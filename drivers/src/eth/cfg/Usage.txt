@@ -1,0 +1,5 @@
+python.exe simplePQRS_9A86_UV.py
+
+python.exe converter.py simplePQRS_9A86_UV_SJA1105PR.hex
+
+Copy configuration stream from generated hex_to_c.c to NXP_SJA110P_configStream.c

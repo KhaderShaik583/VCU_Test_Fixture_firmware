@@ -1,0 +1,21 @@
+.uvoptx
+*.PC - 1810
+*.crf
+*.d
+*.o
+*.iex
+*.dep
+*.lnp
+*.htm
+*.js
+*.axf
+*.TMP
+nvm.hex
+nvm.bin
+Objects/bms.S
+buff_bin.bin
+buffer.bin
+buffer.hex
+vcu_fw_s32k148.uvguix.PC-1856
+vcu_fw_s32k148.uvguix.PC-1856.bak
+*.Rishi

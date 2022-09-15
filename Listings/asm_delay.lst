@@ -1,0 +1,105 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 PRESERVE8
+    2 00000000         
+    3 00000000                 AREA             THUMB, CODE, READONLY
+    4 00000000         
+    5 00000000                 IMPORT           SystemCoreClock
+    6 00000000                 EXPORT           sw_asm_delay_us
+    7 00000000         
+    8 00000000         ; void sw_asm_delay_us(uint32_t delay_us)
+    9 00000000         ; Input parameter delay_us is in micro-second units [R0]
+                        
+   10 00000000         
+   11 00000000                 ALIGN
+   12 00000000         sw_asm_delay_us
+                               FUNCTION
+   13 00000000         
+   14 00000000 B5F0            push             {r4-r7, lr}
+   15 00000002         
+   16 00000002 4C08            ldr              r4, =SystemCoreClock
+   17 00000004 6825            ldr              r5, [r4]    ; r5 = SystemCoreCl
+                                                            ock
+   18 00000006         
+   19 00000006 4C08            ldr              r4, =1000000 ; r4 = 1000000
+   20 00000008 FBB5 F4F4       udiv             r4, r5, r4  ; r4 = r5 / r4 -> r
+                                                            4 = 80
+   21 0000000C FB00 F404       mul              r4, r0, r4  ; r4 = r0 * r4 -> d
+                                                            elay_us * 80
+   22 00000010 F04F 0503       mov              r5, #3      ; account for cycle
+                                                            s in loop for subs 
+                                                            and bne
+   23 00000014 FBB4 F4F5       udiv             r4, r4, r5
+   24 00000018 3C14            subs             r4, #20     ; account for initi
+                                                            alization cycles be
+                                                            fore loop
+   25 0000001A         
+   26 0000001A         loop
+   27 0000001A 1E64            subs             r4, r4, #1
+   28 0000001C D1FD            bne              loop
+   29 0000001E         
+   30 0000001E BF00            nop
+   31 00000020 BF00            nop
+   32 00000022 BDF0            pop              {r4-r7, pc}
+   33 00000024         
+   34 00000024                 ENDP
+   35 00000024         
+   36 00000024                 END
+              00000000 
+              000F4240 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --no_un
+aligned_access --depend=.\objects\asm_delay.d -o.\objects\asm_delay.o -IC:\User
+s\Vector_71\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.0\platform\devices -IC
+:\Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 531" --predefin
+e="CPU_S32K148 SETA 1" --list=.\listings\asm_delay.lst util\src\asm_delay.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+THUMB 00000000
+
+Symbol: THUMB
+   Definitions
+      At line 3 in file util\src\asm_delay.s
+   Uses
+      None
+Comment: THUMB unused
+loop 0000001A
+
+Symbol: loop
+   Definitions
+      At line 26 in file util\src\asm_delay.s
+   Uses
+      At line 28 in file util\src\asm_delay.s
+Comment: loop used once
+sw_asm_delay_us 00000000
+
+Symbol: sw_asm_delay_us
+   Definitions
+      At line 12 in file util\src\asm_delay.s
+   Uses
+      At line 6 in file util\src\asm_delay.s
+Comment: sw_asm_delay_us used once
+3 symbols
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+External symbols
+
+SystemCoreClock 00000000
+
+Symbol: SystemCoreClock
+   Definitions
+      At line 5 in file util\src\asm_delay.s
+   Uses
+      At line 16 in file util\src\asm_delay.s
+Comment: SystemCoreClock used once
+1 symbol
+339 symbols in table

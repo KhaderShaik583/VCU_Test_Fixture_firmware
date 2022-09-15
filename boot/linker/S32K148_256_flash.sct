@@ -1,0 +1,111 @@
+#!armclang -E --target=arm-arm-none-eabi -mcpu=cortex-m4 -xc
+ /*
+ * 
+ * ULTRAVIOLETTE AUTOMOTIVE CONFIDENTIAL
+ * ______________________________________
+ * 
+ *  [2017] - [2018] Ultraviolette Automotive Pvt. Ltd.
+ *  All Rights Reserved.
+ * 
+ * NOTICE: All information contained herein is, and remains the property of 
+ * Ultraviolette Automotive Pvt. Ltd. and its suppliers, if any. The intellectual 
+ * and technical concepts contained herein are proprietary to Ultraviolette Automotive 
+ * and its suppliers and may be covered by U.S. and Foreign Patents, patents in process, 
+ * and are protected by trade secret or copyright law. Dissemination of this information 
+ * or reproduction of this material is strictly forbidden unless prior written permission 
+ * is obtained from Ultraviolette Automotive Pvt. Ltd.
+ * 
+ * Linker script for the S32K148 VCU
+ * Author : Rishi F. [011]
+ *
+ */
+
+#define REGION_ROM_INTERRUPT_VECTOR_START   0x00040000
+#define REGION_ROM_INTERRUPT_VECTOR_SIZE    0x00000400
+
+#define REGION_RAM_INTERRUPT_VECTOR_START   0x1FFE0000
+#define REGION_RAM_INTERRUPT_VECTOR_SIZE    0x00000400
+
+#define REGION_CODE_SRAM_L_START            (REGION_RAM_INTERRUPT_VECTOR_START + REGION_RAM_INTERRUPT_VECTOR_SIZE)
+#define REGION_CODE_SRAM_L_SIZE             0x00014000
+
+#define REGION_DATA_SRAM_L_START            (REGION_CODE_SRAM_L_START + REGION_CODE_SRAM_L_SIZE)
+#define REGION_DATA_SRAM_L_SIZE             0x0000bc00
+
+#define REGION_DATA_SRAM_U_START            (REGION_DATA_SRAM_L_START + REGION_DATA_SRAM_L_SIZE)
+#define REGION_DATA_SRAM_U_SIZE             0x00010000
+
+#define REGION_ARM_HEAP_START               (REGION_DATA_SRAM_U_START + REGION_DATA_SRAM_U_SIZE)
+#define REGION_ARM_HEAP_SIZE                0x00000800
+
+#define REGION_STACK_START                  (REGION_ARM_HEAP_START + REGION_ARM_HEAP_SIZE)
+#define REGION_STACK_SIZE                   0x00000800
+
+
+#define REGION_FLASH_CODE_START             (0x00040000 + REGION_ROM_INTERRUPT_VECTOR_SIZE)
+#define REGION_FLASH_CODE_SIZE              0x00050000
+
+#define REGION_FLASH_OTA_START              (REGION_FLASH_CODE_START + REGION_FLASH_CODE_SIZE)
+#define REGION_FLASH_OTA_SIZE               0x00080000
+
+
+LOAD_REGION REGION_FLASH_CODE_START REGION_FLASH_CODE_SIZE 
+{
+    EXE_REGION_CODE REGION_FLASH_CODE_START REGION_FLASH_CODE_SIZE 
+    {
+        * (InRoot$$Sections)
+        .ANY (+RO)        
+    }
+    
+    EXE_REGION_RW_OTA REGION_FLASH_OTA_START EMPTY REGION_FLASH_OTA_SIZE 
+    {
+      
+    }
+    
+    EXE_REGION_RO_L REGION_CODE_SRAM_L_START REGION_CODE_SRAM_L_SIZE
+    {
+        
+        asm_delay.o             (+RO)
+        
+
+    }
+    
+    EXE_REGION_RW_L REGION_DATA_SRAM_L_START REGION_DATA_SRAM_L_SIZE 
+    {
+        ; RW data
+        .ANY (+RW +ZI)        
+    }    
+    
+    EXE_REGION_RW_U REGION_DATA_SRAM_U_START REGION_DATA_SRAM_U_SIZE 
+    {
+        ; RW data
+        .ANY (+RW +ZI)
+    } 
+    
+    ARM_LIB_HEAP REGION_ARM_HEAP_START EMPTY REGION_ARM_HEAP_SIZE 
+    { 
+        ; Heap region growing up
+    }
+    
+    ARM_LIB_STACK REGION_STACK_START + REGION_STACK_SIZE EMPTY -8 
+    { 
+        ; Stack region growing down
+    }    
+}
+
+
+LOAD_REGION_IVT REGION_RAM_INTERRUPT_VECTOR_START REGION_RAM_INTERRUPT_VECTOR_SIZE 
+{
+  VECTOR_RAM REGION_RAM_INTERRUPT_VECTOR_START EMPTY REGION_RAM_INTERRUPT_VECTOR_SIZE 
+  {
+  
+  }
+}
+
+LOAD_REGION_VECTORS REGION_ROM_INTERRUPT_VECTOR_START REGION_ROM_INTERRUPT_VECTOR_SIZE
+{
+    VECTOR_ROM REGION_ROM_INTERRUPT_VECTOR_START REGION_ROM_INTERRUPT_VECTOR_SIZE
+    {
+        * (RESET,+FIRST)
+    }
+}

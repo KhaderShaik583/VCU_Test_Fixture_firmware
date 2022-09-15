@@ -1,0 +1,68 @@
+
+
+
+ARM Macro Assembler    Page 1 
+
+
+    1 00000000                 PRESERVE8
+    2 00000000         
+    3 00000000         
+    4 00000000                 AREA             THUMB, CODE, READONLY
+    5 00000000         
+    6 00000000                 EXPORT           jump_to_app
+    7 00000000         
+    8 00000000         jump_to_app
+    9 00000000 4804            ldr              r0,=0xE000ED08 ; Set R0 to VTOR
+                                                             address
+   10 00000002 F44F 3100       ldr              r1,=0x00020000 ; User’s flash m
+                                                            emory based address
+                                                            
+   11 00000006 6001            str              r1, [r0]    ; Define beginning 
+                                                            of user’s flash mem
+                                                            ory as vector table
+                                                            
+   12 00000008 6808            ldr              r0, [r1]    ; Load initial MSP 
+                                                            value
+   13 0000000A 4685            mov              sp, r0      ; Set SP value (ass
+                                                            ume MSP is selected
+                                                            )
+   14 0000000C 6848            ldr              r0,     [r1, #4] 
+                                                            ; Load reset vector
+                                                            
+   15 0000000E BF00            nop
+   16 00000010 BF00            nop
+   17 00000012 4700            bx               r0          ; Branch to reset h
+                                                            andler in user’s fl
+                                                            ash
+   18 00000014         
+   19 00000014                 END
+              E000ED08 
+Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp.sp --no_un
+aligned_access --depend=.\objects\jump_app.d -o.\objects\jump_app.o -IC:\Users\
+Vector_71\AppData\Local\Arm\Packs\Keil\S32_SDK_DFP\1.5.0\platform\devices -IC:\
+Keil_v5\ARM\CMSIS\Include --predefine="__UVISION_VERSION SETA 531" --predefine=
+"CPU_S32K148 SETA 1" --list=.\listings\jump_app.lst boot\src\jump_app.s
+
+
+
+ARM Macro Assembler    Page 1 Alphabetic symbol ordering
+Relocatable symbols
+
+THUMB 00000000
+
+Symbol: THUMB
+   Definitions
+      At line 4 in file boot\src\jump_app.s
+   Uses
+      None
+Comment: THUMB unused
+jump_to_app 00000000
+
+Symbol: jump_to_app
+   Definitions
+      At line 8 in file boot\src\jump_app.s
+   Uses
+      At line 6 in file boot\src\jump_app.s
+Comment: jump_to_app used once
+2 symbols
+337 symbols in table

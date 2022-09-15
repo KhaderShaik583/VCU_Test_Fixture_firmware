@@ -1,0 +1,71 @@
+/**
+ * File: cmac.h
+ * Created on: 21 ???. 2015 ?.
+ * Description:
+ * 
+ *
+ * Author: Roman Savrulin <romeo.deepmind@gmail.com>
+ * Copyright: 2015 Roman Savrulin
+ * Copying permission statement:
+ * 
+ *  This file is part of AES-CMAC.
+ *
+ *  AES-CMAC is free software: you can redistribute it and/or modify
+ *  it under the terms of the GNU General Public License as published by
+ *  the Free Software Foundation, either version 3 of the License, or
+ *  (at your option) any later version.
+ *
+ *  This program is distributed in the hope that it will be useful,
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *  GNU General Public License for more details.
+ *
+ *  You should have received a copy of the GNU General Public License
+ *  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ *
+ */
+#ifndef AES_SW_H
+#define AES_SW_H
+
+#include <stdint.h>
+
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+#define BLOCK_SIZE 16
+#define LAST_INDEX (BLOCK_SIZE - 1)
+
+int AES_CBC_ENC(const unsigned char *IV, const unsigned char *key,
+		const unsigned char *input, int inputLength, unsigned char *output,
+		int outputLength);
+
+int AES_CBC_DEC(const unsigned char *IV, const unsigned char *key,
+		const unsigned char *input, int inputLength, unsigned char *output,
+		int outputLength);
+
+void AES_CMAC(const unsigned char *key, const unsigned char *input, int length,
+		unsigned char *mac);
+
+int AES_CMAC_CHECK(const unsigned char *key, const unsigned char *input,
+		int length, const unsigned char *mac);
+
+void xor_128(const unsigned char *a, const unsigned char *b, unsigned char *out);
+void AES_128_DEC(unsigned const char *key, unsigned const char* msg, unsigned char *cipher);
+
+void aes_sw_enc(const uint8_t *buffer, uint8_t *enc_buffer, uint16_t enc_size);
+void aes_sw_dec(const uint8_t *buffer, uint8_t *dec_buffer, uint16_t dec_size);
+void aes_sw_cmac(uint8_t *buffer, uint16_t size, uint8_t *cmac_hash);
+
+#ifdef DEBUG_CMAC
+void print_hex(const char *str, const unsigned char *buf, int len);
+void print128(const unsigned char *bytes);
+void print96(const unsigned char *bytes);
+#endif
+
+#ifdef __cplusplus
+}
+#endif
+
+#endif /* AES_SW_H */
