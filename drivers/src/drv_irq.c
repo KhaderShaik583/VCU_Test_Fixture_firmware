@@ -40,18 +40,18 @@ void PORTE_IRQHandler(void);
 
 void PORTA_IRQHandler(void)
 {
-    volatile uint32_t pins_gpioa = 0U;  
-    
-    pins_gpioa = PINS_GetPortIntFlag(KEY_WAKE_SIG_PORT);
-    
-    if(pins_gpioa > 0)
-    {
-        if(PINS_DRV_GetPortIntFlag(KEY_WAKE_SIG_PORT) & (1U << KEY_WAKE_SIG_PIN))
-        {
-            sw_asm_delay_us(SW_DEBOUNCE_DELAY_US);
-            key_sw_irq();
-        }
-    }
+//    volatile uint32_t pins_gpioa = 0U;  
+//    
+//    pins_gpioa = PINS_GetPortIntFlag(KEY_WAKE_SIG_PORT);
+//    
+//    if(pins_gpioa > 0)
+//    {
+//        if(PINS_DRV_GetPortIntFlag(KEY_WAKE_SIG_PORT) & (1U << KEY_WAKE_SIG_PIN))
+//        {
+//            sw_asm_delay_us(SW_DEBOUNCE_DELAY_US);
+//            key_sw_irq();
+//        }
+//    }
 }
 
 void PORTB_IRQHandler(void)
@@ -70,30 +70,30 @@ void PORTB_IRQHandler(void)
 
 void PORTC_IRQHandler(void)
 {
-    volatile uint32_t pins_gpioc = 0U;  
+//    volatile uint32_t pins_gpioc = 0U;  
 
-    pins_gpioc = PINS_GetPortIntFlag(SWIF_IRQ_PORT);
-    
-    if(pins_gpioc > 0U)
-    {
-        pins_gpioc = PINS_GetPortIntFlag(SWIF_IRQ_PORT);
-        
-        if(pins_gpioc & (1U << SWIF_IRQ_PIN))
-        {
-            cd1030_irq();
-        }
-    }
-    
-    NVIC_ClearPendingIRQ(PORTC_IRQn);
+//    pins_gpioc = PINS_GetPortIntFlag(SWIF_IRQ_PORT);
+//    
+//    if(pins_gpioc > 0U)
+//    {
+//        pins_gpioc = PINS_GetPortIntFlag(SWIF_IRQ_PORT);
+//        
+//        if(pins_gpioc & (1U << SWIF_IRQ_PIN))
+//        {
+//            cd1030_irq();
+//        }
+//    }
+//    
+//    NVIC_ClearPendingIRQ(PORTC_IRQn);
 }
 
 void PORTD_IRQHandler(void)
 {
-    if(PINS_DRV_GetPortIntFlag(IMU_IRQ_PORT) & (1U << IMU_IRQ_PIN))
-    {
-        imu_read_data_irq();
-        PINS_ClearPortIntFlag(IMU_IRQ_PORT, (1U << (IMU_IRQ_PIN)));
-    }
+//    if(PINS_DRV_GetPortIntFlag(IMU_IRQ_PORT) & (1U << IMU_IRQ_PIN))
+//    {
+//        imu_read_data_irq();
+//        PINS_ClearPortIntFlag(IMU_IRQ_PORT, (1U << (IMU_IRQ_PIN)));
+//    }
 }
 
 void PORTE_IRQHandler(void)

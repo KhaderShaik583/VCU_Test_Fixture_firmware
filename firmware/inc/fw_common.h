@@ -41,6 +41,7 @@
 #define STACK_ALIGNMENT (8U)    /* Stack alignment boundary - 8 Bytes */
 #define STACK_SIZE(x)   (((x) + (STACK_ALIGNMENT - ((x) % STACK_ALIGNMENT))))
 
+
 extern void sw_asm_delay_us(uint32_t);
 
 typedef struct {

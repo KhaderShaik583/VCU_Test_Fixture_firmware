@@ -157,18 +157,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>184</LineNumber>
+          <LineNumber>34</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>303750</Address>
+          <Address>315472</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\vcu_can_comm_test\vcu_can_comm_test_rx.c</Filename>
+          <Filename>.\vcu_can_comm_test\Uart.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\vcu_fixture_fx\vcu_can_comm_test/vcu_can_comm_test_rx.c\184</Expression>
+          <Expression>\\vcu_fixture_fx\vcu_can_comm_test/Uart.c\34</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -196,6 +196,21 @@
           <count>4</count>
           <WinNumber>1</WinNumber>
           <ItemText>bms_recv_buff</ItemText>
+        </Ww>
+        <Ww>
+          <count>5</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rxdata</ItemText>
+        </Ww>
+        <Ww>
+          <count>6</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>rx_buffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ret</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -3717,7 +3732,7 @@
 
   <Group>
     <GroupName>firmware</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>

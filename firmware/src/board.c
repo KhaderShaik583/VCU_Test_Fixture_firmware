@@ -323,9 +323,9 @@ static status_t can_if_bms_init(void)
     
     can_fd_if_bms_init();
     
-//	INT_SYS_SetPriority(CAN1_ORed_0_15_MB_IRQn, 2U);
-//	INT_SYS_SetPriority(CAN1_ORed_16_31_MB_IRQn, 2U);
-//	INT_SYS_SetPriority(CAN1_ORed_IRQn, 2U);
+	INT_SYS_SetPriority(CAN1_ORed_0_15_MB_IRQn, 2U);
+	INT_SYS_SetPriority(CAN1_ORed_16_31_MB_IRQn, 2U);
+	INT_SYS_SetPriority(CAN1_ORed_IRQn, 2U);
     
     return ret;
 }
@@ -733,7 +733,7 @@ status_t board_init(void)
 	init_status += can_if_mc_init();
     init_status += can_if_abs_init();
     init_status += can_if_bms_init();
-    init_status += ec25_uart_config();
+//    init_status += ec25_uart_config();
     DEV_ASSERT(init_status == STATUS_SUCCESS);
     
 	dba_config_can();

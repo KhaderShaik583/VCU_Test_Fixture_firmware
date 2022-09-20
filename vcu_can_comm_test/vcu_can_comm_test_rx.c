@@ -34,6 +34,7 @@
 #include "cd1030.h"
 #include "pac1921_task.h"
 #include "vcu_can_comm_test_tx.h"
+#include "lpuart_driver.h"
 
 #define TS_HOUR_MASK    (0x0000001fU)
 #define TS_MINUTE_MASK  (0x000007e0U)
@@ -107,6 +108,9 @@ static volatile uint32_t dba_dma_complete = 0U;
 static volatile uint32_t mc_dma_complete = 0U;
 static volatile uint32_t bms_dma_complete = 0U;
 
+static uint8_t dba_tx_buffer[64] = "DBA CAN TEST PASS \n\r";
+static uint8_t mc_tx_buffer[64] = "MC CAN TEST PASS \n\r";
+static uint8_t mc_tx_buffer1[64] = "MC CAN TEST FAIL \n\r";
 
 void bms_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
 {
@@ -224,6 +228,11 @@ static void can_if_dba_receive_nb(void)
                 /* Process Data */
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
 				vcu_2_dba_send_test_msg(dba_recv_buff.msgId);
+			
+				if(dba_recv_buff.msgId == 0x150U)
+				{
+					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 64);
+				}
                 dba_rx_state = CAN_SM_STATE_START_RX;
             }
             else
@@ -260,6 +269,10 @@ static void can_if_mc_receive_nb(void)
                 /* Process Data */
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
 				vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
+				if(mc_recv_buff.msgId == 0x200U)
+				{
+					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 64);
+				}
                 mc_rx_state = CAN_SM_STATE_START_RX;
             }
             else

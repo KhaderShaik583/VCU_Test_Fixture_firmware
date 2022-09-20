@@ -54,16 +54,17 @@ int32_t main(void)
 //#endif
 //    
 //    (void)osif_kernel_start();
-	
+	vcu_2_bms_can_test_msg(0x123U);
+	vcu_2_mc_send_rpdo_msg(0x789U);
+	vcu_2_dba_send_test_msg(0x456U);
     for(;; )
 	{
-//		uart_check();
+		
+		uart_check();
 		can_fd_bms_receive_test();
 		can_dba_receive_test();
 		can_mc_receive_test();
-//		vcu_2_bms_can_test_msg(1);
-//		vcu_2_mc_send_rpdo_msg();
-//		vcu_2_dba_send_test_msg();
+
 //		ext_wdt_kick();
 	}
     

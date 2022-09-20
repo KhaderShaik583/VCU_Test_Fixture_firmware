@@ -23,21 +23,32 @@
  
 #include "lpuart_driver.h"
 #include "vcu_can_comm_test_tx.h"
+#include "fw_common.h"
+#define LTE_UART_TASK_DELAY         (1000U)
+#define MAX_UART_PAYLOAD            (64U)
 
+static uint8_t tx_buffer[MAX_UART_PAYLOAD] = "UV UART TEST MESG\n\r";
+static uint8_t rx_buffer[MAX_UART_PAYLOAD];
+status_t ret = STATUS_SUCCESS;	
 void uart_check()
 {	
-	uint8_t rxdata[2] = {0x00, 0x00};
-	uint8_t txdata[3] = {"ACK"};
-	status_t s = STATUS_SUCCESS;
+
+	    
+        ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 2,200);  
+		
+		if(ret == STATUS_SUCCESS)
+		{
+			ret = LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, MAX_UART_PAYLOAD);
+		}
 	
-	s = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,1,1000);
-	
-	if (s == STATUS_SUCCESS)
-	{
-		LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,sizeof(rxdata),3);
-//		vcu_2_bms_can_test_msg(1);
-//		vcu_2_mc_send_rpdo_msg();
-//		vcu_2_dba_send_test_msg();
-	}
+//	s = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,2,100);
+//	
+//	if (s == STATUS_SUCCESS)
+//	{
+//		LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,sizeof(rxdata),3);
+////		vcu_2_bms_can_test_msg(1);
+////		vcu_2_mc_send_rpdo_msg();
+////		vcu_2_dba_send_test_msg();
+//	}
 }
 
