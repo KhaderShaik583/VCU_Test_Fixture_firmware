@@ -21,52 +21,23 @@
  *
  */
  
-#include <stdint.h>
-
-#include "fw_features.h"
-#include "vcu_can_comm_test_tx.h"
-#include "vcu_can_comm_test_rx.h"
 #include "lpuart_driver.h"
-#include "Uart.h"
-#include "wdt_task.h"
+#include "vcu_can_comm_test_tx.h"
 
-#ifndef USE_FEATURE_VCU_ON_DESK
-#include "init_task.h"
-#else
-#include "init_task_desk.h"
-#endif
-
-int32_t main(void)
-{
-    (void)board_init();
-    
-//    __DMB();
-//    
-//    (void)osif_kernel_init();
-//    
-//    __DSB();
-//    __ISB();
-
-//#ifndef USE_FEATURE_VCU_ON_DESK
-//    init_task_create();
-//#else
-//    init_task_desk_create();
-//#endif
-//    
-//    (void)osif_kernel_start();
+void uart_check()
+{	
+	uint8_t rxdata[2] = {0x00, 0x00};
+	uint8_t txdata[3] = {"ACK"};
+	status_t s = STATUS_SUCCESS;
 	
-    for(;; )
+	s = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,1,1000);
+	
+	if (s == STATUS_SUCCESS)
 	{
-//		uart_check();
-		can_fd_bms_receive_test();
-		can_dba_receive_test();
-		can_mc_receive_test();
+		LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,sizeof(rxdata),3);
 //		vcu_2_bms_can_test_msg(1);
 //		vcu_2_mc_send_rpdo_msg();
 //		vcu_2_dba_send_test_msg();
-//		ext_wdt_kick();
 	}
-    
-    return 0;
 }
 

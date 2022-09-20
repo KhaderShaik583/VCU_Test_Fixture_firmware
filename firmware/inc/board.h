@@ -413,6 +413,11 @@
 #define SYS_ETH_IF                  (0U)
 #define SW_DEBOUNCE_DELAY_US        (50000U)
 
+#define SYS_DEBUG_LPUART_INTERFACE        (0U)
+#define SYS_DEBUG_LPUART_BAUD             (115200U)
+
+#define SYS_DEBUG_LPUART2_INTERFACE        (2U)
+
 status_t board_init(void);
 msdi_status_t init_CD10x0(void);
 void ec25_pwr_init(void);

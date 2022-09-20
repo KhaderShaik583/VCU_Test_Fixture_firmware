@@ -4051,6 +4051,16 @@
               <FileType>5</FileType>
               <FilePath>.\vcu_can_comm_test\vcu_can_comm_test_tx.h</FilePath>
             </File>
+            <File>
+              <FileName>Uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\vcu_can_comm_test\Uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>Uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\vcu_can_comm_test\Uart.h</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>
@@ -8048,6 +8058,16 @@
               <FileName>vcu_can_comm_test_tx.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\vcu_can_comm_test\vcu_can_comm_test_tx.h</FilePath>
+            </File>
+            <File>
+              <FileName>Uart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\vcu_can_comm_test\Uart.c</FilePath>
+            </File>
+            <File>
+              <FileName>Uart.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\vcu_can_comm_test\Uart.h</FilePath>
             </File>
           </Files>
         </Group>

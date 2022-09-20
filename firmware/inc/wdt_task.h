@@ -53,6 +53,8 @@ extern osif_msg_queue_id_t wdt_msg_queue;
 /* Thread Flags */
 #define WDT_TASK_START_FLAG     (0x0001U)
 
+void ext_wdt_kick(void);
+
 void wdt_task_create(void);
 thread_id_t wdt_task_get_id(void);
 void wdt_register_task(uint32_t task_id);

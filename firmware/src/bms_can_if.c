@@ -27,6 +27,7 @@
 #include "aes.h"
 #include "bms_can_if.h"
 #include "can_messenger_rx.h"
+#include "vcu_can_comm_test_rx.h"
 
 #ifdef USE_SW_AES_MOD
 #include "aes_sw.h"
@@ -256,29 +257,28 @@ uint32_t can_fd_get_rx_state(uint32_t bus)
     return canfd_rx_state[CANFD_LOGICAL_BUS0];
 }
 
-void can_fd_if_bms_init(void)
-{
-    flexcan_data_info_t data_info =
-    {
-       .data_length = CAN_FD_MAX_LEN,
-       .msg_id_type = FLEXCAN_MSG_ID_EXT,
-       .enable_brs  = false,
-       .fd_enable   = true,
-       .fd_padding  = 0U
-    };
-    
-    if(canfd_bus_en_state[CANFD_LOGICAL_BUS0] == CANFD_LOGICAL_BUS_ENABLED)
-    {
-        (void)FLEXCAN_DRV_ConfigRxMb(CAN_IF_BMS, CAN_BMS_RX_MAILBOX, &data_info, BMS_VCU_SLOT0_COMM_ID);
-        FLEXCAN_DRV_SetRxMbGlobalMask(CAN_IF_BMS, FLEXCAN_MSG_ID_EXT, BMS_VCU_MBX_GBL_MASK_FILTER);
-        (void)FLEXCAN_DRV_SetRxIndividualMask(CAN_IF_BMS, FLEXCAN_MSG_ID_EXT, CAN_BMS_RX_MAILBOX, BMS_VCU_SLOT0_COMM_ID);
-        
-#ifdef USE_FEATURE_CAN_BUS_TIMEOUT
-        can_bus_if_timeout_timers[CANFD_LOGICAL_BUS0] = osif_timer_create(canfd_bus0_timeout_handler, osTimerOnce, NULL, NULL);
-#endif
-        bms_create_tx_timer();
-    }
-}
+//void can_fd_if_bms_init(void)
+//{
+//    flexcan_data_info_t data_info =
+//    {
+//       .data_length = CAN_FD_MAX_LEN,
+//       .msg_id_type = FLEXCAN_MSG_ID_EXT,
+//       .enable_brs  = false,
+//       .fd_enable   = true,
+//       .fd_padding  = 0U
+//    };
+//    
+//        (void)FLEXCAN_DRV_ConfigRxMb(CAN_IF_BMS, CAN_BMS_RX_MAILBOX, &data_info, BMS_VCU_SLOT0_COMM_ID);
+//        FLEXCAN_DRV_SetRxMbGlobalMask(CAN_IF_BMS, FLEXCAN_MSG_ID_EXT, BMS_VCU_MBX_GBL_MASK_FILTER);
+//        (void)FLEXCAN_DRV_SetRxIndividualMask(CAN_IF_BMS, FLEXCAN_MSG_ID_EXT, CAN_BMS_RX_MAILBOX, BMS_VCU_SLOT0_COMM_ID);
+//        
+//		FLEXCAN_DRV_InstallEventCallback(CAN_IF_BMS, bms_can_callback, NULL);
+//#ifndef USE_FEATURE_CAN_BUS_TIMEOUT
+//        can_bus_if_timeout_timers[CANFD_LOGICAL_BUS0] = osif_timer_create(canfd_bus0_timeout_handler, osTimerOnce, NULL, NULL);
+//#endif
+//        bms_create_tx_timer();
+// 
+//}
 
 status_t can_fd_if_bms_send(uint8_t *buffer, uint16_t len, uint32_t msg_id, uint32_t bus_id)
 {

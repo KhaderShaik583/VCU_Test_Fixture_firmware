@@ -25,6 +25,20 @@
 #include "pins_driver.h"
 #include "wdog_driver.h" 
 
+
+
+void ext_wdt_kick(void)
+{
+    /* Merge core and external wdt apis */
+    
+    /* Kick internal WDT */
+    WDOG_DRV_Trigger(0U);
+    
+    /* Kick external WDT */
+    PINS_DRV_ClearPins(EXT_WDT_WDI_GPIO, (1U << EXT_WDT_WDI_PIN));
+    sw_asm_delay_us(50);
+    PINS_DRV_SetPins(EXT_WDT_WDI_GPIO, (1U << EXT_WDT_WDI_PIN));    
+}
 #ifdef USE_FEATURE_WDT
 
 #ifdef USE_FEATURE_RTX_VIEWER

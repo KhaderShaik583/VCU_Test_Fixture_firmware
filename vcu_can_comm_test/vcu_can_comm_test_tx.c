@@ -102,7 +102,21 @@ status_t vcu_2_bms_can_test_msg(uint32_t bus)
     return s;
 }
 
-status_t vcu_2_mc_send_rpdo_msg()
+status_t vcu_2_bms_can_test_msg_2(uint32_t msgid)
+{
+    status_t s = STATUS_SUCCESS;
+    
+    uint32_t msg_id = 0U;
+    msg_id = msgid;
+    
+    uint8_t dummy_buffer[64] = {"BMSCANTESTMESSAGE"};
+    
+    (void)can_fd_if_bms_testmsg_send(dummy_buffer, 13U, msg_id, 1);
+    
+    return s;
+}
+
+status_t vcu_2_mc_send_rpdo_msg(uint32_t msg_Id)
 {
 	status_t write_status = STATUS_SUCCESS;
 	uint8_t buffer[8] = {"MCCANTES"};
@@ -117,12 +131,12 @@ status_t vcu_2_mc_send_rpdo_msg()
       .fd_padding  = 0U
     };
     
-    (void)FLEXCAN_DRV_Send(CAN_IF_MOTOR, CAN_MC_TX_MAILBOX, &tx_info, CAN_IF_VCU_2_MC_TEST_MSG_ID, buffer);
+    (void)FLEXCAN_DRV_Send(CAN_IF_MOTOR, CAN_MC_TX_MAILBOX, &tx_info, msg_Id, buffer);
 	
 	return write_status;   
 }
 
-status_t vcu_2_dba_send_test_msg()
+status_t vcu_2_dba_send_test_msg(uint32_t msg_Id)
 {
 	status_t write_status = STATUS_SUCCESS;
 	uint8_t buffer[8] = {"DBACAN"};
@@ -137,7 +151,7 @@ status_t vcu_2_dba_send_test_msg()
       .fd_padding  = 0U
     };
     
-    (void)FLEXCAN_DRV_Send(CAN_IF_ABS, CAN_DBA_TX_MAILBOX, &tx_info, CAN_IF_VCU_2_DBA_TEST_MSG_ID, buffer);
+    (void)FLEXCAN_DRV_Send(CAN_IF_ABS, CAN_DBA_TX_MAILBOX, &tx_info, msg_Id, buffer);
 	
 	return write_status;   
 }

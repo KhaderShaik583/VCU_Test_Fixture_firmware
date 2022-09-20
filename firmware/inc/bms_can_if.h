@@ -31,7 +31,7 @@ uint32_t can_fd_get_rx_state(uint32_t bus);
 void can_fd_reset_rx_state(void);
 uint32_t canfd_get_bus_en_state(uint32_t bus);
 void can_fd_if_bms_err_process(uint32_t *esr);
-void can_fd_if_bms_init(void);
+//void can_fd_if_bms_init(void);
 status_t can_fd_if_bms_send(uint8_t *buffer, uint16_t len, uint32_t msg_id, uint32_t bus_id);
 void canfd_disable_bus(uint32_t bus);
 void canfd_enable_bus(uint32_t bus);
