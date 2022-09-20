@@ -65,7 +65,7 @@ int32_t main(void)
 		can_dba_receive_test();
 		can_mc_receive_test();
 
-//		ext_wdt_kick();
+		ext_wdt_kick();
 	}
     
     return 0;

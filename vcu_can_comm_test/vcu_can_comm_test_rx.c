@@ -109,29 +109,31 @@ static volatile uint32_t mc_dma_complete = 0U;
 static volatile uint32_t bms_dma_complete = 0U;
 
 static uint8_t dba_tx_buffer[64] = "DBA CAN TEST PASS \n\r";
-static uint8_t mc_tx_buffer[64] = "MC CAN TEST PASS \n\r";
+static uint8_t mc_tx_buffer[64] =  "MC CAN TEST PASS \n\r";
+static uint8_t bms_tx_buffer[64] = "BMS CAN TEST PASS \n\r";
+
 static uint8_t mc_tx_buffer1[64] = "MC CAN TEST FAIL \n\r";
 
-void bms_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
-{
-    UNUSED_VAR(flexcanState);
-    UNUSED_VAR(instance);
-    UNUSED_VAR(idx);
-   
-    if(eventType == FLEXCAN_EVENT_DMA_COMPLETE)
-    {
-        bms_dma_complete = 1U;
-    }
-    else if(eventType == FLEXCAN_EVENT_DMA_ERROR)
-    {
-        FLEXCAN_DRV_AbortTransfer(CAN_IF_BMS, CAN_BMS_RX_MAILBOX);
-        bms_rx_state = CAN_SM_STATE_START_RX;
-    }
-    else
-    {
-        __NOP();
-    }
-}
+//void bms_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
+//{
+//    UNUSED_VAR(flexcanState);
+//    UNUSED_VAR(instance);
+//    UNUSED_VAR(idx);
+//   
+//    if(eventType == FLEXCAN_EVENT_DMA_COMPLETE)
+//    {
+//        bms_dma_complete = 1U;
+//    }
+//    else if(eventType == FLEXCAN_EVENT_DMA_ERROR)
+//    {
+//        FLEXCAN_DRV_AbortTransfer(CAN_IF_BMS, CAN_BMS_RX_MAILBOX);
+//        bms_rx_state = CAN_SM_STATE_START_RX;
+//    }
+//    else
+//    {
+//        __NOP();
+//    }
+//}
 
 void dba1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
 {
@@ -175,35 +177,104 @@ void mc1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t
     }
 }
 
-static void can_fd_bms_receive_test_nb()
+
+static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 {
-    	switch(bms_rx_state)
+    int32_t ret = 0;
+    status_t s;
+    
+#ifdef USE_FEATURE_CAN_BUS_ENCRYPTION
+    uint8_t canfd_rx_hash[CMAC_KEY_SIZE];
+    int32_t canfd_macval = 1U;
+    uint16_t canfd_cipher_len = 0U;
+    uint32_t volatile msgid = 0U;
+#endif
+    
+    switch(canfd_rx_state[bus])
     {
-        case CAN_SM_STATE_START_RX:
-            FLEXCAN_DRV_RxFifo(CAN_IF_BMS, &bms_recv_buff);
-            bms_rx_state = CAN_SM_STATE_WAIT_RX;
+        case CANFD_STATE_INIT_RX:
+            /* Start a RX on Mailbox specified by bus parameter */
+            (void)FLEXCAN_DRV_Receive(CAN_IF_BMS, (uint8_t)rx_mbx[bus], &bms_rx_buff[bus]);
+        
+            /* Go to next state after starting Rx */
+            canfd_rx_state[bus] = CANFD_STATE_WAIT_RX_NB;
+        
+            /* Mark the bus transaction as pending for the current bus*/
+            bus_transaction_state[bus] = CANFD_BUS_TRANSACTION_PENDING;
+
             break;
         
-        case CAN_SM_STATE_WAIT_RX:
-            if(bms_dma_complete == 1U)
+        case CANFD_STATE_WAIT_RX_NB:
+            
+            s = FLEXCAN_DRV_GetTransferStatus(CAN_IF_BMS, (uint8_t)rx_mbx[bus]);
+            if(s == STATUS_SUCCESS)
             {
-                bms_dma_complete = 0U;
                 
-                /* Process Data */
-               // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
-				vcu_2_bms_can_test_msg_2(bms_recv_buff.msgId);
-                bms_rx_state = CAN_SM_STATE_START_RX;
+                if(bms_rx_buff[bus].dataLen > 0U)
+                {
+#ifndef USE_FEATURE_CAN_BUS_ENCRYPTION
+                                        
+                    /* If its a PC message ID ignore and discard */
+                    msgid = (bms_rx_buff[bus].msgId >> CAN_MSG_MSG_ID_SHIFT) & 0x0000FFFU;
+
+                    /* WATCH OUT - The below if statement can break stuff if the msg id range it
+                       excludes is not in sync with PC CAN message ids. 
+                    */
+                    if((msgid < 0x808U) || (msgid > 0x8FFU))
+                    {
+                        canfd_cipher_len = bms_rx_buff[bus].dataLen - CMAC_HASH_SIZE;
+#ifndef USE_SW_AES_MOD
+                        aes_cmacl_can_bms_vcu(bms_rx_buff[bus].data, canfd_cipher_len, canfd_rx_hash);
+#else
+                        aes_sw_cmac(bms_rx_buff[bus].data, canfd_cipher_len, canfd_rx_hash);
+#endif /* USE_SW_AES_MOD */                  
+                        canfd_macval = memcmp((bms_rx_buff[bus].data + canfd_cipher_len), &canfd_rx_hash[0], CMAC_KEY_SIZE); 
+                        
+                        if(canfd_macval == 0)
+                        {
+                            /* Decrypt Message */
+#ifndef USE_SW_AES_MOD
+                            aes_decrypt_buffer_can_bms_vcu(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
+#else
+                            aes_sw_dec(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
+#endif /* USE_SW_AES_MOD */
+                            /* Process Data */
+                            (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
+                        }    
+                    }
+#else
+                     /* Process Data */
+//                     extern void can_fd_validate(uint8_t *buffer, uint16_t len);
+//                     can_fd_validate(bms_rx_buff.data, bms_rx_buff.dataLen);
+					 vcu_2_bms_can_test_msg(bms_rx_buff[bus].msgId);
+					 if(bms_rx_buff[bus].msgId == 0x420000U)
+						{
+							LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 64);
+						}
+#endif /* USE_FEATURE_CAN_BUS_ENCRYPTION */
+
+                    /* RX Success on current bus. Go to CANFD_STATE_INIT_RX to start new RX */
+                    canfd_rx_state[bus] = CANFD_STATE_INIT_RX;
+                }
+                else
+                {
+                    canfd_rx_state[bus] = CANFD_STATE_INIT_RX;
+                }
+                
+                bus_transaction_state[bus] = CANFD_BUS_TRANSACTION_DONE;
             }
             else
             {
-                bms_rx_state = CAN_SM_STATE_WAIT_RX;
+                canfd_rx_state[bus] = CANFD_STATE_WAIT_RX_NB;
             }
             break;
             
-		 default:
-            __NOP();
+        default:
+            canfd_rx_state[bus] = CANFD_STATE_INIT_RX;
             break;
-    } 
+    }
+
+    return ret;  
 }
 
 /**
@@ -298,6 +369,6 @@ void can_mc_receive_test()
 
 void can_fd_bms_receive_test()
 { 
-    (void)can_fd_bms_receive_test_nb();   
+    (void)can_fd_bms_receive_test_nb(0);   
 }
 

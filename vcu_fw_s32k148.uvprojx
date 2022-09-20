@@ -1864,11 +1864,6 @@
               <FilePath>.\firmware\src\coredump.c</FilePath>
             </File>
             <File>
-              <FileName>rtc_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\firmware\src\rtc_task.c</FilePath>
-            </File>
-            <File>
               <FileName>rtc_task.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\firmware\inc\rtc_task.h</FilePath>
@@ -2814,6 +2809,11 @@
               <FileName>mc_task.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\firmware\inc\mc_task.h</FilePath>
+            </File>
+            <File>
+              <FileName>rtc_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\firmware\src\rtc_task.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -5923,11 +5923,6 @@
               <FilePath>.\firmware\src\coredump.c</FilePath>
             </File>
             <File>
-              <FileName>rtc_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\firmware\src\rtc_task.c</FilePath>
-            </File>
-            <File>
               <FileName>rtc_task.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\firmware\inc\rtc_task.h</FilePath>
@@ -6822,6 +6817,11 @@
               <FileName>mc_task.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\firmware\inc\mc_task.h</FilePath>
+            </File>
+            <File>
+              <FileName>rtc_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\firmware\src\rtc_task.c</FilePath>
             </File>
           </Files>
         </Group>

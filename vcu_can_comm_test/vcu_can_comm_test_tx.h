@@ -30,7 +30,7 @@
 #include "canfd_queue.h"
 
 
-status_t vcu_2_bms_can_test_msg(uint32_t bus);
+status_t vcu_2_bms_can_test_msg(uint64_t msgid);
 status_t vcu_2_mc_send_rpdo_msg(uint32_t msg_Id);
 status_t vcu_2_dba_send_test_msg(uint32_t msg_Id);
 status_t vcu_2_bms_can_test_msg_2(uint32_t msgid);

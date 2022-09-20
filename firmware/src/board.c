@@ -164,7 +164,7 @@ static void can_fd_if_bms_init(void)
         FLEXCAN_DRV_SetRxMbGlobalMask(CAN_IF_BMS, FLEXCAN_MSG_ID_EXT, BMS_VCU_MBX_GBL_MASK_FILTER);
         (void)FLEXCAN_DRV_SetRxIndividualMask(CAN_IF_BMS, FLEXCAN_MSG_ID_EXT, CAN_BMS_RX_MAILBOX, BMS_VCU_SLOT0_COMM_ID);
         
-		FLEXCAN_DRV_InstallEventCallback(CAN_IF_BMS, bms_can_callback, NULL);
+//		FLEXCAN_DRV_InstallEventCallback(CAN_IF_BMS, bms_can_callback, NULL);
 #ifndef USE_FEATURE_CAN_BUS_TIMEOUT
         can_bus_if_timeout_timers[CANFD_LOGICAL_BUS0] = osif_timer_create(canfd_bus0_timeout_handler, osTimerOnce, NULL, NULL);
 #endif

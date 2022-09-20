@@ -34,7 +34,7 @@ void uart_check()
 {	
 
 	    
-        ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 2,200);  
+        ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 2, 200);  
 		
 		if(ret == STATUS_SUCCESS)
 		{

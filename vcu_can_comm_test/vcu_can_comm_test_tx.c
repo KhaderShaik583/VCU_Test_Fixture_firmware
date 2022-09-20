@@ -58,7 +58,7 @@ static status_t can_fd_if_bms_testmsg_send(uint8_t *buffer, uint16_t len, uint32
     UNUSED_PARAM(bus_id);
 
     
-    data_info.data_length = msg_id;
+    data_info.data_length = len;
     data_info.msg_id_type = FLEXCAN_MSG_ID_EXT;
     data_info.enable_brs  = false;
     data_info.fd_enable   = true;
@@ -88,30 +88,13 @@ static status_t can_fd_if_bms_testmsg_send(uint8_t *buffer, uint16_t len, uint32
     return ret;
 }
 
-status_t vcu_2_bms_can_test_msg(uint32_t bus)
+status_t vcu_2_bms_can_test_msg(uint64_t msgid)
 {
     status_t s = STATUS_SUCCESS;
     
-    uint32_t msg_id = 0U;
-    msg_id = CAN_IF_VCU_2_BMS_TEST_MSG_ID;
-    
     uint8_t dummy_buffer[64] = {"BMSCANTESTMESSAGE"};
     
-    (void)can_fd_if_bms_testmsg_send(dummy_buffer, 13U, msg_id, bus);
-    
-    return s;
-}
-
-status_t vcu_2_bms_can_test_msg_2(uint32_t msgid)
-{
-    status_t s = STATUS_SUCCESS;
-    
-    uint32_t msg_id = 0U;
-    msg_id = msgid;
-    
-    uint8_t dummy_buffer[64] = {"BMSCANTESTMESSAGE"};
-    
-    (void)can_fd_if_bms_testmsg_send(dummy_buffer, 13U, msg_id, 1);
+    (void)can_fd_if_bms_testmsg_send(dummy_buffer, 13U, msgid, 0);
     
     return s;
 }
