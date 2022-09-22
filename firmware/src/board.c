@@ -63,9 +63,12 @@
 /* Target Id, Target Iq, Id, Iq */
 #define MC_CAN_TPDO1_TID_TIQ_ID                 (0x101U)
 
+#define MC_CAN_TPDO_TEST_MSG_ID                 (0x108U)
+#define DBA_CAN_TEST_MSG_ID                 	(0x124U)
+
 /* Cutback Gain, throttle input voltage, velocity */
 #define MC_CAN_TPDO2_CB_THRV_VEL                (0x102U)
-#define MC_MAX_TPDOS                            (2U)
+#define MC_MAX_TPDOS                            (3U)
 #define MOT_CONT_CAN_IF_MBX_FILTER         (0x500U)  
 #define MOT_CONT_CAN_IF_GBL_MBX_FILTER     (0x500U)
 
@@ -87,14 +90,15 @@ static edma_chn_state_t dma_ctrl_chn1_state;
 /* 
     Messages incoming on this bus.
 */
-#define ABS_MAX_MSGS    (6U)
+#define ABS_MAX_MSGS    (7U)
 static const uint16_t abs_msg_ids[ABS_MAX_MSGS] = {
     DISP_CAN_ALS_MSG_ID,
     DISP_CAN_MAG_MSG_ID,
     ABS_CAN_SPEED_INFO_MSG_ID,
     CHG_MSG_CHG_BOOT_NTF_ID,
     CHG_MSG_CHRG_FAULTS_ID,			
-    CAN_MSG_ANALOG_MEAS_ID
+    CAN_MSG_ANALOG_MEAS_ID,
+	DBA_CAN_TEST_MSG_ID
 };
 
 /* 
@@ -104,6 +108,7 @@ static const uint16_t abs_msg_ids[ABS_MAX_MSGS] = {
 static const uint16_t mc_tpdo_ids[MC_MAX_TPDOS] = {
     MC_CAN_TPDO1_TID_TIQ_ID,
     MC_CAN_TPDO2_CB_THRV_VEL,
+	MC_CAN_TPDO_TEST_MSG_ID
 
 };
 

@@ -54,9 +54,9 @@ int32_t main(void)
 //#endif
 //    
 //    (void)osif_kernel_start();
-	vcu_2_bms_can_test_msg(0x123U);
-	vcu_2_mc_send_rpdo_msg(0x789U);
-	vcu_2_dba_send_test_msg(0x456U);
+	vcu_2_bms_can_test_msg(0x946U);
+	vcu_2_mc_send_rpdo_msg(0x108U);
+	vcu_2_dba_send_test_msg(0x124U);
     for(;; )
 	{
 		

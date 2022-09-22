@@ -300,7 +300,7 @@ static void can_if_dba_receive_nb(void)
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
 				vcu_2_dba_send_test_msg(dba_recv_buff.msgId);
 			
-				if(dba_recv_buff.msgId == 0x150U)
+				if(dba_recv_buff.msgId == 0x200U)
 				{
 					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 64);
 				}
@@ -340,7 +340,7 @@ static void can_if_mc_receive_nb(void)
                 /* Process Data */
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
 				vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
-				if(mc_recv_buff.msgId == 0x200U)
+				if(mc_recv_buff.msgId == 0x400U)
 				{
 					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 64);
 				}

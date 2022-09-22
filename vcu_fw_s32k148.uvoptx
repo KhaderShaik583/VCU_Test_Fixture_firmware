@@ -157,34 +157,18 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>752</LineNumber>
+          <LineNumber>41</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>303714</Address>
+          <Address>314664</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\firmware\src\board.c</Filename>
+          <Filename>.\vcu_can_comm_test\Uart.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\vcu_fixture_fx\firmware/src/board.c\752</Expression>
-        </Bp>
-        <Bp>
-          <Number>1</Number>
-          <Type>0</Type>
-          <LineNumber>63</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>306848</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\firmware\src\main.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\vcu_fixture_fx\firmware/src/main.c\63</Expression>
+          <Expression>\\vcu_fixture_fx\vcu_can_comm_test/Uart.c\41</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -225,6 +209,11 @@
         </Ww>
         <Ww>
           <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>ret</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
           <WinNumber>1</WinNumber>
           <ItemText>ret</ItemText>
         </Ww>
