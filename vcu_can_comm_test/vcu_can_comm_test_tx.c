@@ -125,6 +125,47 @@ static status_t can_fd_if_bms_testmsg_send(uint8_t *buffer, uint16_t len, uint32
     return ret;
 }
 
+static status_t can_fd_if_bms_testmsg_send_afterdecryption(uint8_t *buffer, uint16_t len, uint32_t msg_id, uint32_t bus_id)
+{
+    status_t ret;
+    flexcan_data_info_t data_info;
+    
+#ifndef USE_FEATURE_CAN_BUS_ENCRYPTION
+    uint8_t can_encrypted_buffer[CAN_FD_MAX_LEN];
+    uint16_t enc_len = 0U;
+    
+    UNUSED_PARAM(bus_id);
+
+    (void)can_fd_encrypt(buffer, len, can_encrypted_buffer, &enc_len);
+    data_info.data_length = enc_len;
+    data_info.msg_id_type = FLEXCAN_MSG_ID_EXT;
+    data_info.enable_brs  = false;
+    data_info.fd_enable   = true;
+    data_info.fd_padding  = 0U;
+    data_info.is_remote   = false;
+    
+    /* Configure TX message buffer with index TX_MSG_ID and TX_MAILBOX*/
+    (void)FLEXCAN_DRV_ConfigTxMb(CAN_IF_BMS, CAN_BMS_TX_MAILBOX, &data_info, msg_id);
+
+    /* Execute send non-blocking */
+    ret = FLEXCAN_DRV_Send(CAN_IF_BMS, CAN_BMS_TX_MAILBOX, &data_info, msg_id, can_encrypted_buffer);
+#else
+    data_info.data_length = len,
+    data_info.msg_id_type = FLEXCAN_MSG_ID_EXT,
+    data_info.enable_brs  = false,
+    data_info.fd_enable   = true,
+    data_info.fd_padding  = 0U;
+    data_info.is_remote   = false;
+    
+    /* Configure TX message buffer with index TX_MSG_ID and TX_MAILBOX*/
+    FLEXCAN_DRV_ConfigTxMb(CAN_IF_BMS, CAN_BMS_TX_MAILBOX, &data_info, msg_id);
+
+    /* Execute send non-blocking */
+    ret = FLEXCAN_DRV_Send(CAN_IF_BMS, CAN_BMS_TX_MAILBOX, &data_info, msg_id, buffer);
+#endif /* USE_FEATURE_CAN_BUS_ENCRYPTION */
+
+    return ret;
+}
 //status_t vcu_2_bms_can_test_msg(uint32_t msgid)
 //{
 //    status_t s = STATUS_SUCCESS;
@@ -148,6 +189,22 @@ status_t vcu_2_bms_can_test_msg(uint32_t msgid)
     /* Increment data length by CANFD_MSG_SIG_LEN + data length */
     
     (void)can_fd_if_bms_testmsg_send(msg_sig, CANFD_MSG_SIG_LEN, emsg_id, 0);
+    
+    return s;
+}
+
+status_t vcu_2_bms_can_test_msg_reply(uint32_t msgid, const uint8_t *msg_sig)
+{
+    status_t s = STATUS_SUCCESS;
+     volatile uint32_t emsg_id = 0U;
+	uint8_t smsg_sig[8];	
+//	    emsg_id |= slot_to_msg_id_map[0] | ((uint32_t)msgid << CAN_MSG_MSG_ID_SHIFT) |   \
+//              (0 << CAN_MSG_PRIO_SHIFT);
+	    /* Add message specific data other than signature */
+    /* Increment data length by CANFD_MSG_SIG_LEN + data length */
+	
+    memcpy(&smsg_sig,msg_sig,sizeof(smsg_sig));
+    (void)can_fd_if_bms_testmsg_send(smsg_sig, CANFD_MSG_SIG_LEN, msgid, 0);
     
     return s;
 }

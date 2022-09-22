@@ -36,6 +36,10 @@
 #include "vcu_can_comm_test_tx.h"
 #include "lpuart_driver.h"
 
+#ifdef USE_SW_AES_MOD
+#include "aes_sw.h"
+#endif
+
 #define TS_HOUR_MASK    (0x0000001fU)
 #define TS_MINUTE_MASK  (0x000007e0U)
 #define TS_SECOND_MASK  (0x0001f800U)
@@ -114,26 +118,6 @@ static uint8_t bms_tx_buffer[64] = "BMS CAN TEST PASS \n\r";
 
 static uint8_t mc_tx_buffer1[64] = "MC CAN TEST FAIL \n\r";
 
-//void bms_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
-//{
-//    UNUSED_VAR(flexcanState);
-//    UNUSED_VAR(instance);
-//    UNUSED_VAR(idx);
-//   
-//    if(eventType == FLEXCAN_EVENT_DMA_COMPLETE)
-//    {
-//        bms_dma_complete = 1U;
-//    }
-//    else if(eventType == FLEXCAN_EVENT_DMA_ERROR)
-//    {
-//        FLEXCAN_DRV_AbortTransfer(CAN_IF_BMS, CAN_BMS_RX_MAILBOX);
-//        bms_rx_state = CAN_SM_STATE_START_RX;
-//    }
-//    else
-//    {
-//        __NOP();
-//    }
-//}
 
 void dba1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
 {
@@ -212,7 +196,7 @@ static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
                 
                 if(bms_rx_buff[bus].dataLen > 0U)
                 {
-#ifndef USE_FEATURE_CAN_BUS_ENCRYPTION
+#ifdef USE_FEATURE_CAN_BUS_ENCRYPTION
                                         
                     /* If its a PC message ID ignore and discard */
                     msgid = (bms_rx_buff[bus].msgId >> CAN_MSG_MSG_ID_SHIFT) & 0x0000FFFU;
@@ -238,8 +222,9 @@ static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 #else
                             aes_sw_dec(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
 #endif /* USE_SW_AES_MOD */
+							vcu_2_bms_can_test_msg_reply(bms_rx_buff[bus].msgId, dec_fd_rx_buffer);
                             /* Process Data */
-                            (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
+                           // (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
                         }    
                     }
 #else

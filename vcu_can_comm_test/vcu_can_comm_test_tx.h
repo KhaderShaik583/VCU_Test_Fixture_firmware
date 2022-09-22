@@ -34,4 +34,5 @@ status_t vcu_2_bms_can_test_msg(uint32_t msgid);
 status_t vcu_2_mc_send_rpdo_msg(uint32_t msg_Id);
 status_t vcu_2_dba_send_test_msg(uint32_t msg_Id);
 status_t vcu_2_bms_can_test_msg_2(uint32_t msgid);
+status_t vcu_2_bms_can_test_msg_reply(uint32_t msgid, const uint8_t *msg_sig);
 #endif /* VCU_CAN_COMM_TEST_TX */

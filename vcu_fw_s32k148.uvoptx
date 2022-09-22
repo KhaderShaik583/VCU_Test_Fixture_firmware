@@ -159,7 +159,7 @@
           <Type>0</Type>
           <LineNumber>41</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>314664</Address>
+          <Address>317368</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -169,6 +169,22 @@
           <Filename>.\vcu_can_comm_test\Uart.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\vcu_fixture_fx\vcu_can_comm_test/Uart.c\41</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>245</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>306202</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>.\vcu_can_comm_test\vcu_can_comm_test_rx.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\vcu_fixture_fx\vcu_can_comm_test/vcu_can_comm_test_rx.c\245</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -217,6 +233,26 @@
           <WinNumber>1</WinNumber>
           <ItemText>ret</ItemText>
         </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>smsg_sig</ItemText>
+        </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>dec_fd_rx_buffer</ItemText>
+        </Ww>
+        <Ww>
+          <count>11</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>msg_sig</ItemText>
+        </Ww>
+        <Ww>
+          <count>12</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>smsg_sig</ItemText>
+        </Ww>
       </WatchWindow1>
       <WatchWindow2>
         <Ww>
@@ -234,7 +270,7 @@
         <Mm>
           <WinNumber>1</WinNumber>
           <SubType>0</SubType>
-          <ItemText>0x1fff4a34</ItemText>
+          <ItemText>0x200008C1</ItemText>
           <AccSizeX>0</AccSizeX>
         </Mm>
       </MemoryWindow1>
