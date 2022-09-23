@@ -35,17 +35,19 @@
 #else
 #include "init_task_desk.h"
 #endif
+static uint8_t tx_buffer0[64] = "UART0 Test Message \n\r";
+static uint8_t tx_buffer1[64] = "UART1 Test Message \n\r";
 
 int32_t main(void)
 {
     (void)board_init();
     
-//    __DMB();
+    __DMB();
 //    
 //    (void)osif_kernel_init();
 //    
-//    __DSB();
-//    __ISB();
+    __DSB();
+    __ISB();
 
 //#ifndef USE_FEATURE_VCU_ON_DESK
 //    init_task_create();
@@ -57,10 +59,14 @@ int32_t main(void)
 	vcu_2_bms_can_test_msg(0x946U);
 	vcu_2_mc_send_rpdo_msg(0x108U);
 	vcu_2_dba_send_test_msg(0x124U);
+	
     for(;; )
 	{
 		
-		uart_check();
+		//uart_check();
+		dbg_printf("%s\n\r", "hello");
+//		LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer0, 64, 100);
+		
 		can_fd_bms_receive_test();
 		can_dba_receive_test();
 		can_mc_receive_test();

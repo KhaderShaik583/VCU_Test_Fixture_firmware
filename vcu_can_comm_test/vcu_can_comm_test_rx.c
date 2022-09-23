@@ -223,6 +223,10 @@ static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
                             aes_sw_dec(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
 #endif /* USE_SW_AES_MOD */
 							vcu_2_bms_can_test_msg_reply(bms_rx_buff[bus].msgId, dec_fd_rx_buffer);
+								if(msgid == 0x946U)
+								{
+									LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 64);
+								}
                             /* Process Data */
                            // (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
                         }    
@@ -232,10 +236,7 @@ static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 //                     extern void can_fd_validate(uint8_t *buffer, uint16_t len);
 //                     can_fd_validate(bms_rx_buff.data, bms_rx_buff.dataLen);
 					 vcu_2_bms_can_test_msg(bms_rx_buff[bus].msgId);
-					 if(bms_rx_buff[bus].msgId == 0x420000U)
-						{
-							LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 64);
-						}
+
 #endif /* USE_FEATURE_CAN_BUS_ENCRYPTION */
 
                     /* RX Success on current bus. Go to CANFD_STATE_INIT_RX to start new RX */
@@ -285,7 +286,7 @@ static void can_if_dba_receive_nb(void)
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
 				vcu_2_dba_send_test_msg(dba_recv_buff.msgId);
 			
-				if(dba_recv_buff.msgId == 0x200U)
+				if(dba_recv_buff.msgId == 0x124U)
 				{
 					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 64);
 				}
@@ -325,15 +326,20 @@ static void can_if_mc_receive_nb(void)
                 /* Process Data */
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
 				vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
-				if(mc_recv_buff.msgId == 0x400U)
+				if(mc_recv_buff.msgId == 0x108U)
 				{
 					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 64);
+				}
+				else
+				{
+					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer1, 64);
 				}
                 mc_rx_state = CAN_SM_STATE_START_RX;
             }
             else
             {
                 mc_rx_state = CAN_SM_STATE_WAIT_RX;
+
             }
             break;
             

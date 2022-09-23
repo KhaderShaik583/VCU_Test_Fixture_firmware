@@ -46,6 +46,12 @@ static const uint32_t slot_to_msg_id_map[MAX_CANFD_LOGICAL_INTERFACES] = {
         /* PORT 0 */ 0x200000U
 };
 
+static const uint32_t outgoing_slot_to_msg_id_map[3] = {
+        /* SLOT 0 */ 0x400000U,
+        /* SLOT 1 */ 0x200000U,
+        /* SLOT 2 */ 0x800000U,
+};
+
 static uint8_t fw_msg_sig[CANFD_MSG_SIG_LEN + 56U];
 static volatile uint32_t mscm_ocmdr0_save = 0U;
 static volatile uint32_t mscm_ocmdr1_save = 0U;
@@ -183,12 +189,11 @@ status_t vcu_2_bms_can_test_msg(uint32_t msgid)
      volatile uint32_t emsg_id = 0U;
     uint8_t msg_sig[CANFD_MSG_SIG_LEN] = {0x25U, 0x9cU, 0x1fU, 0x57U, 0x93U, 0xacU, 0x8bU, 0x92U};
 	
-	    emsg_id |= slot_to_msg_id_map[0] | ((uint32_t)msgid << CAN_MSG_MSG_ID_SHIFT) |   \
-              (0 << CAN_MSG_PRIO_SHIFT);
+	    msgid = outgoing_slot_to_msg_id_map[0] | ((uint32_t)msgid << CAN_MSG_MSG_ID_SHIFT);   
 	    /* Add message specific data other than signature */
     /* Increment data length by CANFD_MSG_SIG_LEN + data length */
     
-    (void)can_fd_if_bms_testmsg_send(msg_sig, CANFD_MSG_SIG_LEN, emsg_id, 0);
+    (void)can_fd_if_bms_testmsg_send(msg_sig, CANFD_MSG_SIG_LEN, msgid, 0);
     
     return s;
 }
