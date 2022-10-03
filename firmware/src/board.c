@@ -55,6 +55,7 @@
 #include "vcu_can_comm_test_rx.h"
 #include "mc_task.h"
 #include "bms.h"
+#include "Uart.h"
 
 #define EDMA_CHN0_NUMBER                    (0U)
 #define EDMA_CHN1_NUMBER                    (1U)
@@ -154,7 +155,7 @@ static status_t can_if_edma_init(void)
     return ret;
 }
 
-static void can_fd_if_bms_init(void)
+static void can_fd_if_Test_bms_init(void)
 {
     flexcan_data_info_t data_info =
     {
@@ -326,7 +327,7 @@ static status_t can_if_bms_init(void)
     
     ret += FLEXCAN_DRV_Init(CAN_IF_BMS, &can_bcu_state, &can_bms_cfg);
     
-    can_fd_if_bms_init();
+    can_fd_if_Test_bms_init();
     
 	INT_SYS_SetPriority(CAN1_ORed_0_15_MB_IRQn, 2U);
 	INT_SYS_SetPriority(CAN1_ORed_16_31_MB_IRQn, 2U);
@@ -486,7 +487,7 @@ static void rtc_pac1921_i2c_init(void)
     LPI2C_Set_MasterTimeoutConfig(RTC_IF_INST, LPI2C_TIMEOUT_SCL_OR_SDA);
     LPI2C_Set_MasterPinLowTimeout(RTC_IF_INST, 5U);
     
-    INT_SYS_SetPriority(LPI2C0_Master_IRQn, 0U);
+//    INT_SYS_SetPriority(LPI2C0_Master_IRQn, 0U);
 }
 
 static void enable_port_clocks(void)
@@ -677,6 +678,11 @@ msdi_status_t init_CD10x0(void)
     return status;
 }
 
+/**
+ * @brief SYSTICK initialization with a tick period of 10 ms
+ * 
+ */
+
 #ifdef USE_FEATURE_FAST_TURN_ON
 static void board_pwr_on(void)
 {
@@ -712,6 +718,8 @@ status_t board_init(void)
     */
     
     enable_port_clocks();
+	
+//	init_systick();
     
 #ifdef USE_FEATURE_FAST_TURN_ON
     /* Turn ON EC25, i.MX */
@@ -738,7 +746,7 @@ status_t board_init(void)
 	init_status += can_if_mc_init();
     init_status += can_if_abs_init();
     init_status += can_if_bms_init();
-//    init_status += ec25_uart_config();
+    init_status += ec25_uart_config();
     DEV_ASSERT(init_status == STATUS_SUCCESS);
     
 	dba_config_can();
@@ -749,10 +757,10 @@ status_t board_init(void)
     rtc_pac1921_i2c_init();
 	loadswitch_adc_init();
     
-#ifndef USE_DEBUG_PRINTS
+#ifdef USE_DEBUG_PRINTS
     DbgConsole_Init(SYS_DEBUG_LPUART_INTERFACE, SYS_DEBUG_LPUART_BAUD, DEBUG_CONSOLE_DEVICE_TYPE_LPUART);
 #endif
-
+//	LPUART_DRV_InstallRxCallback(SYS_DEBUG_LPUART_INTERFACE,ThisIsMyRXCallback,NULL);
     drv_led_init();
     bcm_horn_diag_en();
    

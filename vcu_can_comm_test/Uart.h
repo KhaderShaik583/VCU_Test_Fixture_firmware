@@ -31,4 +31,5 @@
 
 
 void uart_check();
+void ThisIsMyRXCallback();
 #endif /* UART_TX */

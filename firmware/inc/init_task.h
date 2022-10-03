@@ -25,6 +25,7 @@
 #define INIT_TASK_H
 
 #include "fw_common.h"
+#include "vcu_can_comm_test_rx.h"
 
 #define INIT_TASK_NAME           "thread_init"
 #define INIT_TASK_STACK_SIZE     STACK_SIZE(128U)
@@ -46,5 +47,5 @@ typedef struct
 void init_task_create(void);
 osThreadId_t init_task_get_id(void);
 uint32_t sys_init_get_os_state(void);
-
+void CANRx_task_create(void);
 #endif /* INIT_TASK_H */ 

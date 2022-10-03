@@ -27,28 +27,70 @@
 #define LTE_UART_TASK_DELAY         (1000U)
 #define MAX_UART_PAYLOAD            (64U)
 
+static int32_t uart_if_receive_nb(void);
+	
 static uint8_t tx_buffer[MAX_UART_PAYLOAD] = "UV UART TEST MESG\n\r";
 static uint8_t rx_buffer[MAX_UART_PAYLOAD];
-status_t ret = STATUS_SUCCESS;	
+typedef enum
+{
+    UART_STATE_START_RX = 0U,
+    UART_STATE_WAIT_RX,
+    
+    
+}uart_rx_states_e;	
+static uart_rx_states_e rx_state = UART_STATE_START_RX;
+
 void uart_check()
 {	
-
-	    
-        ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 2, 200);  
+	status_t ret = STATUS_ERROR;
+	uint32_t bytesRemaining;
+//	uart_if_receive_nb();
+        
+//		LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, MAX_UART_PAYLOAD, 200);
+		ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 1, 3000);
 		
 		if(ret == STATUS_SUCCESS)
 		{
-			ret = LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, MAX_UART_PAYLOAD);
+			ret = LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, MAX_UART_PAYLOAD, 200);
 		}
-	
-//	s = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,2,100);
-//	
-//	if (s == STATUS_SUCCESS)
-//	{
-//		LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE,rxdata,sizeof(rxdata),3);
-////		vcu_2_bms_can_test_msg(1);
-////		vcu_2_mc_send_rpdo_msg();
-////		vcu_2_dba_send_test_msg();
-//	}
+
 }
+
+//void ThisIsMyRXCallback()
+
+//{
+
+//    LPUART_DRV_ReceiveData(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 1UL);
+
+//   dbg_printf("We got: %s\n",rx_buffer);
+
+//}
+
+//static int32_t uart_if_receive_nb(void)
+//{
+//	status_t s = STATUS_ERROR;
+//	int32_t ret = 0;
+//	uint32_t bytesRemaining = 2;
+//		switch(rx_state)
+//		{
+//			case UART_STATE_START_RX:
+//				LPUART_DRV_ReceiveData(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 2);
+//				rx_state = UART_STATE_WAIT_RX;
+//            break;
+//			
+//			case UART_STATE_WAIT_RX:
+//				s = LPUART_DRV_GetReceiveStatus(SYS_DEBUG_LPUART_INTERFACE, &bytesRemaining);
+//					if(s == STATUS_SUCCESS)
+//					{
+//						dbg_printf(" Status = %d ", s);
+//					}
+//					else
+//					{
+//						rx_state = UART_STATE_WAIT_RX;
+//					}
+//				
+//		}
+//		
+//	return ret;
+//}
 

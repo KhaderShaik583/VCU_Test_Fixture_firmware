@@ -4069,7 +4069,7 @@
       <TargetName>VCU_DESK_MODE</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pArmCC>6180000::V6.18::ARMCLANG</pArmCC>
+      <pArmCC>6140000::V6.14::ARMCLANG</pArmCC>
       <pCCUsed>6140000::V6.14::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>

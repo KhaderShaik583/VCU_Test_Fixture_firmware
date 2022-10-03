@@ -17,7 +17,7 @@
  * Ultraviolette Automotive Pvt. Ltd.
  * 
  *
- * Author : Rishi F. [011]
+ * Author : Khader S. [088]
  *
  */
  
@@ -162,7 +162,7 @@ void mc1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t
 }
 
 
-static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
+int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 {
     int32_t ret = 0;
     status_t s;
@@ -222,11 +222,12 @@ static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 #else
                             aes_sw_dec(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
 #endif /* USE_SW_AES_MOD */
-							vcu_2_bms_can_test_msg_reply(bms_rx_buff[bus].msgId, dec_fd_rx_buffer);
 								if(msgid == 0x946U)
 								{
-									LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 64);
+									LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 20, 200);
 								}
+//								vcu_2_bms_can_test_msg_reply(bms_rx_buff[bus].msgId, dec_fd_rx_buffer);
+
                             /* Process Data */
                            // (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
                         }    
@@ -268,7 +269,7 @@ static int32_t can_fd_bms_receive_test_nb(uint32_t bus)
  * CAN_SM_STATE_START_RX :Start a RX operation on the RX mailbox.
  * CAN_FD_STATE_WAIT_RX - Wait for data to arrive on the mailbox without blocking.
  */
-static void can_if_dba_receive_nb(void)
+void can_if_dba_receive_nb(void)
 {
 	switch(dba_rx_state)
     {
@@ -284,7 +285,7 @@ static void can_if_dba_receive_nb(void)
                 
                 /* Process Data */
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
-				vcu_2_dba_send_test_msg(dba_recv_buff.msgId);
+				//vcu_2_dba_send_test_msg(dba_recv_buff.msgId);
 			
 				if(dba_recv_buff.msgId == 0x124U)
 				{
@@ -309,7 +310,7 @@ static void can_if_dba_receive_nb(void)
  * CAN_SM_STATE_START_RX :Start a RX operation on the RX mailbox.
  * CAN_FD_STATE_WAIT_RX - Wait for data to arrive on the mailbox without blocking.
  */
-static void can_if_mc_receive_nb(void)
+void can_if_mc_receive_nb(void)
 {
 	switch(mc_rx_state)
     {
@@ -325,14 +326,10 @@ static void can_if_mc_receive_nb(void)
                 
                 /* Process Data */
                // (void)process_can_data(vcu_rx_buff.data, &vcu_rx_buff.dataLen, vcu_rx_buff.msgId);
-				vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
+				//vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
 				if(mc_recv_buff.msgId == 0x108U)
 				{
 					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 64);
-				}
-				else
-				{
-					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer1, 64);
 				}
                 mc_rx_state = CAN_SM_STATE_START_RX;
             }

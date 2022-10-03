@@ -52,6 +52,10 @@
 #include "imu.h"
 #include "can_messenger_rx.h"
 #include "wdog_hw_access.h"
+
+#include "vcu_can_comm_test_tx.h"
+
+#include "lpuart_driver.h"
 #ifdef USE_FEATURE_WDT
 #include "wdt_task.h" 
 #endif
@@ -70,6 +74,11 @@
 #define KEY_FLAG                    (0x0080U)
 #define INIT_MOTOR_PWR_ENABLE_FLAG  (0x0800U)
 #define SWIF_KEY_ON_EVENT_FLAG      (0x0020U)
+
+#define CANRx_TASK_STACK_SIZE     STACK_SIZE(128U)
+
+static uint8_t tx_buffer[MAX_UART_PAYLOAD] = "Connected \n\r";
+uint8_t rx_buffer[1] = {0x00};
 
 typedef enum
 {
@@ -91,6 +100,8 @@ uint32_t osRtxErrorNotify (uint32_t code, void *object_id);
 #ifdef USE_FEATURE_RTX_VIEWER
 __attribute__((section(".bss.os.thread.cb")))
 thread_tcb_t init_thread_tcb;
+__attribute__((section(".bss.os.thread.cb")))
+thread_tcb_t CANRx_thread_tcb;
 #else
 static thread_tcb_t init_thread_tcb;
 #endif /* USE_FEATURE_RTX_VIEWER */
@@ -101,6 +112,7 @@ static uint32_t reboot_request = 0xF0773100U;
 
 __attribute__((section("ARM_LIB_STACK")))
 static uint64_t init_thread_stk[INIT_TASK_STACK_SIZE];
+static uint64_t CANRx_thread_stk[LED_TASK_STACK_SIZE];
 
 osif_msg_queue_id_t sys_msg_queue; 
 static osif_timer_id_t init_sm_key_state_timer;
@@ -121,6 +133,18 @@ static const thread_attrs_t init_attr = {
     sizeof(init_thread_tcb),
     &init_thread_stk[0],
     INIT_TASK_STACK_SIZE * sizeof(uint64_t),
+    osPriorityNormal,
+    0U,
+    0U    
+};
+
+static const thread_attrs_t CANRx_attr = {
+    "thread_CANRx",
+    osThreadDetached,
+    &CANRx_thread_tcb,
+    sizeof(CANRx_thread_tcb),
+    &CANRx_thread_stk[0],
+    CANRx_TASK_STACK_SIZE * sizeof(uint64_t),
     osPriorityNormal,
     0U,
     0U    
@@ -804,54 +828,79 @@ __NO_RETURN static void sys_init_task(void *arg)
     
     UNUSED_PARAM(arg);
     
-    init_sm_pre_init();
-
+//    init_sm_pre_init();
+	
+	uint8_t rx_buffer[1] = {0x00};
+	
+	LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, MAX_UART_PAYLOAD, 200);
+	status_t ret = STATUS_ERROR;
+	
+	
+//	CANRx_task_create();
     for(;; )
-    {        
-        switch(vcu_state)
-        {
-            case VCU_STATE_INIT:
-                init_sm_vcu_state_init();
-                break;
-            
-            case VCU_STATE_EVAL_KEY: 
-                init_sm_vcu_state_eval_key();
-                break;
-                    
-            case VCU_STATE_WAIT_KEY:
-                init_sm_vcu_state_wait_key();
-                break;
-                
-            case VCU_STATE_RUN_TASKS:
-                init_sm_vcu_state_run_tasks();                            
-                break;
-            
-            case VCU_STATE_IDLE:
-                init_sm_vcu_state_idle();
-                if(STATUS_SUCCESS == osif_msg_queue_recv(sys_msg_queue, &mq, NULL, 1U))
-                {
-                    process_sys_queue(mq);
-                }
-                break;
-                
-            case VCU_STATE_POST_PWR_OFF:
-                init_sm_vcu_post_pwr_off();
-                break;
-            
-            case VCU_STATE_POST_PWR_OFF_WAIT:
-                init_sm_vcu_post_pwr_off_wait();
-                break;
-                
-            case VCU_STATE_START_PWR_OFF_SEQ: 
-                init_sm_vcu_state_start_pwr_off();
-                break;
-
-            default:
-                init_sm_undefined_state();
-                break;
-        }
+    {    
+		can_fd_bms_receive_test();
+		can_dba_receive_test();
+		can_mc_receive_test();	
+        
+		ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 1, 3000);
+		
+		if(ret == STATUS_SUCCESS)
+		{
+			switch(rx_buffer[0])
+			{
+				case 0x01:
+						vcu_2_bms_can_test_msg(0x946U);
+						memset(rx_buffer, 0, sizeof(rx_buffer));
+						break;
+				case 0x02:
+						vcu_2_mc_send_rpdo_msg(0x108U);
+						memset(rx_buffer, 0, sizeof(rx_buffer));
+						break;
+				case 0x03:
+						vcu_2_dba_send_test_msg(0x124U);
+						memset(rx_buffer, 0, sizeof(rx_buffer));
+						break;
+				default:
+					__NOP();
+						break;
+			}
+			
+		}
     }
+
 }
+
+//__NO_RETURN static void CANRx_task(void *arg) 
+//{
+//    sys_msg_queue_obj_t mq;
+//    
+//    UNUSED_PARAM(arg);
+//   
+//	
+//    for(;; )
+//    {    
+//		can_fd_bms_receive_test();
+//		can_dba_receive_test();
+//		can_mc_receive_test();	
+//        
+//    }
+
+//}
+
+//void CANRx_task_create(void)
+//{
+//    uint32_t param = NULL;
+
+//    sys_msg_queue = osif_msg_queue_create(INIT_TASK_MSG_QUEUE_MAX_OBJS, sizeof(sys_msg_queue_obj_t));
+//    DEV_ASSERT(sys_msg_queue != NULL);
+//    
+//    thread_init = osif_thread_create(CANRx_task, &param, &CANRx_attr);
+//    DEV_ASSERT(thread_init != NULL);
+//    
+//    init_sm_key_state_timer = osif_timer_create(init_sm_key_state_timer_handler, osTimerOnce, NULL, NULL);
+//    DEV_ASSERT(init_sm_key_state_timer != NULL); 
+//}
 
 void init_task_create(void)
 {
