@@ -8219,8 +8219,8 @@ Section Cross References
     board.o(.text.board_init) refers to board.o(.text.can_if_bms_init) for can_if_bms_init
     board.o(.text.board_init) refers to board.o(.text.ec25_uart_config) for ec25_uart_config
     board.o(.text.board_init) refers to board.o(.text.dev_assert) for dev_assert
-    board.o(.text.board_init) refers to board.o(.text.dba_config_can) for dba_config_can
-    board.o(.text.board_init) refers to board.o(.text.mc_config_can_mbx_fifo) for mc_config_can_mbx_fifo
+    board.o(.text.board_init) refers to board.o(.text.dba_config_Test_can) for dba_config_Test_can
+    board.o(.text.board_init) refers to board.o(.text.mc_config_Test_can_mbx_fifo) for mc_config_Test_can_mbx_fifo
     board.o(.text.board_init) refers to board.o(.text.sys_lpspi2_init) for sys_lpspi2_init
     board.o(.text.board_init) refers to board.o(.text.sys_lpspi0_init) for sys_lpspi0_init
     board.o(.text.board_init) refers to board.o(.text.sys_lpspi1_init) for sys_lpspi1_init
@@ -8277,28 +8277,28 @@ Section Cross References
     board.o(.text.ec25_uart_config) refers to lpuart_driver.o(.text.LPUART_DRV_Init) for LPUART_DRV_Init
     board.o(.ARM.exidx.text.ec25_uart_config) refers to board.o(.text.ec25_uart_config) for [Anonymous Symbol]
     board.o(.ARM.exidx.text.dev_assert) refers to board.o(.text.dev_assert) for [Anonymous Symbol]
-    board.o(.text.dba_config_can) refers to board.o(.rodata..L__const.dba_config_can.data_info) for .L__const.dba_config_can.data_info
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxMb) for FLEXCAN_DRV_ConfigRxMb
-    board.o(.text.dba_config_can) refers to board.o(.rodata.abs_msg_ids) for abs_msg_ids
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxIndividualMask) for FLEXCAN_DRV_SetRxIndividualMask
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMbGlobalMask) for FLEXCAN_DRV_SetRxMbGlobalMask
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxFifo) for FLEXCAN_DRV_ConfigRxFifo
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMaskType) for FLEXCAN_DRV_SetRxMaskType
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxFifoGlobalMask) for FLEXCAN_DRV_SetRxFifoGlobalMask
-    board.o(.text.dba_config_can) refers to vcu_can_comm_test_rx.o(.text.dba1_can_callback) for dba1_can_callback
-    board.o(.text.dba_config_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_InstallEventCallback) for FLEXCAN_DRV_InstallEventCallback
-    board.o(.ARM.exidx.text.dba_config_can) refers to board.o(.text.dba_config_can) for [Anonymous Symbol]
-    board.o(.text.mc_config_can_mbx_fifo) refers to board.o(.rodata..L__const.mc_config_can_mbx_fifo.data_info) for .L__const.mc_config_can_mbx_fifo.data_info
-    board.o(.text.mc_config_can_mbx_fifo) refers to board.o(.rodata.mc_tpdo_ids) for mc_tpdo_ids
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxMb) for FLEXCAN_DRV_ConfigRxMb
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxIndividualMask) for FLEXCAN_DRV_SetRxIndividualMask
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMbGlobalMask) for FLEXCAN_DRV_SetRxMbGlobalMask
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxFifo) for FLEXCAN_DRV_ConfigRxFifo
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMaskType) for FLEXCAN_DRV_SetRxMaskType
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxFifoGlobalMask) for FLEXCAN_DRV_SetRxFifoGlobalMask
-    board.o(.text.mc_config_can_mbx_fifo) refers to vcu_can_comm_test_rx.o(.text.mc1_can_callback) for mc1_can_callback
-    board.o(.text.mc_config_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_InstallEventCallback) for FLEXCAN_DRV_InstallEventCallback
-    board.o(.ARM.exidx.text.mc_config_can_mbx_fifo) refers to board.o(.text.mc_config_can_mbx_fifo) for [Anonymous Symbol]
+    board.o(.text.dba_config_Test_can) refers to board.o(.rodata..L__const.dba_config_Test_can.data_info) for .L__const.dba_config_Test_can.data_info
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxMb) for FLEXCAN_DRV_ConfigRxMb
+    board.o(.text.dba_config_Test_can) refers to board.o(.rodata.abs_msg_ids) for abs_msg_ids
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxIndividualMask) for FLEXCAN_DRV_SetRxIndividualMask
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMbGlobalMask) for FLEXCAN_DRV_SetRxMbGlobalMask
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxFifo) for FLEXCAN_DRV_ConfigRxFifo
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMaskType) for FLEXCAN_DRV_SetRxMaskType
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxFifoGlobalMask) for FLEXCAN_DRV_SetRxFifoGlobalMask
+    board.o(.text.dba_config_Test_can) refers to vcu_can_comm_test_rx.o(.text.dba1_can_callback) for dba1_can_callback
+    board.o(.text.dba_config_Test_can) refers to flexcan_driver.o(.text.FLEXCAN_DRV_InstallEventCallback) for FLEXCAN_DRV_InstallEventCallback
+    board.o(.ARM.exidx.text.dba_config_Test_can) refers to board.o(.text.dba_config_Test_can) for [Anonymous Symbol]
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to board.o(.rodata..L__const.mc_config_Test_can_mbx_fifo.data_info) for .L__const.mc_config_Test_can_mbx_fifo.data_info
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to board.o(.rodata.mc_tpdo_ids) for mc_tpdo_ids
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxMb) for FLEXCAN_DRV_ConfigRxMb
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxIndividualMask) for FLEXCAN_DRV_SetRxIndividualMask
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMbGlobalMask) for FLEXCAN_DRV_SetRxMbGlobalMask
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_ConfigRxFifo) for FLEXCAN_DRV_ConfigRxFifo
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxMaskType) for FLEXCAN_DRV_SetRxMaskType
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_SetRxFifoGlobalMask) for FLEXCAN_DRV_SetRxFifoGlobalMask
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to vcu_can_comm_test_rx.o(.text.mc1_can_callback) for mc1_can_callback
+    board.o(.text.mc_config_Test_can_mbx_fifo) refers to flexcan_driver.o(.text.FLEXCAN_DRV_InstallEventCallback) for FLEXCAN_DRV_InstallEventCallback
+    board.o(.ARM.exidx.text.mc_config_Test_can_mbx_fifo) refers to board.o(.text.mc_config_Test_can_mbx_fifo) for [Anonymous Symbol]
     board.o(.text.sys_lpspi2_init) refers to interrupt_manager.o(.text.INT_SYS_DisableIRQ) for INT_SYS_DisableIRQ
     board.o(.text.sys_lpspi2_init) refers to board.o(.bss.master_state_sja1105) for master_state_sja1105
     board.o(.text.sys_lpspi2_init) refers to lpspi_master_driver.o(.text.LPSPI_DRV_MasterInit) for LPSPI_DRV_MasterInit
@@ -9396,31 +9396,23 @@ Section Cross References
     bcm.o(.text.bcm_control) refers to pins_driver.o(.text.PINS_DRV_ClearPins) for PINS_DRV_ClearPins
     bcm.o(.ARM.exidx.text.bcm_control) refers to bcm.o(.text.bcm_control) for [Anonymous Symbol]
     bcm.o(.ARM.exidx.text.dev_assert) refers to bcm.o(.text.dev_assert) for [Anonymous Symbol]
-    udp_task.o(.text) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.udp_task_imx_get_id) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.udp_task_imx_get_id) refers to udp_task.o(.bss.thread_udp_imx) for thread_udp_imx
-    udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.udp_task_imx_get_id) refers to udp_task.o(.text.udp_task_imx_get_id) for [Anonymous Symbol]
-    udp_task.o(.text.udp_task_kill) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.udp_task_kill) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.udp_task_kill) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.udp_task_kill) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.udp_task_kill) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9428,16 +9420,12 @@ Section Cross References
     udp_task.o(.text.udp_task_kill) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.udp_task_kill) refers to udp_task.o(.bss.thread_udp_imx) for thread_udp_imx
     udp_task.o(.text.udp_task_kill) refers to osif.o(.text.osif_task_end) for osif_task_end
-    udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.udp_task_kill) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.udp_task_kill) refers to udp_task.o(.text.udp_task_kill) for [Anonymous Symbol]
-    udp_task.o(.text.udp_task_imx_init) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.udp_task_imx_init) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.udp_task_imx_init) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.udp_task_imx_init) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.udp_task_imx_init) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9459,31 +9447,23 @@ Section Cross References
     udp_task.o(.text.udp_task_imx_init) refers to udp_task.o(.rodata.udp_task_attr) for udp_task_attr
     udp_task.o(.text.udp_task_imx_init) refers to osif.o(.text.osif_thread_create) for osif_thread_create
     udp_task.o(.text.udp_task_imx_init) refers to udp_task.o(.bss.thread_udp_imx) for thread_udp_imx
-    udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.udp_task_imx_init) refers to udp_task.o(.text.udp_task_imx_init) for [Anonymous Symbol]
-    udp_task.o(.text.dev_assert) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.dev_assert) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.dev_assert) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.dev_assert) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.dev_assert) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.dev_assert) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.dev_assert) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.dev_assert) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.dev_assert) refers to udp_task.o(.text.dev_assert) for [Anonymous Symbol]
-    udp_task.o(.text.link_up_timer_handler) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.link_up_timer_handler) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.link_up_timer_handler) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.link_up_timer_handler) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.link_up_timer_handler) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9494,16 +9474,12 @@ Section Cross References
     udp_task.o(.text.link_up_timer_handler) refers to udp_task.o(.bss.link_active) for link_active
     udp_task.o(.text.link_up_timer_handler) refers to udp_task.o(.bss.sim_det) for sim_det
     udp_task.o(.text.link_up_timer_handler) refers to stat.o(.text.set_status_bit) for set_status_bit
-    udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.link_up_timer_handler) refers to udp_task.o(.text.link_up_timer_handler) for [Anonymous Symbol]
-    udp_task.o(.text.ota_link_timeout_handler) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.ota_link_timeout_handler) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.ota_link_timeout_handler) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.ota_link_timeout_handler) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.ota_link_timeout_handler) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9512,16 +9488,12 @@ Section Cross References
     udp_task.o(.text.ota_link_timeout_handler) refers to udp_task.o(.data.boot_fw_upd_fail_sentinel) for boot_fw_upd_fail_sentinel
     udp_task.o(.text.ota_link_timeout_handler) refers to nvm.o(.text.nvm_write) for nvm_write
     udp_task.o(.text.ota_link_timeout_handler) refers to system_s32k148.o(.text.SystemSoftwareReset) for SystemSoftwareReset
-    udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.ota_link_timeout_handler) refers to udp_task.o(.text.ota_link_timeout_handler) for [Anonymous Symbol]
-    udp_task.o(.text.udp_task_rxtx) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.udp_task_rxtx) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.udp_task_rxtx) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.udp_task_rxtx) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.udp_task_rxtx) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9549,16 +9521,12 @@ Section Cross References
     udp_task.o(.text.udp_task_rxtx) refers to netbuf.o(.text.netbuf_delete) for netbuf_delete
     udp_task.o(.text.udp_task_rxtx) refers to udp_task.o(.text.process_udp_payload_imx) for process_udp_payload_imx
     udp_task.o(.text.udp_task_rxtx) refers to udp_task.o(.bss.link_active) for link_active
-    udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.udp_task_rxtx) refers to udp_task.o(.text.udp_task_rxtx) for [Anonymous Symbol]
-    udp_task.o(.text.udp_msg_router) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.udp_msg_router) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.udp_msg_router) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.udp_msg_router) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.udp_msg_router) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9567,16 +9535,12 @@ Section Cross References
     udp_task.o(.text.udp_msg_router) refers to netbuf.o(.text.netbuf_ref) for netbuf_ref
     udp_task.o(.text.udp_msg_router) refers to api_lib.o(.text.netconn_sendto) for netconn_sendto
     udp_task.o(.text.udp_msg_router) refers to udp_task.o(.text.dev_assert) for dev_assert
-    udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.udp_msg_router) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.udp_msg_router) refers to udp_task.o(.text.udp_msg_router) for [Anonymous Symbol]
-    udp_task.o(.text.process_udp_payload_lte) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_udp_payload_lte) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_udp_payload_lte) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_udp_payload_lte) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_udp_payload_lte) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9597,16 +9561,12 @@ Section Cross References
     udp_task.o(.text.process_udp_payload_lte) refers to udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) for process_LTE_S32_UDP_SET_TIME
     udp_task.o(.text.process_udp_payload_lte) refers to udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) for process_LTE_S32_UDP_FILE_DL_STOP
     udp_task.o(.text.process_udp_payload_lte) refers to udp_task.o(.text.process_string_cmds) for process_string_cmds
-    udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_udp_payload_lte) refers to udp_task.o(.text.process_udp_payload_lte) for [Anonymous Symbol]
-    udp_task.o(.text.process_udp_payload_imx) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_udp_payload_imx) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_udp_payload_imx) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_udp_payload_imx) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_udp_payload_imx) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9618,48 +9578,36 @@ Section Cross References
     udp_task.o(.text.process_udp_payload_imx) refers to udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) for process_IMX_S32_UDP_MSG_ABS_MODE_CTRL
     udp_task.o(.text.process_udp_payload_imx) refers to udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) for process_IMX_S32_UDP_MSG_CLU_RDY
     udp_task.o(.text.process_udp_payload_imx) refers to udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) for process_MSG_ID_TRIP_RESET_IMX_S32
-    udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_udp_payload_imx) refers to udp_task.o(.text.process_udp_payload_imx) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) refers to stat.o(.text.set_status_bit) for set_status_bit
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_START) refers to udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_START) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers to stat.o(.text.clear_status_bit) for clear_status_bit
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_UPD_STOP) refers to udp_task.o(.text.process_LTE_S32_UDP_FILE_UPD_STOP) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9689,16 +9637,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers to udp_task.o(.bss.udp_msg_queue) for udp_msg_queue
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers to udp_task.o(.bss.ota_link_timer) for ota_link_timer
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers to osif.o(.text.osif_timer_start) for osif_timer_start
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) refers to udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_START_NTF) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9721,16 +9665,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers to udp_task.o(.bss.ota_link_timer) for ota_link_timer
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers to osif.o(.text.osif_timer_stop) for osif_timer_stop
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) refers to osif.o(.text.osif_timer_start) for osif_timer_start
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL) refers to udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9758,16 +9698,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers to mc_task.o(.text.mc_factory_reset_ride_tmaps) for mc_factory_reset_ride_tmaps
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers to udp_task.o(.data.boot_fw_upd_fail_sentinel) for boot_fw_upd_fail_sentinel
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers to init_task.o(.bss.sys_msg_queue) for sys_msg_queue
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) refers to udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9775,33 +9711,21 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to udp_task.o(.bss.umsg) for umsg
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to udp_task.o(.bss.sim_det) for sim_det
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to can_messenger_rx.o(.text.bms_get_balancer_info) for bms_get_balancer_info
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to udp_task.o(.bss.udp_resp) for udp_resp
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to osif.o(.text.osif_enter_critical) for osif_enter_critical
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to nvm.o(.text.nvm_read) for nvm_read
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to version.o(.text.get_fw_max_ver) for get_fw_max_ver
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to version.o(.text.get_fw_min_ver) for get_fw_min_ver
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to version.o(.text.get_fw_date) for get_fw_date
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to version.o(.text.get_fw_timestamp) for get_fw_timestamp
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to can_messenger_rx.o(.text.bms_get_fw_version) for bms_get_fw_version
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to udp_task.o(.rodata.str1.1) for .L.str.1
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to __2snprintf.o(.text) for __2snprintf
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to udp_task.o(.bss.udp_msg_queue) for udp_msg_queue
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to rt_memclr_w.o(.text) for __aeabi_memclr4
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to nvm.o(.text.nvm_write) for nvm_write
     udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to osif.o(.text.osif_time_delay) for osif_time_delay
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) refers to udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9811,16 +9735,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers to odometer_task.o(.text.odo_get_info) for odo_get_info
     udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers to udp_task.o(.bss.udp_msg_queue) for udp_msg_queue
     udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO) refers to udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9831,16 +9751,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers to osif.o(.text.osif_enter_critical) for osif_enter_critical
     udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers to odometer_task.o(.text.odo_reset) for odo_reset
     udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_ODO_RESET) refers to udp_task.o(.text.process_LTE_S32_UDP_ODO_RESET) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9850,16 +9766,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers to stat.o(.text.get_status) for get_status
     udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers to imu.o(.bss.imu_msg_queue) for imu_msg_queue
     udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_CALIB_IMU) refers to udp_task.o(.text.process_LTE_S32_UDP_CALIB_IMU) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9870,16 +9782,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers to osif.o(.text.osif_enter_critical) for osif_enter_critical
     udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers to rtc_task.o(.text.rtc_set_date_time_nw) for rtc_set_date_time_nw
     udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_SET_TIME) refers to udp_task.o(.text.process_LTE_S32_UDP_SET_TIME) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9890,16 +9798,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers to stat.o(.text.set_status_bit) for set_status_bit
     udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers to init_task.o(.bss.sys_msg_queue) for sys_msg_queue
     udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_FILE_DL_STOP) refers to udp_task.o(.text.process_LTE_S32_UDP_FILE_DL_STOP) for [Anonymous Symbol]
-    udp_task.o(.text.process_string_cmds) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_string_cmds) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_string_cmds) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_string_cmds) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_string_cmds) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9907,7 +9811,7 @@ Section Cross References
     udp_task.o(.text.process_string_cmds) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.dev_assert) for dev_assert
     udp_task.o(.text.process_string_cmds) refers to strncmp.o(.text) for strncmp
-    udp_task.o(.text.process_string_cmds) refers to udp_task.o(.rodata.str1.1) for .L.str.10
+    udp_task.o(.text.process_string_cmds) refers to udp_task.o(.rodata.str1.1) for .L.str.9
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.process_time_cmd) for process_time_cmd
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.process_odo_rst_cmd) for process_odo_rst_cmd
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.process_imu_calibration_cmd) for process_imu_calibration_cmd
@@ -9919,16 +9823,12 @@ Section Cross References
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.process_mem_read) for process_mem_read
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.process_tamper_clr) for process_tamper_clr
     udp_task.o(.text.process_string_cmds) refers to udp_task.o(.text.process_mc_ctxt_factory_rst) for process_mc_ctxt_factory_rst
-    udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_string_cmds) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_string_cmds) refers to udp_task.o(.text.process_string_cmds) for [Anonymous Symbol]
-    udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9938,16 +9838,12 @@ Section Cross References
     udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers to udp_task.o(.bss.udp_resp) for udp_resp
     udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers to udp_task.o(.bss.udp_msg_queue) for udp_msg_queue
     udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_GET_RTC_TIME) refers to udp_task.o(.text.process_LTE_S32_UDP_GET_RTC_TIME) for [Anonymous Symbol]
-    udp_task.o(.text.ota_eth_switch_init) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.ota_eth_switch_init) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.ota_eth_switch_init) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.ota_eth_switch_init) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.ota_eth_switch_init) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9958,31 +9854,23 @@ Section Cross References
     udp_task.o(.text.ota_eth_switch_init) refers to nxp_sja1105p_spi.o(.bss.SJA1105P_gpf_spiWrite32) for SJA1105P_gpf_spiWrite32
     udp_task.o(.text.ota_eth_switch_init) refers to nxp_sja1105p_auxiliaryconfigurationunit.o(.text.SJA1105P_getProdId) for SJA1105P_getProdId
     udp_task.o(.text.ota_eth_switch_init) refers to nxp_sja1105p_config.o(.text.SJA1105P_initSwitch) for SJA1105P_initSwitch
-    udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.ota_eth_switch_init) refers to udp_task.o(.text.ota_eth_switch_init) for [Anonymous Symbol]
-    udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.__NVIC_ClearPendingIRQ) refers to udp_task.o(.text.__NVIC_ClearPendingIRQ) for [Anonymous Symbol]
-    udp_task.o(.text.process_time_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_time_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_time_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_time_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_time_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -9991,21 +9879,17 @@ Section Cross References
     udp_task.o(.text.process_time_cmd) refers to udp_task.o(.text.dev_assert) for dev_assert
     udp_task.o(.text.process_time_cmd) refers to strlen.o(.text) for strlen
     udp_task.o(.text.process_time_cmd) refers to osif.o(.text.osif_enter_critical) for osif_enter_critical
-    udp_task.o(.text.process_time_cmd) refers to udp_task.o(.rodata.str1.1) for .L.str.15
+    udp_task.o(.text.process_time_cmd) refers to udp_task.o(.rodata.str1.1) for .L.str.14
     udp_task.o(.text.process_time_cmd) refers to strtok.o(.text) for strtok
     udp_task.o(.text.process_time_cmd) refers to strtol.o(.text) for strtol
     udp_task.o(.text.process_time_cmd) refers to rtc_task.o(.text.rtc_set_date_time_nw) for rtc_set_date_time_nw
     udp_task.o(.text.process_time_cmd) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
-    udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_time_cmd) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_time_cmd) refers to udp_task.o(.text.process_time_cmd) for [Anonymous Symbol]
-    udp_task.o(.text.process_odo_rst_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_odo_rst_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_odo_rst_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_odo_rst_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_odo_rst_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10014,16 +9898,12 @@ Section Cross References
     udp_task.o(.text.process_odo_rst_cmd) refers to dba_task.o(.text.abs_is_vehicle_stationary) for abs_is_vehicle_stationary
     udp_task.o(.text.process_odo_rst_cmd) refers to stat.o(.text.get_status) for get_status
     udp_task.o(.text.process_odo_rst_cmd) refers to odometer_task.o(.text.odo_reset) for odo_reset
-    udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_odo_rst_cmd) refers to udp_task.o(.text.process_odo_rst_cmd) for [Anonymous Symbol]
-    udp_task.o(.text.process_imu_calibration_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_imu_calibration_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_imu_calibration_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_imu_calibration_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_imu_calibration_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10033,16 +9913,12 @@ Section Cross References
     udp_task.o(.text.process_imu_calibration_cmd) refers to stat.o(.text.get_status) for get_status
     udp_task.o(.text.process_imu_calibration_cmd) refers to imu.o(.bss.imu_msg_queue) for imu_msg_queue
     udp_task.o(.text.process_imu_calibration_cmd) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_imu_calibration_cmd) refers to udp_task.o(.text.process_imu_calibration_cmd) for [Anonymous Symbol]
-    udp_task.o(.text.process_torque_map_calibration_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_torque_map_calibration_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_torque_map_calibration_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_torque_map_calibration_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_torque_map_calibration_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10053,16 +9929,12 @@ Section Cross References
     udp_task.o(.text.process_torque_map_calibration_cmd) refers to mc_task.o(.text.mc_update_torque_map_signal) for mc_update_torque_map_signal
     udp_task.o(.text.process_torque_map_calibration_cmd) refers to udp_task.o(.bss.has_mc_tm_changed) for has_mc_tm_changed
     udp_task.o(.text.process_torque_map_calibration_cmd) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
-    udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_torque_map_calibration_cmd) refers to udp_task.o(.text.process_torque_map_calibration_cmd) for [Anonymous Symbol]
-    udp_task.o(.text.process_torque_map_commit_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_torque_map_commit_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_torque_map_commit_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_torque_map_commit_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_torque_map_commit_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10072,32 +9944,24 @@ Section Cross References
     udp_task.o(.text.process_torque_map_commit_cmd) refers to osif.o(.text.osif_enter_critical) for osif_enter_critical
     udp_task.o(.text.process_torque_map_commit_cmd) refers to mc_task.o(.text.mc_commit_torque_map_signal) for mc_commit_torque_map_signal
     udp_task.o(.text.process_torque_map_commit_cmd) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
-    udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_torque_map_commit_cmd) refers to udp_task.o(.text.process_torque_map_commit_cmd) for [Anonymous Symbol]
-    udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.process_torque_map_factory_rst) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_torque_map_factory_rst) refers to mc_task.o(.text.mc_factory_reset_ride_tmaps) for mc_factory_reset_ride_tmaps
-    udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst) refers to udp_task.o(.text.process_torque_map_factory_rst) for [Anonymous Symbol]
-    udp_task.o(.text.process_torque_map_read) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_torque_map_read) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_torque_map_read) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_torque_map_read) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_torque_map_read) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10107,34 +9971,25 @@ Section Cross References
     udp_task.o(.text.process_torque_map_read) refers to mc_task.o(.text.mc_read_tmap_info) for mc_read_tmap_info
     udp_task.o(.text.process_torque_map_read) refers to udp_task.o(.bss.udp_msg_queue) for udp_msg_queue
     udp_task.o(.text.process_torque_map_read) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_torque_map_read) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_torque_map_read) refers to udp_task.o(.text.process_torque_map_read) for [Anonymous Symbol]
-    udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.process_hw_rst_fuelgauge) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_hw_rst_fuelgauge) refers to osif.o(.text.osif_enter_critical) for osif_enter_critical
-    udp_task.o(.text.process_hw_rst_fuelgauge) refers to can_messenger_rx.o(.text.bms_fg_reset) for bms_fg_reset
     udp_task.o(.text.process_hw_rst_fuelgauge) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
-    udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge) refers to udp_task.o(.text.process_hw_rst_fuelgauge) for [Anonymous Symbol]
-    udp_task.o(.text.process_mem_read) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_mem_read) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_mem_read) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_mem_read) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_mem_read) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10148,16 +10003,12 @@ Section Cross References
     udp_task.o(.text.process_mem_read) refers to osif.o(.text.osif_exit_critical) for osif_exit_critical
     udp_task.o(.text.process_mem_read) refers to udp_task.o(.bss.udp_msg_queue) for udp_msg_queue
     udp_task.o(.text.process_mem_read) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_mem_read) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_mem_read) refers to udp_task.o(.text.process_mem_read) for [Anonymous Symbol]
-    udp_task.o(.text.process_tamper_clr) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_tamper_clr) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_tamper_clr) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_tamper_clr) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_tamper_clr) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10165,32 +10016,24 @@ Section Cross References
     udp_task.o(.text.process_tamper_clr) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_tamper_clr) refers to bms_task.o(.bss.bms_msg_queue) for bms_msg_queue
     udp_task.o(.text.process_tamper_clr) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_tamper_clr) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_tamper_clr) refers to udp_task.o(.text.process_tamper_clr) for [Anonymous Symbol]
-    udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_mc_ctxt_factory_rst) refers to mc_task.o(.text.mc_factory_reset) for mc_factory_reset
-    udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_mc_ctxt_factory_rst) refers to udp_task.o(.text.process_mc_ctxt_factory_rst) for [Anonymous Symbol]
-    udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10199,16 +10042,12 @@ Section Cross References
     udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers to udp_task.o(.text.dev_assert) for dev_assert
     udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers to dba_task.o(.bss.dba_msg_queue) for dba_msg_queue
     udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) refers to udp_task.o(.text.process_IMX_S32_UDP_MSG_BRIGHTNESS_CTRL) for [Anonymous Symbol]
-    udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10218,16 +10057,12 @@ Section Cross References
     udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers to mc_task.o(.text.mc_is_vehicle_stationary) for mc_is_vehicle_stationary
     udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers to dba_task.o(.bss.dba_msg_queue) for dba_msg_queue
     udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers to osif.o(.text.osif_msg_queue_send) for osif_msg_queue_send
-    udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) refers to udp_task.o(.text.process_IMX_S32_UDP_MSG_ABS_MODE_CTRL) for [Anonymous Symbol]
-    udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10236,16 +10071,12 @@ Section Cross References
     udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers to dba_task.o(.text.abs_update_menu_state) for abs_update_menu_state
     udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers to dba_task.o(.text.chg_get_ui_init_state) for chg_get_ui_init_state
     udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers to mc_task.o(.text.mc_get_regen_level) for mc_get_regen_level
-    udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_IMX_S32_UDP_MSG_CLU_RDY) refers to udp_task.o(.text.process_IMX_S32_UDP_MSG_CLU_RDY) for [Anonymous Symbol]
-    udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10253,16 +10084,12 @@ Section Cross References
     udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers to udp_task.o(.text.dev_assert) for dev_assert
     udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers to odometer_task.o(.text.odo_trip_reset) for odo_trip_reset
-    udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_MSG_ID_TRIP_RESET_IMX_S32) refers to udp_task.o(.text.process_MSG_ID_TRIP_RESET_IMX_S32) for [Anonymous Symbol]
-    udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -10270,215 +10097,155 @@ Section Cross References
     udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers to udp_task.o(.text.dev_assert) for dev_assert
     udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers to mc_task.o(.text.mc_set_regen_level) for mc_set_regen_level
-    udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.ARM.exidx.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) refers to udp_task.o(.text.process_MSG_ID_GET_REGEN_LEVEL_IMX_S32) for [Anonymous Symbol]
-    udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.thread_udp_imx) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.rodata.flash_init_config) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.flash_ssd_config) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.ethernet_link_up_timer) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.ota_link_timer) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.udp_msg_queue) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.rodata.udp_task_attr) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.rodata.udp_task_attr) refers to udp_task.o(.rodata.str1.1) for .L.str.18
+    udp_task.o(.rodata.udp_task_attr) refers to udp_task.o(.rodata.str1.1) for .L.str.17
     udp_task.o(.rodata.udp_task_attr) refers to udp_task.o(.bss.os.thread.cb) for udp_thread_imx_tcb
     udp_task.o(.rodata.udp_task_attr) refers to udp_task.o(ARM_LIB_STACK) for [Anonymous Symbol]
-    udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.os.thread.cb) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.link_active) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.link_active) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.link_active) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.link_active) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.link_active) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.link_active) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.link_active) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.sim_det) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.sim_det) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.sim_det) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.sim_det) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.sim_det) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.sim_det) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.sim_det) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.data.boot_fw_upd_fail_sentinel) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.tx_net_lte_buf) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.rx_net_lte_buf) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.tx_net_imx_buf) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.rx_net_imx_buf) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.umsg) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.umsg) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.umsg) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.umsg) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.umsg) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.umsg) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.umsg) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.mscm_ocmdr0_save) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.mscm_ocmdr1_save) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.num_blocks) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.num_blocks) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.num_blocks) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.num_blocks) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.num_blocks) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.num_blocks) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.num_blocks) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.is_bms_fw) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.ota_base_address) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.ota_base_address) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.ota_base_address) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.ota_base_address) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.ota_base_address) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.ota_base_address) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.ota_base_address) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.udp_resp) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.udp_resp) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.udp_resp) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.udp_resp) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.udp_resp) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.udp_resp) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.udp_resp) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.rx_blocks) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.rx_blocks) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.rx_blocks) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.rx_blocks) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.rx_blocks) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.rx_blocks) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.rx_blocks) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.data.boot_fw_upd_sentinel) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_str.o(.text) for _printf_str
-    udp_task.o(.rodata.str1.1) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
+    udp_task.o(.rodata.str1.1) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
+    udp_task.o(.rodata.str1.1) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
+    udp_task.o(.rodata.str1.1) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
+    udp_task.o(.rodata.str1.1) refers (Special) to _printf_str.o(.text) for _printf_str
+    udp_task.o(.rodata.str1.1) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
     udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
     udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_str.o(.text) for _printf_str
     udp_task.o(.bss.has_mc_tm_changed) refers (Special) to _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) for _printf_x
-    udp_task.o(ARM_LIB_STACK) refers (Special) to _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) for _printf_d
-    udp_task.o(ARM_LIB_STACK) refers (Special) to _printf_dec.o(.text) for _printf_int_dec
     udp_task.o(ARM_LIB_STACK) refers (Special) to _printf_hex_int_ll_ptr.o(.text) for _printf_longlong_hex
     udp_task.o(ARM_LIB_STACK) refers (Special) to _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) for _printf_percent
     udp_task.o(ARM_LIB_STACK) refers (Special) to _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) for _printf_s
@@ -11105,8 +10872,6 @@ Section Cross References
     bms_task.o(.ARM.exidx.text.dev_assert) refers to bms_task.o(.text.dev_assert) for [Anonymous Symbol]
     bms_task.o(.text.bms_task) refers to canfd_queue.o(.text.canfd_queue_init) for canfd_queue_init
     bms_task.o(.text.bms_task) refers to init_msg.o(.text.init_fast_boot_mesg) for init_fast_boot_mesg
-    bms_task.o(.text.bms_task) refers to can_messenger_rx.o(.text.fet_sw_init) for fet_sw_init
-    bms_task.o(.text.bms_task) refers to can_messenger_rx.o(.text.bms_state_init) for bms_state_init
     bms_task.o(.text.bms_task) refers to bms_task.o(.text.bms_can_err_cb) for bms_can_err_cb
     bms_task.o(.text.bms_task) refers to flexcan_driver.o(.text.FLEXCAN_DRV_InstallErrorCallback) for FLEXCAN_DRV_InstallErrorCallback
     bms_task.o(.text.bms_task) refers to osif.o(.text.osif_thread_wait_on_flag) for osif_thread_wait_on_flag
@@ -11152,7 +10917,6 @@ Section Cross References
     bms_task.o(.text.bms_send_can_fd_msg) refers to can_messenger_tx.o(.text.can_msg_send_process) for can_msg_send_process
     bms_task.o(.ARM.exidx.text.bms_send_can_fd_msg) refers to bms_task.o(.text.bms_send_can_fd_msg) for [Anonymous Symbol]
     bms_task.o(.text.process_BMS_MSG_ASYNC_FET_OFF) refers to canfd_queue.o(.text.canfd_enqueue) for canfd_enqueue
-    bms_task.o(.text.process_BMS_MSG_ASYNC_FET_OFF) refers to can_messenger_rx.o(.text.bms_data_tx_timer_stop) for bms_data_tx_timer_stop
     bms_task.o(.ARM.exidx.text.process_BMS_MSG_ASYNC_FET_OFF) refers to bms_task.o(.text.process_BMS_MSG_ASYNC_FET_OFF) for [Anonymous Symbol]
     bms_task.o(.text.process_BMS_MSG_ASYNC_FET_ON) refers to canfd_queue.o(.text.canfd_enqueue) for canfd_enqueue
     bms_task.o(.ARM.exidx.text.process_BMS_MSG_ASYNC_FET_ON) refers to bms_task.o(.text.process_BMS_MSG_ASYNC_FET_ON) for [Anonymous Symbol]
@@ -11763,7 +11527,6 @@ Section Cross References
     bms_can_if.o(.text.canfd_bus0_timeout_handler) refers to bms_can_if.o(.text.can_fd_reset_bus_rx_state) for can_fd_reset_bus_rx_state
     bms_can_if.o(.text.canfd_bus0_timeout_handler) refers to stat.o(.text.set_status_bit) for set_status_bit
     bms_can_if.o(.text.canfd_bus0_timeout_handler) refers to bms_can_if.o(.bss.can_msg_timeout_count) for can_msg_timeout_count
-    bms_can_if.o(.text.canfd_bus0_timeout_handler) refers to can_messenger_rx.o(.text.bms_data_tx_timer_start) for bms_data_tx_timer_start
     bms_can_if.o(.ARM.exidx.text.canfd_bus0_timeout_handler) refers to bms_can_if.o(.text.canfd_bus0_timeout_handler) for [Anonymous Symbol]
     bms_can_if.o(.text.can_fd_reset_bus_rx_state) refers to bms_can_if.o(.bss.canfd_rx_state) for canfd_rx_state
     bms_can_if.o(.ARM.exidx.text.can_fd_reset_bus_rx_state) refers to bms_can_if.o(.text.can_fd_reset_bus_rx_state) for [Anonymous Symbol]
@@ -11794,14 +11557,12 @@ Section Cross References
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to osif.o(.text.osif_timer_start) for osif_timer_start
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to flexcan_driver.o(.text.FLEXCAN_DRV_GetTransferStatus) for FLEXCAN_DRV_GetTransferStatus
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to osif.o(.text.osif_timer_stop) for osif_timer_stop
-    bms_can_if.o(.text.can_fd_bms_receive_nb) refers to can_messenger_rx.o(.text.bms_data_tx_timer_stop) for bms_data_tx_timer_stop
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to stat.o(.text.clear_status_bit) for clear_status_bit
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to bms_can_if.o(.bss.can_msg_timeout_count) for can_msg_timeout_count
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to aes_sw.o(.text.aes_sw_cmac) for aes_sw_cmac
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to memcmp.o(.text) for memcmp
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to bms_can_if.o(.bss.dec_fd_rx_buffer) for dec_fd_rx_buffer
     bms_can_if.o(.text.can_fd_bms_receive_nb) refers to aes_sw.o(.text.aes_sw_dec) for aes_sw_dec
-    bms_can_if.o(.text.can_fd_bms_receive_nb) refers to can_messenger_rx.o(.text.process_bms_can_data) for process_bms_can_data
     bms_can_if.o(.ARM.exidx.text.can_fd_bms_receive_nb) refers to bms_can_if.o(.text.can_fd_bms_receive_nb) for [Anonymous Symbol]
     bms_can_if.o(.ARM.exidx.text.dev_assert) refers to bms_can_if.o(.text.dev_assert) for [Anonymous Symbol]
     wdt_task.o(.text.ext_wdt_kick) refers to wdog_driver.o(.text.WDOG_DRV_Trigger) for WDOG_DRV_Trigger
@@ -14867,9 +14628,6 @@ Section Cross References
     _printf_str.o(.text) refers (Special) to _printf_char.o(.text) for _printf_cs_common
     _printf_str.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
     _printf_str.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
-    _printf_dec.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_signed
-    _printf_dec.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
-    _printf_dec.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
     _printf_hex_ll.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
     _printf_hex_ll.o(.text) refers to _printf_hex_ll.o(.constdata) for .constdata
     _printf_hex_int.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
@@ -14905,7 +14663,6 @@ Section Cross References
     __printf_flags_ss_wp.o(.text) refers to __printf_flags_ss_wp.o(.constdata) for .constdata
     _printf_s.o(.ARM.Collect$$_printf_percent$$00000014) refers (Weak) to _printf_char.o(.text) for _printf_string
     _printf_x.o(.ARM.Collect$$_printf_percent$$0000000C) refers (Weak) to _printf_hex_int_ll_ptr.o(.text) for _printf_int_hex
-    _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
     _printf_percent.o(.ARM.Collect$$_printf_percent$$00000000) refers (Special) to _printf_percent_end.o(.ARM.Collect$$_printf_percent$$00000017) for _printf_percent_end
     atoi.o(.text) refers to rt_errno_addr_twolibspace.o(.text) for __aeabi_errno_addr
     atoi.o(.text) refers to strtol.o(.text) for strtol
@@ -15169,6 +14926,9 @@ Section Cross References
     _printf_intcommon.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
     _printf_intcommon.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_pre_padding
     _printf_intcommon.o(.text) refers (Weak) to _printf_pad.o(.text) for _printf_post_padding
+    _printf_dec.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_signed
+    _printf_dec.o(.text) refers (Weak) to _printf_truncate.o(.text) for _printf_truncate_unsigned
+    _printf_dec.o(.text) refers to _printf_intcommon.o(.text) for _printf_int_common
     _printf_char_common.o(.text) refers to __printf_flags_ss_wp.o(.text) for __printf
     _printf_char.o(.text) refers (Weak) to _printf_str.o(.text) for _printf_str
     _printf_wctomb.o(.text) refers (Special) to _printf_wchar.o(.text) for _printf_lcs_common
@@ -15189,6 +14949,7 @@ Section Cross References
     _printf_p.o(.ARM.Collect$$_printf_percent$$00000002) refers (Weak) to _printf_hex_int_ll_ptr.o(.text) for _printf_hex_ptr
     _printf_o.o(.ARM.Collect$$_printf_percent$$0000000B) refers (Weak) to _printf_oct_int_ll.o(.text) for _printf_int_oct
     _printf_i.o(.ARM.Collect$$_printf_percent$$00000008) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
+    _printf_d.o(.ARM.Collect$$_printf_percent$$00000009) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
     _printf_u.o(.ARM.Collect$$_printf_percent$$0000000A) refers (Weak) to _printf_dec.o(.text) for _printf_int_dec
     _printf_f.o(.ARM.Collect$$_printf_percent$$00000003) refers (Weak) to printf1.o(x$fpl$printf1) for _printf_fp_dec
     _printf_e.o(.ARM.Collect$$_printf_percent$$00000004) refers (Weak) to printf1.o(x$fpl$printf1) for _printf_fp_dec
@@ -20391,8 +20152,8 @@ Removing Unused input sections from the image.
     Removing board.o(.ARM.exidx.text.can_if_bms_init), (8 bytes).
     Removing board.o(.ARM.exidx.text.ec25_uart_config), (8 bytes).
     Removing board.o(.ARM.exidx.text.dev_assert), (8 bytes).
-    Removing board.o(.ARM.exidx.text.dba_config_can), (8 bytes).
-    Removing board.o(.ARM.exidx.text.mc_config_can_mbx_fifo), (8 bytes).
+    Removing board.o(.ARM.exidx.text.dba_config_Test_can), (8 bytes).
+    Removing board.o(.ARM.exidx.text.mc_config_Test_can_mbx_fifo), (8 bytes).
     Removing board.o(.ARM.exidx.text.sys_lpspi2_init), (8 bytes).
     Removing board.o(.ARM.exidx.text.sys_lpspi0_init), (8 bytes).
     Removing board.o(.ARM.exidx.text.sys_lpspi1_init), (8 bytes).
@@ -20921,7 +20682,7 @@ Removing Unused input sections from the image.
     Removing udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL), (8 bytes).
     Removing udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_DL_DONE), (372 bytes).
     Removing udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_DL_DONE), (8 bytes).
-    Removing udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO), (344 bytes).
+    Removing udp_task.o(.text.process_LTE_S32_UDP_MSG_FW_VER_INFO), (206 bytes).
     Removing udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_FW_VER_INFO), (8 bytes).
     Removing udp_task.o(.text.process_LTE_S32_UDP_MSG_ODO_INFO), (92 bytes).
     Removing udp_task.o(.ARM.exidx.text.process_LTE_S32_UDP_MSG_ODO_INFO), (8 bytes).
@@ -20955,7 +20716,7 @@ Removing Unused input sections from the image.
     Removing udp_task.o(.ARM.exidx.text.process_torque_map_factory_rst), (8 bytes).
     Removing udp_task.o(.text.process_torque_map_read), (60 bytes).
     Removing udp_task.o(.ARM.exidx.text.process_torque_map_read), (8 bytes).
-    Removing udp_task.o(.text.process_hw_rst_fuelgauge), (20 bytes).
+    Removing udp_task.o(.text.process_hw_rst_fuelgauge), (12 bytes).
     Removing udp_task.o(.ARM.exidx.text.process_hw_rst_fuelgauge), (8 bytes).
     Removing udp_task.o(.text.process_mem_read), (232 bytes).
     Removing udp_task.o(.ARM.exidx.text.process_mem_read), (8 bytes).
@@ -20998,8 +20759,8 @@ Removing Unused input sections from the image.
     Removing udp_task.o(.data.process_LTE_S32_UDP_MSG_FW_DL.prev_block), (4 bytes).
     Removing udp_task.o(.bss.rx_blocks), (4 bytes).
     Removing udp_task.o(.data.boot_fw_upd_sentinel), (4 bytes).
-    Removing udp_task.o(.rodata.str1.1), (192 bytes).
     Removing udp_task.o(.bss.process_LTE_S32_UDP_SET_TIME.update_in_progress), (1 bytes).
+    Removing udp_task.o(.rodata.str1.1), (77 bytes).
     Removing udp_task.o(.bss.has_mc_tm_changed), (1 bytes).
     Removing udp_task.o(ARM_LIB_STACK), (1856 bytes).
     Removing lte_uart_task.o(.text), (0 bytes).
@@ -21349,7 +21110,7 @@ Removing Unused input sections from the image.
     Removing bms_task.o(.ARM.exidx.text.bms_task_create), (8 bytes).
     Removing bms_task.o(.text.dev_assert), (32 bytes).
     Removing bms_task.o(.ARM.exidx.text.dev_assert), (8 bytes).
-    Removing bms_task.o(.text.bms_task), (106 bytes).
+    Removing bms_task.o(.text.bms_task), (90 bytes).
     Removing bms_task.o(.ARM.exidx.text.bms_task), (8 bytes).
     Removing bms_task.o(.text.bms_can_err_cb), (46 bytes).
     Removing bms_task.o(.ARM.exidx.text.bms_can_err_cb), (8 bytes).
@@ -21361,7 +21122,7 @@ Removing Unused input sections from the image.
     Removing bms_task.o(.ARM.exidx.text.bms_queue_proc), (8 bytes).
     Removing bms_task.o(.text.bms_send_can_fd_msg), (92 bytes).
     Removing bms_task.o(.ARM.exidx.text.bms_send_can_fd_msg), (8 bytes).
-    Removing bms_task.o(.text.process_BMS_MSG_ASYNC_FET_OFF), (44 bytes).
+    Removing bms_task.o(.text.process_BMS_MSG_ASYNC_FET_OFF), (38 bytes).
     Removing bms_task.o(.ARM.exidx.text.process_BMS_MSG_ASYNC_FET_OFF), (8 bytes).
     Removing bms_task.o(.text.process_BMS_MSG_ASYNC_FET_ON), (38 bytes).
     Removing bms_task.o(.ARM.exidx.text.process_BMS_MSG_ASYNC_FET_ON), (8 bytes).
@@ -21668,7 +21429,7 @@ Removing Unused input sections from the image.
     Removing can_messenger_tx.o(.bss.fw_msg_sig), (64 bytes).
     Removing can_messenger_tx.o(.rodata.str1.4), (9 bytes).
     Removing bms_can_if.o(.text), (0 bytes).
-    Removing bms_can_if.o(.text.canfd_bus0_timeout_handler), (62 bytes).
+    Removing bms_can_if.o(.text.canfd_bus0_timeout_handler), (54 bytes).
     Removing bms_can_if.o(.ARM.exidx.text.canfd_bus0_timeout_handler), (8 bytes).
     Removing bms_can_if.o(.text.can_fd_reset_bus_rx_state), (14 bytes).
     Removing bms_can_if.o(.ARM.exidx.text.can_fd_reset_bus_rx_state), (8 bytes).
@@ -21688,7 +21449,7 @@ Removing Unused input sections from the image.
     Removing bms_can_if.o(.ARM.exidx.text.can_fd_encrypt), (8 bytes).
     Removing bms_can_if.o(.text.can_fd_bms_receive), (8 bytes).
     Removing bms_can_if.o(.ARM.exidx.text.can_fd_bms_receive), (8 bytes).
-    Removing bms_can_if.o(.text.can_fd_bms_receive_nb), (428 bytes).
+    Removing bms_can_if.o(.text.can_fd_bms_receive_nb), (260 bytes).
     Removing bms_can_if.o(.ARM.exidx.text.can_fd_bms_receive_nb), (8 bytes).
     Removing bms_can_if.o(.text.dev_assert), (22 bytes).
     Removing bms_can_if.o(.ARM.exidx.text.dev_assert), (8 bytes).
@@ -23419,7 +23180,7 @@ Removing Unused input sections from the image.
     Removing uart.o(.bss.rx_buffer), (64 bytes).
     Removing uart.o(.data.tx_buffer), (64 bytes).
 
-7932 unused section(s) (total 360949 bytes) removed from the image.
+7932 unused section(s) (total 360490 bytes) removed from the image.
 
 ==============================================================================
 
@@ -24863,7 +24624,6 @@ Stack Usage for SysTick_Handler 0x0 bytes.
 Stack Usage for __rt_ctype_table 0x8 bytes.
 Stack Usage for snprintf 0x28 bytes.
 Stack Usage for _printf_str 0x10 bytes.
-Stack Usage for _printf_int_dec 0x18 bytes.
 Stack Usage for _printf_longlong_hex 0x10 bytes.
 Stack Usage for _printf_int_hex 0x10 bytes.
 Stack Usage for _printf_ll_hex 0x0 bytes.
@@ -24892,6 +24652,7 @@ Stack Usage for _printf_post_padding 0x10 bytes.
 Stack Usage for _printf_truncate_signed 0x0 bytes.
 Stack Usage for _printf_truncate_unsigned 0x0 bytes.
 Stack Usage for _printf_int_common 0x20 bytes.
+Stack Usage for _printf_int_dec 0x18 bytes.
 Stack Usage for _printf_charcount 0x0 bytes.
 Stack Usage for _printf_char_common 0x40 bytes.
 Stack Usage for _sputc 0x0 bytes.
@@ -25802,13 +25563,13 @@ Stack Usage for can_if_abs_init 0x60 bytes.
 Stack Usage for can_if_bms_init 0x60 bytes.
 Stack Usage for can_if_edma_init 0x58 bytes.
 Stack Usage for can_if_mc_init 0x60 bytes.
-Stack Usage for dba_config_can 0x68 bytes.
+Stack Usage for dba_config_Test_can 0x68 bytes.
 Stack Usage for dev_assert 0x4 bytes.
 Stack Usage for ec25_uart_config 0x20 bytes.
 Stack Usage for enable_port_clocks 0x8 bytes.
 Stack Usage for err_notifier 0x10 bytes.
 Stack Usage for init_crypto 0x8 bytes.
-Stack Usage for mc_config_can_mbx_fifo 0x68 bytes.
+Stack Usage for mc_config_Test_can_mbx_fifo 0x68 bytes.
 Stack Usage for rtc_pac1921_i2c_init 0x28 bytes.
 Stack Usage for sys_clock_init 0x8 bytes.
 Stack Usage for sys_lpspi0_init 0x38 bytes.
@@ -26148,10 +25909,10 @@ Untraceable function pointers.
  * _get_lc_ctype from lc_ctype_c.o(locale$$code) referenced from rt_ctype_table.o(.text)
  * _printf_input_char from _printf_char_common.o(.text) referenced from _printf_char_common.o(.text)
  * _snputc from _snputc.o(.text) referenced from snprintf.o(.text)
- * dba1_can_callback from vcu_can_comm_test_rx.o(.text.dba1_can_callback) referenced 2 times from board.o(.text.dba_config_can)
+ * dba1_can_callback from vcu_can_comm_test_rx.o(.text.dba1_can_callback) referenced 2 times from board.o(.text.dba_config_Test_can)
  * init_data_bss from startup.o(.text.init_data_bss) referenced from startup_s32k148.o(.text)
  * init_sm_key_state_timer_handler from init_task.o(.text.init_sm_key_state_timer_handler) referenced 2 times from init_task.o(.text.init_task_create)
- * mc1_can_callback from vcu_can_comm_test_rx.o(.text.mc1_can_callback) referenced 2 times from board.o(.text.mc_config_can_mbx_fifo)
+ * mc1_can_callback from vcu_can_comm_test_rx.o(.text.mc1_can_callback) referenced 2 times from board.o(.text.mc_config_Test_can_mbx_fifo)
  * osRtxIdleThread from init_task.o(.text.osRtxIdleThread) referenced 2 times from rtx_thread.o(.text.osRtxThreadStartup)
  * osRtxMessageQueuePostProcess from rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) referenced 2 times from rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
  * osRtxSemaphorePostProcess from rtx_semaphore.o(.text.osRtxSemaphorePostProcess) referenced 2 times from rtx_semaphore.o(.text.svcRtxSemaphoreNew)
@@ -26265,7 +26026,6 @@ Image Symbol Table
     ../clib/printf.c                         0x00000000   Number         0  noretval__2snprintf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  __printf.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_str.o ABSOLUTE
-    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_hex_ll.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_hex_int_ll.o ABSOLUTE
@@ -26283,6 +26043,7 @@ Image Symbol Table
     ../clib/printf.c                         0x00000000   Number         0  _printf_pad.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_truncate.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_intcommon.o ABSOLUTE
+    ../clib/printf.c                         0x00000000   Number         0  _printf_dec.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_charcount.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _printf_char_common.o ABSOLUTE
     ../clib/printf.c                         0x00000000   Number         0  _sputc.o ABSOLUTE
@@ -26301,13 +26062,13 @@ Image Symbol Table
     ../clib/printf.c                         0x00000000   Number         0  _printf_fp_infnan.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_s.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_x.o ABSOLUTE
-    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_percent.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_c.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_n.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_p.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_o.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_i.o ABSOLUTE
+    ../clib/printf_percent.s                 0x00000000   Number         0  _printf_d.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_u.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_f.o ABSOLUTE
     ../clib/printf_percent.s                 0x00000000   Number         0  _printf_e.o ABSOLUTE
@@ -26722,21 +26483,21 @@ Image Symbol Table
     .text                                    0x00040650   Section       16  rt_ctype_table.o(.text)
     .text                                    0x00040660   Section        0  snprintf.o(.text)
     .text                                    0x00040698   Section        0  _printf_str.o(.text)
-    .text                                    0x000406ec   Section        0  _printf_dec.o(.text)
-    _printf_hex_common                       0x00040765   Thumb Code     0  _printf_hex_int_ll_ptr.o(.text)
-    .text                                    0x00040764   Section        0  _printf_hex_int_ll_ptr.o(.text)
-    .text                                    0x000407f8   Section        0  __printf_flags_ss_wp.o(.text)
-    .text                                    0x00040980   Section        0  memcmp.o(.text)
-    .text                                    0x000409d8   Section      214  rt_memcpy.o(.text)
-    .text                                    0x00040aae   Section      100  rt_memcpy_w.o(.text)
-    .text                                    0x00040b12   Section       16  aeabi_memset4.o(.text)
-    .text                                    0x00040b22   Section       68  rt_memclr.o(.text)
-    .text                                    0x00040b66   Section       78  rt_memclr_w.o(.text)
-    .text                                    0x00040bb4   Section       10  rt_locale_twolibspace.o(.text)
-    .text                                    0x00040bbe   Section        0  _printf_pad.o(.text)
-    .text                                    0x00040c0c   Section        0  _printf_truncate.o(.text)
-    .text                                    0x00040c30   Section        0  _printf_intcommon.o(.text)
-    .text                                    0x00040ce2   Section        0  _printf_charcount.o(.text)
+    _printf_hex_common                       0x000406ed   Thumb Code     0  _printf_hex_int_ll_ptr.o(.text)
+    .text                                    0x000406ec   Section        0  _printf_hex_int_ll_ptr.o(.text)
+    .text                                    0x00040780   Section        0  __printf_flags_ss_wp.o(.text)
+    .text                                    0x00040908   Section        0  memcmp.o(.text)
+    .text                                    0x00040960   Section      214  rt_memcpy.o(.text)
+    .text                                    0x00040a36   Section      100  rt_memcpy_w.o(.text)
+    .text                                    0x00040a9a   Section       16  aeabi_memset4.o(.text)
+    .text                                    0x00040aaa   Section       68  rt_memclr.o(.text)
+    .text                                    0x00040aee   Section       78  rt_memclr_w.o(.text)
+    .text                                    0x00040b3c   Section       10  rt_locale_twolibspace.o(.text)
+    .text                                    0x00040b46   Section        0  _printf_pad.o(.text)
+    .text                                    0x00040b94   Section        0  _printf_truncate.o(.text)
+    .text                                    0x00040bb8   Section        0  _printf_intcommon.o(.text)
+    .text                                    0x00040c6c   Section        0  _printf_dec.o(.text)
+    .text                                    0x00040ce4   Section        0  _printf_charcount.o(.text)
     _printf_input_char                       0x00040d0d   Thumb Code    10  _printf_char_common.o(.text)
     .text                                    0x00040d0c   Section        0  _printf_char_common.o(.text)
     .text                                    0x00040d3c   Section        0  _sputc.o(.text)
@@ -28014,8 +27775,8 @@ Image Symbol Table
     coredump_save_nv                         0x0004b2b1   Thumb Code   128  coredump.o(.text.coredump_save_nv)
     [Anonymous Symbol]                       0x0004b2b0   Section        0  coredump.o(.text.coredump_save_nv)
     [Anonymous Symbol]                       0x0004b330   Section        0  vcu_can_comm_test_rx.o(.text.dba1_can_callback)
-    dba_config_can                           0x0004b365   Thumb Code   222  board.o(.text.dba_config_can)
-    [Anonymous Symbol]                       0x0004b364   Section        0  board.o(.text.dba_config_can)
+    dba_config_Test_can                      0x0004b365   Thumb Code   222  board.o(.text.dba_config_Test_can)
+    [Anonymous Symbol]                       0x0004b364   Section        0  board.o(.text.dba_config_Test_can)
     dev_assert                               0x0004b445   Thumb Code    22  adc_driver.o(.text.dev_assert)
     [Anonymous Symbol]                       0x0004b444   Section        0  adc_driver.o(.text.dev_assert)
     dev_assert                               0x0004b45d   Thumb Code    22  clock_s32k1xx.o(.text.dev_assert)
@@ -28113,8 +27874,8 @@ Image Symbol Table
     [Anonymous Symbol]                       0x0004bc80   Section        0  lsm_task.o(.text.lsm_is_throttle_voltage_zero)
     [Anonymous Symbol]                       0x0004bca0   Section        0  main.o(.text.main)
     [Anonymous Symbol]                       0x0004bcc0   Section        0  vcu_can_comm_test_rx.o(.text.mc1_can_callback)
-    mc_config_can_mbx_fifo                   0x0004bcf5   Thumb Code   196  board.o(.text.mc_config_can_mbx_fifo)
-    [Anonymous Symbol]                       0x0004bcf4   Section        0  board.o(.text.mc_config_can_mbx_fifo)
+    mc_config_Test_can_mbx_fifo              0x0004bcf5   Thumb Code   196  board.o(.text.mc_config_Test_can_mbx_fifo)
+    [Anonymous Symbol]                       0x0004bcf4   Section        0  board.o(.text.mc_config_Test_can_mbx_fifo)
     mc_eval_gear_aux_cond                    0x0004bdb9   Thumb Code    68  mc_task.o(.text.mc_eval_gear_aux_cond)
     [Anonymous Symbol]                       0x0004bdb8   Section        0  mc_task.o(.text.mc_eval_gear_aux_cond)
     mc_gear_op_fwd                           0x0004bdfd   Thumb Code    74  mc_task.o(.text.mc_gear_op_fwd)
@@ -28387,8 +28148,8 @@ Image Symbol Table
     .L__const.can_if_edma_init.dm_chn1_cfg   0x0004f3a8   Data          24  board.o(.rodata..L__const.can_if_edma_init.dm_chn1_cfg)
     .L__const.can_if_edma_init.edma_channel_states 0x0004f3c0   Data           8  board.o(.rodata..L__const.can_if_edma_init.edma_channel_states)
     .L__const.can_if_mc_init.can_mc_cfg      0x0004f3c8   Data          76  board.o(.rodata..L__const.can_if_mc_init.can_mc_cfg)
-    .L__const.dba_config_can.data_info       0x0004f414   Data          12  board.o(.rodata..L__const.dba_config_can.data_info)
-    .L__const.mc_config_can_mbx_fifo.data_info 0x0004f420   Data          12  board.o(.rodata..L__const.mc_config_can_mbx_fifo.data_info)
+    .L__const.dba_config_Test_can.data_info  0x0004f414   Data          12  board.o(.rodata..L__const.dba_config_Test_can.data_info)
+    .L__const.mc_config_Test_can_mbx_fifo.data_info 0x0004f420   Data          12  board.o(.rodata..L__const.mc_config_Test_can_mbx_fifo.data_info)
     .L__const.vcu_2_dba_send_test_msg.tx_info 0x0004f42c   Data          12  vcu_can_comm_test_tx.o(.rodata..L__const.vcu_2_dba_send_test_msg.tx_info)
     .L__const.vcu_2_mc_send_rpdo_msg.tx_info 0x0004f438   Data          12  vcu_can_comm_test_tx.o(.rodata..L__const.vcu_2_mc_send_rpdo_msg.tx_info)
     CLOCK_SYS_SetSystemClockConfig.maxSysClksInHSRUN 0x0004f444   Data          84  clock_s32k1xx.o(.rodata.CLOCK_SYS_SetSystemClockConfig.maxSysClksInHSRUN)
@@ -28830,36 +28591,36 @@ Image Symbol Table
     __rt_ctype_table                         0x00040651   Thumb Code    16  rt_ctype_table.o(.text)
     snprintf                                 0x00040661   Thumb Code    50  snprintf.o(.text)
     _printf_str                              0x00040699   Thumb Code    82  _printf_str.o(.text)
-    _printf_int_dec                          0x000406ed   Thumb Code   104  _printf_dec.o(.text)
-    _printf_longlong_hex                     0x00040765   Thumb Code    86  _printf_hex_int_ll_ptr.o(.text)
-    _printf_int_hex                          0x000407bb   Thumb Code    28  _printf_hex_int_ll_ptr.o(.text)
-    _printf_ll_hex                           0x000407d7   Thumb Code    12  _printf_hex_int_ll_ptr.o(.text)
-    _printf_hex_ptr                          0x000407e3   Thumb Code    18  _printf_hex_int_ll_ptr.o(.text)
-    __printf                                 0x000407f9   Thumb Code   388  __printf_flags_ss_wp.o(.text)
-    memcmp                                   0x00040981   Thumb Code    88  memcmp.o(.text)
-    __aeabi_memcpy                           0x000409d9   Thumb Code     0  rt_memcpy.o(.text)
-    __rt_memcpy                              0x000409d9   Thumb Code   214  rt_memcpy.o(.text)
-    _memcpy_lastbytes                        0x00040a8b   Thumb Code     0  rt_memcpy.o(.text)
-    __aeabi_memcpy4                          0x00040aaf   Thumb Code     0  rt_memcpy_w.o(.text)
-    __aeabi_memcpy8                          0x00040aaf   Thumb Code     0  rt_memcpy_w.o(.text)
-    __rt_memcpy_w                            0x00040aaf   Thumb Code   100  rt_memcpy_w.o(.text)
-    _memcpy_lastbytes_aligned                0x00040af7   Thumb Code     0  rt_memcpy_w.o(.text)
-    __aeabi_memset4                          0x00040b13   Thumb Code    16  aeabi_memset4.o(.text)
-    __aeabi_memset8                          0x00040b13   Thumb Code     0  aeabi_memset4.o(.text)
-    __aeabi_memclr                           0x00040b23   Thumb Code     0  rt_memclr.o(.text)
-    __rt_memclr                              0x00040b23   Thumb Code    68  rt_memclr.o(.text)
-    _memset                                  0x00040b27   Thumb Code     0  rt_memclr.o(.text)
-    __aeabi_memclr4                          0x00040b67   Thumb Code     0  rt_memclr_w.o(.text)
-    __aeabi_memclr8                          0x00040b67   Thumb Code     0  rt_memclr_w.o(.text)
-    __rt_memclr_w                            0x00040b67   Thumb Code    78  rt_memclr_w.o(.text)
-    _memset_w                                0x00040b6b   Thumb Code     0  rt_memclr_w.o(.text)
-    __rt_locale                              0x00040bb5   Thumb Code    10  rt_locale_twolibspace.o(.text)
-    _printf_pre_padding                      0x00040bbf   Thumb Code    44  _printf_pad.o(.text)
-    _printf_post_padding                     0x00040beb   Thumb Code    34  _printf_pad.o(.text)
-    _printf_truncate_signed                  0x00040c0d   Thumb Code    18  _printf_truncate.o(.text)
-    _printf_truncate_unsigned                0x00040c1f   Thumb Code    18  _printf_truncate.o(.text)
-    _printf_int_common                       0x00040c31   Thumb Code   178  _printf_intcommon.o(.text)
-    _printf_charcount                        0x00040ce3   Thumb Code    40  _printf_charcount.o(.text)
+    _printf_longlong_hex                     0x000406ed   Thumb Code    86  _printf_hex_int_ll_ptr.o(.text)
+    _printf_int_hex                          0x00040743   Thumb Code    28  _printf_hex_int_ll_ptr.o(.text)
+    _printf_ll_hex                           0x0004075f   Thumb Code    12  _printf_hex_int_ll_ptr.o(.text)
+    _printf_hex_ptr                          0x0004076b   Thumb Code    18  _printf_hex_int_ll_ptr.o(.text)
+    __printf                                 0x00040781   Thumb Code   388  __printf_flags_ss_wp.o(.text)
+    memcmp                                   0x00040909   Thumb Code    88  memcmp.o(.text)
+    __aeabi_memcpy                           0x00040961   Thumb Code     0  rt_memcpy.o(.text)
+    __rt_memcpy                              0x00040961   Thumb Code   214  rt_memcpy.o(.text)
+    _memcpy_lastbytes                        0x00040a13   Thumb Code     0  rt_memcpy.o(.text)
+    __aeabi_memcpy4                          0x00040a37   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memcpy8                          0x00040a37   Thumb Code     0  rt_memcpy_w.o(.text)
+    __rt_memcpy_w                            0x00040a37   Thumb Code   100  rt_memcpy_w.o(.text)
+    _memcpy_lastbytes_aligned                0x00040a7f   Thumb Code     0  rt_memcpy_w.o(.text)
+    __aeabi_memset4                          0x00040a9b   Thumb Code    16  aeabi_memset4.o(.text)
+    __aeabi_memset8                          0x00040a9b   Thumb Code     0  aeabi_memset4.o(.text)
+    __aeabi_memclr                           0x00040aab   Thumb Code     0  rt_memclr.o(.text)
+    __rt_memclr                              0x00040aab   Thumb Code    68  rt_memclr.o(.text)
+    _memset                                  0x00040aaf   Thumb Code     0  rt_memclr.o(.text)
+    __aeabi_memclr4                          0x00040aef   Thumb Code     0  rt_memclr_w.o(.text)
+    __aeabi_memclr8                          0x00040aef   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_memclr_w                            0x00040aef   Thumb Code    78  rt_memclr_w.o(.text)
+    _memset_w                                0x00040af3   Thumb Code     0  rt_memclr_w.o(.text)
+    __rt_locale                              0x00040b3d   Thumb Code    10  rt_locale_twolibspace.o(.text)
+    _printf_pre_padding                      0x00040b47   Thumb Code    44  _printf_pad.o(.text)
+    _printf_post_padding                     0x00040b73   Thumb Code    34  _printf_pad.o(.text)
+    _printf_truncate_signed                  0x00040b95   Thumb Code    18  _printf_truncate.o(.text)
+    _printf_truncate_unsigned                0x00040ba7   Thumb Code    18  _printf_truncate.o(.text)
+    _printf_int_common                       0x00040bb9   Thumb Code   178  _printf_intcommon.o(.text)
+    _printf_int_dec                          0x00040c6d   Thumb Code   104  _printf_dec.o(.text)
+    _printf_charcount                        0x00040ce5   Thumb Code    40  _printf_charcount.o(.text)
     _printf_char_common                      0x00040d17   Thumb Code    32  _printf_char_common.o(.text)
     _sputc                                   0x00040d3d   Thumb Code    10  _sputc.o(.text)
     _snputc                                  0x00040d47   Thumb Code    16  _snputc.o(.text)
@@ -29416,32 +29177,32 @@ Memory Map of the image
 
     Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x00040400   0x00040400   0x00000008   Code   RO        10516  * !!!main             c_wu.l(__main.o)
+    0x00040400   0x00040400   0x00000008   Code   RO        10513  * !!!main             c_wu.l(__main.o)
     0x00040408   0x00040408   0x00000034   Code   RO        11068    !!!scatter          c_wu.l(__scatter.o)
     0x0004043c   0x0004043c   0x0000001a   Code   RO        11070    !!handler_copy      c_wu.l(__scatter_copy.o)
     0x00040456   0x00040456   0x00000002   PAD
     0x00040458   0x00040458   0x0000001c   Code   RO        11072    !!handler_zi        c_wu.l(__scatter_zi.o)
-    0x00040474   0x00040474   0x00000000   Code   RO        10481    .ARM.Collect$$_printf_percent$$00000000  c_wu.l(_printf_percent.o)
-    0x00040474   0x00040474   0x00000006   Code   RO        10699    .ARM.Collect$$_printf_percent$$00000001  c_wu.l(_printf_n.o)
-    0x0004047a   0x0004047a   0x00000006   Code   RO        10700    .ARM.Collect$$_printf_percent$$00000002  c_wu.l(_printf_p.o)
+    0x00040474   0x00040474   0x00000000   Code   RO        10478    .ARM.Collect$$_printf_percent$$00000000  c_wu.l(_printf_percent.o)
+    0x00040474   0x00040474   0x00000006   Code   RO        10698    .ARM.Collect$$_printf_percent$$00000001  c_wu.l(_printf_n.o)
+    0x0004047a   0x0004047a   0x00000006   Code   RO        10699    .ARM.Collect$$_printf_percent$$00000002  c_wu.l(_printf_p.o)
     0x00040480   0x00040480   0x00000006   Code   RO        10704    .ARM.Collect$$_printf_percent$$00000003  c_wu.l(_printf_f.o)
     0x00040486   0x00040486   0x00000006   Code   RO        10705    .ARM.Collect$$_printf_percent$$00000004  c_wu.l(_printf_e.o)
     0x0004048c   0x0004048c   0x00000006   Code   RO        10706    .ARM.Collect$$_printf_percent$$00000005  c_wu.l(_printf_g.o)
     0x00040492   0x00040492   0x00000006   Code   RO        10707    .ARM.Collect$$_printf_percent$$00000006  c_wu.l(_printf_a.o)
     0x00040498   0x00040498   0x0000000a   Code   RO        10712    .ARM.Collect$$_printf_percent$$00000007  c_wu.l(_printf_ll.o)
-    0x000404a2   0x000404a2   0x00000006   Code   RO        10702    .ARM.Collect$$_printf_percent$$00000008  c_wu.l(_printf_i.o)
-    0x000404a8   0x000404a8   0x00000006   Code   RO        10480    .ARM.Collect$$_printf_percent$$00000009  c_wu.l(_printf_d.o)
+    0x000404a2   0x000404a2   0x00000006   Code   RO        10701    .ARM.Collect$$_printf_percent$$00000008  c_wu.l(_printf_i.o)
+    0x000404a8   0x000404a8   0x00000006   Code   RO        10702    .ARM.Collect$$_printf_percent$$00000009  c_wu.l(_printf_d.o)
     0x000404ae   0x000404ae   0x00000006   Code   RO        10703    .ARM.Collect$$_printf_percent$$0000000A  c_wu.l(_printf_u.o)
-    0x000404b4   0x000404b4   0x00000006   Code   RO        10701    .ARM.Collect$$_printf_percent$$0000000B  c_wu.l(_printf_o.o)
-    0x000404ba   0x000404ba   0x00000006   Code   RO        10479    .ARM.Collect$$_printf_percent$$0000000C  c_wu.l(_printf_x.o)
+    0x000404b4   0x000404b4   0x00000006   Code   RO        10700    .ARM.Collect$$_printf_percent$$0000000B  c_wu.l(_printf_o.o)
+    0x000404ba   0x000404ba   0x00000006   Code   RO        10477    .ARM.Collect$$_printf_percent$$0000000C  c_wu.l(_printf_x.o)
     0x000404c0   0x000404c0   0x00000006   Code   RO        10709    .ARM.Collect$$_printf_percent$$0000000D  c_wu.l(_printf_lli.o)
     0x000404c6   0x000404c6   0x00000006   Code   RO        10710    .ARM.Collect$$_printf_percent$$0000000E  c_wu.l(_printf_lld.o)
     0x000404cc   0x000404cc   0x00000006   Code   RO        10711    .ARM.Collect$$_printf_percent$$0000000F  c_wu.l(_printf_llu.o)
     0x000404d2   0x000404d2   0x00000006   Code   RO        10716    .ARM.Collect$$_printf_percent$$00000010  c_wu.l(_printf_llo.o)
     0x000404d8   0x000404d8   0x00000006   Code   RO        10717    .ARM.Collect$$_printf_percent$$00000011  c_wu.l(_printf_llx.o)
     0x000404de   0x000404de   0x0000000a   Code   RO        10713    .ARM.Collect$$_printf_percent$$00000012  c_wu.l(_printf_l.o)
-    0x000404e8   0x000404e8   0x00000006   Code   RO        10698    .ARM.Collect$$_printf_percent$$00000013  c_wu.l(_printf_c.o)
-    0x000404ee   0x000404ee   0x00000006   Code   RO        10478    .ARM.Collect$$_printf_percent$$00000014  c_wu.l(_printf_s.o)
+    0x000404e8   0x000404e8   0x00000006   Code   RO        10697    .ARM.Collect$$_printf_percent$$00000013  c_wu.l(_printf_c.o)
+    0x000404ee   0x000404ee   0x00000006   Code   RO        10476    .ARM.Collect$$_printf_percent$$00000014  c_wu.l(_printf_s.o)
     0x000404f4   0x000404f4   0x00000006   Code   RO        10714    .ARM.Collect$$_printf_percent$$00000015  c_wu.l(_printf_lc.o)
     0x000404fa   0x000404fa   0x00000006   Code   RO        10715    .ARM.Collect$$_printf_percent$$00000016  c_wu.l(_printf_ls.o)
     0x00040500   0x00040500   0x00000004   Code   RO        10708    .ARM.Collect$$_printf_percent$$00000017  c_wu.l(_printf_percent_end.o)
@@ -29478,7 +29239,7 @@ Memory Map of the image
     0x0004052a   0x0004052a   0x00000000   Code   RO        11061    .ARM.Collect$$libshutdown$$0000000C  c_wu.l(libshutdown2.o)
     0x0004052a   0x0004052a   0x00000000   Code   RO        11064    .ARM.Collect$$libshutdown$$0000000F  c_wu.l(libshutdown2.o)
     0x0004052a   0x0004052a   0x00000002   Code   RO        11065    .ARM.Collect$$libshutdown$$00000010  c_wu.l(libshutdown2.o)
-    0x0004052c   0x0004052c   0x00000000   Code   RO        10650    .ARM.Collect$$rtentry$$00000000  c_wu.l(__rtentry.o)
+    0x0004052c   0x0004052c   0x00000000   Code   RO        10647    .ARM.Collect$$rtentry$$00000000  c_wu.l(__rtentry.o)
     0x0004052c   0x0004052c   0x00000000   Code   RO        10873    .ARM.Collect$$rtentry$$00000002  c_wu.l(__rtentry2.o)
     0x0004052c   0x0004052c   0x00000004   Code   RO        10887    .ARM.Collect$$rtentry$$00000007  c_wu.l(__rtentry7.o)
     0x00040530   0x00040530   0x00000008   Code   RO        10874    .ARM.Collect$$rtentry$$00000008  c_wu.l(__rtentry2.o)
@@ -29496,29 +29257,29 @@ Memory Map of the image
     0x00040660   0x00040660   0x00000038   Code   RO        10425    .text               c_wu.l(snprintf.o)
     0x00040698   0x00040698   0x00000052   Code   RO        10433    .text               c_wu.l(_printf_str.o)
     0x000406ea   0x000406ea   0x00000002   PAD
-    0x000406ec   0x000406ec   0x00000078   Code   RO        10435    .text               c_wu.l(_printf_dec.o)
-    0x00040764   0x00040764   0x00000094   Code   RO        10455    .text               c_wu.l(_printf_hex_int_ll_ptr.o)
-    0x000407f8   0x000407f8   0x00000188   Code   RO        10475    .text               c_wu.l(__printf_flags_ss_wp.o)
-    0x00040980   0x00040980   0x00000058   Code   RO        10496    .text               c_wu.l(memcmp.o)
-    0x000409d8   0x000409d8   0x000000d6   Code   RO        10502    .text               c_wu.l(rt_memcpy.o)
-    0x00040aae   0x00040aae   0x00000064   Code   RO        10506    .text               c_wu.l(rt_memcpy_w.o)
-    0x00040b12   0x00040b12   0x00000010   Code   RO        10510    .text               c_wu.l(aeabi_memset4.o)
-    0x00040b22   0x00040b22   0x00000044   Code   RO        10512    .text               c_wu.l(rt_memclr.o)
-    0x00040b66   0x00040b66   0x0000004e   Code   RO        10514    .text               c_wu.l(rt_memclr_w.o)
-    0x00040bb4   0x00040bb4   0x0000000a   Code   RO        10660    .text               c_wu.l(rt_locale_twolibspace.o)
-    0x00040bbe   0x00040bbe   0x0000004e   Code   RO        10671    .text               c_wu.l(_printf_pad.o)
-    0x00040c0c   0x00040c0c   0x00000024   Code   RO        10673    .text               c_wu.l(_printf_truncate.o)
-    0x00040c30   0x00040c30   0x000000b2   Code   RO        10675    .text               c_wu.l(_printf_intcommon.o)
-    0x00040ce2   0x00040ce2   0x00000028   Code   RO        10677    .text               c_wu.l(_printf_charcount.o)
-    0x00040d0a   0x00040d0a   0x00000002   PAD
-    0x00040d0c   0x00040d0c   0x00000030   Code   RO        10679    .text               c_wu.l(_printf_char_common.o)
-    0x00040d3c   0x00040d3c   0x0000000a   Code   RO        10681    .text               c_wu.l(_sputc.o)
-    0x00040d46   0x00040d46   0x00000010   Code   RO        10683    .text               c_wu.l(_snputc.o)
-    0x00040d56   0x00040d56   0x0000002c   Code   RO        10685    .text               c_wu.l(_printf_char.o)
+    0x000406ec   0x000406ec   0x00000094   Code   RO        10453    .text               c_wu.l(_printf_hex_int_ll_ptr.o)
+    0x00040780   0x00040780   0x00000188   Code   RO        10473    .text               c_wu.l(__printf_flags_ss_wp.o)
+    0x00040908   0x00040908   0x00000058   Code   RO        10493    .text               c_wu.l(memcmp.o)
+    0x00040960   0x00040960   0x000000d6   Code   RO        10499    .text               c_wu.l(rt_memcpy.o)
+    0x00040a36   0x00040a36   0x00000064   Code   RO        10503    .text               c_wu.l(rt_memcpy_w.o)
+    0x00040a9a   0x00040a9a   0x00000010   Code   RO        10507    .text               c_wu.l(aeabi_memset4.o)
+    0x00040aaa   0x00040aaa   0x00000044   Code   RO        10509    .text               c_wu.l(rt_memclr.o)
+    0x00040aee   0x00040aee   0x0000004e   Code   RO        10511    .text               c_wu.l(rt_memclr_w.o)
+    0x00040b3c   0x00040b3c   0x0000000a   Code   RO        10657    .text               c_wu.l(rt_locale_twolibspace.o)
+    0x00040b46   0x00040b46   0x0000004e   Code   RO        10668    .text               c_wu.l(_printf_pad.o)
+    0x00040b94   0x00040b94   0x00000024   Code   RO        10670    .text               c_wu.l(_printf_truncate.o)
+    0x00040bb8   0x00040bb8   0x000000b2   Code   RO        10672    .text               c_wu.l(_printf_intcommon.o)
+    0x00040c6a   0x00040c6a   0x00000002   PAD
+    0x00040c6c   0x00040c6c   0x00000078   Code   RO        10674    .text               c_wu.l(_printf_dec.o)
+    0x00040ce4   0x00040ce4   0x00000028   Code   RO        10676    .text               c_wu.l(_printf_charcount.o)
+    0x00040d0c   0x00040d0c   0x00000030   Code   RO        10678    .text               c_wu.l(_printf_char_common.o)
+    0x00040d3c   0x00040d3c   0x0000000a   Code   RO        10680    .text               c_wu.l(_sputc.o)
+    0x00040d46   0x00040d46   0x00000010   Code   RO        10682    .text               c_wu.l(_snputc.o)
+    0x00040d56   0x00040d56   0x0000002c   Code   RO        10684    .text               c_wu.l(_printf_char.o)
     0x00040d82   0x00040d82   0x00000002   PAD
-    0x00040d84   0x00040d84   0x000000bc   Code   RO        10687    .text               c_wu.l(_printf_wctomb.o)
-    0x00040e40   0x00040e40   0x0000007c   Code   RO        10690    .text               c_wu.l(_printf_longlong_dec.o)
-    0x00040ebc   0x00040ebc   0x00000070   Code   RO        10696    .text               c_wu.l(_printf_oct_int_ll.o)
+    0x00040d84   0x00040d84   0x000000bc   Code   RO        10686    .text               c_wu.l(_printf_wctomb.o)
+    0x00040e40   0x00040e40   0x0000007c   Code   RO        10689    .text               c_wu.l(_printf_longlong_dec.o)
+    0x00040ebc   0x00040ebc   0x00000070   Code   RO        10695    .text               c_wu.l(_printf_oct_int_ll.o)
     0x00040f2c   0x00040f2c   0x0000000c   Code   RO        10863    .text               c_wu.l(sys_exit.o)
     0x00040f38   0x00040f38   0x00000008   Code   RO        10869    .text               c_wu.l(libspace.o)
     0x00040f40   0x00040f40   0x0000008a   Code   RO        10894    .text               c_wu.l(lludiv10.o)
@@ -30750,7 +30511,7 @@ Memory Map of the image
     0x0004b2b0   0x0004b2b0   0x00000080   Code   RO         6482    .text.coredump_save_nv  coredump.o
     0x0004b330   0x0004b330   0x00000032   Code   RO        10349    .text.dba1_can_callback  vcu_can_comm_test_rx.o
     0x0004b362   0x0004b362   0x00000002   PAD
-    0x0004b364   0x0004b364   0x000000de   Code   RO         6408    .text.dba_config_can  board.o
+    0x0004b364   0x0004b364   0x000000de   Code   RO         6408    .text.dba_config_Test_can  board.o
     0x0004b442   0x0004b442   0x00000002   PAD
     0x0004b444   0x0004b444   0x00000016   Code   RO           53    .text.dev_assert    adc_driver.o
     0x0004b45a   0x0004b45a   0x00000002   PAD
@@ -30848,7 +30609,7 @@ Memory Map of the image
     0x0004bcbe   0x0004bcbe   0x00000002   PAD
     0x0004bcc0   0x0004bcc0   0x00000032   Code   RO        10351    .text.mc1_can_callback  vcu_can_comm_test_rx.o
     0x0004bcf2   0x0004bcf2   0x00000002   PAD
-    0x0004bcf4   0x0004bcf4   0x000000c4   Code   RO         6410    .text.mc_config_can_mbx_fifo  board.o
+    0x0004bcf4   0x0004bcf4   0x000000c4   Code   RO         6410    .text.mc_config_Test_can_mbx_fifo  board.o
     0x0004bdb8   0x0004bdb8   0x00000044   Code   RO         6562    .text.mc_eval_gear_aux_cond  mc_task.o
     0x0004bdfc   0x0004bdfc   0x0000004a   Code   RO         6564    .text.mc_gear_op_fwd  mc_task.o
     0x0004be46   0x0004be46   0x00000002   PAD
@@ -31093,17 +30854,17 @@ Memory Map of the image
     0x0004efdc   0x0004efdc   0x000000b0   Code   RO         6469    THUMB               coredump_asm.o
     0x0004f08c   0x0004f08c   0x0000000a   Ven    RO        11074    Veneer$$Code        anon$$obj.o
     0x0004f096   0x0004f096   0x00000030   Code   RO        10825    i.__ARM_fpclassify  m_wm.l(fpclassify.o)
-    0x0004f0c6   0x0004f0c6   0x0000000e   Code   RO        10468    i._is_digit         c_wu.l(__printf_wp.o)
+    0x0004f0c6   0x0004f0c6   0x0000000e   Code   RO        10466    i._is_digit         c_wu.l(__printf_wp.o)
     0x0004f0d4   0x0004f0d4   0x0000002c   Code   RO        10721    locale$$code        c_wu.l(lc_ctype_c.o)
     0x0004f100   0x0004f100   0x0000002c   Code   RO        10968    locale$$code        c_wu.l(lc_numeric_c.o)
     0x0004f12c   0x0004f12c   0x0000001a   Code   RO        10929    x$fpl$fpinit        fz_wm.l(fpinit.o)
     0x0004f146   0x0004f146   0x00000004   Code   RO        10794    x$fpl$printf1       fz_wm.l(printf1.o)
     0x0004f14a   0x0004f14a   0x00000004   Code   RO        10796    x$fpl$printf2       fz_wm.l(printf2.o)
     0x0004f14e   0x0004f14e   0x00000000   Code   RO        10804    x$fpl$usenofp       fz_wm.l(usenofp.o)
-    0x0004f14e   0x0004f14e   0x00000028   Data   RO        10456    .constdata          c_wu.l(_printf_hex_int_ll_ptr.o)
-    0x0004f176   0x0004f176   0x00000011   Data   RO        10476    .constdata          c_wu.l(__printf_flags_ss_wp.o)
+    0x0004f14e   0x0004f14e   0x00000028   Data   RO        10454    .constdata          c_wu.l(_printf_hex_int_ll_ptr.o)
+    0x0004f176   0x0004f176   0x00000011   Data   RO        10474    .constdata          c_wu.l(__printf_flags_ss_wp.o)
     0x0004f187   0x0004f187   0x00000001   PAD
-    0x0004f188   0x0004f188   0x00000008   Data   RO        10688    .constdata          c_wu.l(_printf_wctomb.o)
+    0x0004f188   0x0004f188   0x00000008   Data   RO        10687    .constdata          c_wu.l(_printf_wctomb.o)
     0x0004f190   0x0004f190   0x00000026   Data   RO        10901    .constdata          c_wu.l(_printf_fp_hex.o)
     0x0004f1b6   0x0004f1b6   0x00000002   PAD
     0x0004f1b8   0x0004f1b8   0x00000094   Data   RO        10941    .constdata          c_wu.l(bigflt0.o)
@@ -31115,8 +30876,8 @@ Memory Map of the image
     0x0004f3a8   0x0004f3a8   0x00000018   Data   RO         6438    .rodata..L__const.can_if_edma_init.dm_chn1_cfg  board.o
     0x0004f3c0   0x0004f3c0   0x00000008   Data   RO         6436    .rodata..L__const.can_if_edma_init.edma_channel_states  board.o
     0x0004f3c8   0x0004f3c8   0x0000004c   Data   RO         6440    .rodata..L__const.can_if_mc_init.can_mc_cfg  board.o
-    0x0004f414   0x0004f414   0x0000000c   Data   RO         6448    .rodata..L__const.dba_config_can.data_info  board.o
-    0x0004f420   0x0004f420   0x0000000c   Data   RO         6450    .rodata..L__const.mc_config_can_mbx_fifo.data_info  board.o
+    0x0004f414   0x0004f414   0x0000000c   Data   RO         6448    .rodata..L__const.dba_config_Test_can.data_info  board.o
+    0x0004f420   0x0004f420   0x0000000c   Data   RO         6450    .rodata..L__const.mc_config_Test_can_mbx_fifo.data_info  board.o
     0x0004f42c   0x0004f42c   0x0000000c   Data   RO        10400    .rodata..L__const.vcu_2_dba_send_test_msg.tx_info  vcu_can_comm_test_tx.o
     0x0004f438   0x0004f438   0x0000000c   Data   RO        10399    .rodata..L__const.vcu_2_mc_send_rpdo_msg.tx_info  vcu_can_comm_test_tx.o
     0x0004f444   0x0004f444   0x00000054   Data   RO          535    .rodata.CLOCK_SYS_SetSystemClockConfig.maxSysClksInHSRUN  clock_s32k1xx.o
@@ -31352,7 +31113,7 @@ Image component sizes
       2424          0        554          0          0       8357   aes_sw.o
         44          8          0          0          0        364   asm_delay.o
        124          0        240          0          0       1890   bcm.o
-      1908          0        340          0       2112      31674   board.o
+      1908          0        340          0       2112      31684   board.o
         28          0          0          0        464      35937   can_messenger_rx.o
         12          0          0          0         60      15738   charger_task.o
          0          0          0        856          4      12564   clock_config.o
@@ -31430,7 +31191,7 @@ Image component sizes
        106          0          0          0          0       6111   wdog_hw_access.o
 
     ----------------------------------------------------------------------
-     53342        440       3900       3076     550096    1039334   Object Totals
+     53342        440       3900       3076     550096    1039344   Object Totals
         10          0         80          0     527368          0   (incl. Generated)
       1074          0          7          4        126          0   (incl. Padding)
 
@@ -31544,8 +31305,8 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     60794        710       4454       3076     550192    1040034   Grand Totals
-     60794        710       4454       3076     550192    1040034   ELF Image Totals
+     60794        710       4454       3076     550192    1040044   Grand Totals
+     60794        710       4454       3076     550192    1040044   ELF Image Totals
      60794        710       4454       3076          0          0   ROM Totals
 
 ==============================================================================

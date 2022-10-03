@@ -521,7 +521,7 @@ static void start_shutdown_proc(void)
     
     osif_time_delay(1000);
     
-    bms_data_tx_timer_stop();
+//    bms_data_tx_timer_stop();
     
     /* Shutting down. The message content is irrelevant */
     shutdown_msg.udp_msg.cmd = MSG_ID_GRACEFUL_SHUTDOWN_S32_LTE;

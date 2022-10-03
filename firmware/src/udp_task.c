@@ -429,7 +429,7 @@ static void process_LTE_S32_UDP_MSG_FW_VER_INFO(const udp_rx_msg_t *umesg)
         }
     }
     
-    bms_get_balancer_info(&bal_info);
+//    bms_get_balancer_info(&bal_info);
     
     udp_resp.udp_msg.cmd = MSG_ID_FW_VER_S32_LTE;
     
@@ -450,23 +450,23 @@ static void process_LTE_S32_UDP_MSG_FW_VER_INFO(const udp_rx_msg_t *umesg)
     
     /* snprintf does not count null so +1 */
     /* Also piggybacking some additional info as there is a ton of space in the buffer */
-    n = snprintf((char *)&udp_resp.buffer[0], SHMEM_BMS_BLK_SIZE, 
-                                                   "VCU FW: v%d.%d. %s, %s\nBMS FW: %s\nBMS BLIN: %d,%d,%d\n"   \
-                                                   "F/W Sentinel: 0x%x\nVCU RCM-H:%d, RCM-L:%d\nException:%s,%d,%x\n",
-                                                    get_fw_max_ver(), 
-                                                    get_fw_min_ver(), 
-                                                    get_fw_date(), 
-                                                    get_fw_timestamp(), 
-                                                    bms_get_fw_version(),
-                                                    bal_info.balancer_run_count,
-                                                    bal_info.balancer_abort_cause,
-                                                    bal_info.balancer_time_ticks,
-                                                    fw_update_state,
-                                                    rcm_h,
-                                                    rcm_l,
-                                                    os_err_info.thread,
-                                                    os_err_info.os_err_code,
-                                                    os_err_info.os_obj_id);
+//    n = snprintf((char *)&udp_resp.buffer[0], SHMEM_BMS_BLK_SIZE, 
+//                                                   "VCU FW: v%d.%d. %s, %s\nBMS FW: %s\nBMS BLIN: %d,%d,%d\n"   \
+//                                                   "F/W Sentinel: 0x%x\nVCU RCM-H:%d, RCM-L:%d\nException:%s,%d,%x\n",
+//                                                    get_fw_max_ver(), 
+//                                                    get_fw_min_ver(), 
+//                                                    get_fw_date(), 
+//                                                    get_fw_timestamp(), 
+////                                                    bms_get_fw_version(),
+//                                                    bal_info.balancer_run_count,
+//                                                    bal_info.balancer_abort_cause,
+//                                                    bal_info.balancer_time_ticks,
+//                                                    fw_update_state,
+//                                                    rcm_h,
+//                                                    rcm_l,
+//                                                    os_err_info.thread,
+//                                                    os_err_info.os_err_code,
+//                                                    os_err_info.os_obj_id);
      
     udp_resp.udp_msg.len = (uint32_t)((n < 0) ? 0 : (n + 1));
     (void)osif_exit_critical(lc);
@@ -728,7 +728,7 @@ static void process_hw_rst_fuelgauge(const udp_rx_msg_t *umesg)
     UNUSED_PARAM(umesg);
     
     lc = osif_enter_critical();
-    bms_fg_reset();
+//    bms_fg_reset();
     (void)osif_exit_critical(lc);
 }
 

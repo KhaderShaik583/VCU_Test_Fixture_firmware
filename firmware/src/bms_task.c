@@ -97,7 +97,7 @@ static void process_BMS_MSG_ASYNC_FET_OFF(void)
     
     (void)canfd_enqueue(can_message, CANFD_LOGICAL_BUS0);
     
-    bms_data_tx_timer_stop();
+//    bms_data_tx_timer_stop();
     
 #ifdef USE_FEATURE_VCU_ON_DESK
     dbg_printf("I,0,BMS_MSG_ASYNC_FET_OFF\n\r");
@@ -309,8 +309,8 @@ __NO_RETURN static void bms_task(void *arg)
 
     canfd_queue_init();
     init_fast_boot_mesg();
-    fet_sw_init();
-    bms_state_init();
+//    fet_sw_init();
+//    bms_state_init();
     
     /* Install callback for CAN bus error events */
     FLEXCAN_DRV_InstallErrorCallback(CAN_IF_BMS, bms_can_err_cb, NULL);

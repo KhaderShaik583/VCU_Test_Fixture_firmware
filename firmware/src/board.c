@@ -56,6 +56,7 @@
 #include "mc_task.h"
 #include "bms.h"
 #include "Uart.h"
+#include "can_messenger_rx.h"
 
 #define EDMA_CHN0_NUMBER                    (0U)
 #define EDMA_CHN1_NUMBER                    (1U)
@@ -178,7 +179,7 @@ static void can_fd_if_Test_bms_init(void)
  
 }
 
-static void dba_config_can(void)
+static void dba_config_Test_can(void)
 {
     uint16_t id_counter = 0U;
     flexcan_id_table_t filterTable[8];    
@@ -234,7 +235,7 @@ static void dba_config_can(void)
     FLEXCAN_DRV_InstallEventCallback(CAN_IF_ABS, dba1_can_callback, NULL);
 }
 
-static status_t mc_config_can_mbx_fifo(uint8_t instance, uint8_t mb_idx)
+static status_t mc_config_Test_can_mbx_fifo(uint8_t instance, uint8_t mb_idx)
 {
 	status_t read_status = STATUS_SUCCESS;
     uint16_t id_counter = 0U;
@@ -749,8 +750,8 @@ status_t board_init(void)
     init_status += ec25_uart_config();
     DEV_ASSERT(init_status == STATUS_SUCCESS);
     
-	dba_config_can();
-	(void)mc_config_can_mbx_fifo(CAN_IF_MOTOR, RX_MAILBOX);
+	dba_config_Test_can();
+	(void)mc_config_Test_can_mbx_fifo(CAN_IF_MOTOR, RX_MAILBOX);
 	sys_lpspi2_init();
 	sys_lpspi0_init();
     sys_lpspi1_init();

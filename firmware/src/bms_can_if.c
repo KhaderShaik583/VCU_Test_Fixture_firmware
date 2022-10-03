@@ -142,7 +142,7 @@ static int32_t can_fd_bms_receive_nb(uint32_t bus)
                 
 #ifdef USE_FEATURE_CAN_BUS_TIMEOUT
                 (void)osif_timer_stop(can_bus_if_timeout_timers[bus]);
-                bms_data_tx_timer_stop();
+//                bms_data_tx_timer_stop();
                 clear_status_bit(STAT_VCU_BMS_CAN_MSG_TIMEOUT);
                 clear_status_bit(STAT_VCU_BMS_CAN_LINK_FAIL);
                 can_msg_timeout_count = 0U;
@@ -176,7 +176,7 @@ static int32_t can_fd_bms_receive_nb(uint32_t bus)
                             aes_sw_dec(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
 #endif /* USE_SW_AES_MOD */
                             /* Process Data */
-                            (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
+//                            (void)process_bms_can_data(dec_fd_rx_buffer, bms_rx_buff[bus], &canfd_cipher_len, bus);
                         }    
                     }
 #else
@@ -223,7 +223,7 @@ void canfd_bus0_timeout_handler(void *arg)
     
     if(can_msg_timeout_count > CAN_MSG_MAX_TIMEOUTS)
     {
-        bms_data_tx_timer_start(BMS_DATA_TX_TIMER_PERIOD);
+//        bms_data_tx_timer_start(BMS_DATA_TX_TIMER_PERIOD);
         set_status_bit(STAT_VCU_BMS_CAN_LINK_FAIL);
     }
 }
