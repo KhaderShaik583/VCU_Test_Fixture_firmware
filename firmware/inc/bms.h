@@ -72,7 +72,7 @@
 #define CANFD_LOGICAL_BUS_ENABLED      (1U)
 #define CANFD_LOGICAL_BUS_DISABLED     (0U)
 
-#define BMS_VCU_SLOT0_COMM_ID           (0x400000U)
+#define BMS_VCU_SLOT0_COMM_ID           (0x200000U)
 #define BMS_VCU_MBX_GBL_MASK_FILTER     (0xE00000U)
 #define CAN_FD_BUS_TIMEOUT              (500U)
 

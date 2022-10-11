@@ -39,7 +39,7 @@
 /* #define USE_NATIVE_IMU_COMPUTATION */
 
 /* Software AES-128 is only used for testing & validation and not for production */
- #define USE_SW_AES_MOD
+// #define USE_SW_AES_MOD
 
 #endif /* FW_FEATURES_H */
 

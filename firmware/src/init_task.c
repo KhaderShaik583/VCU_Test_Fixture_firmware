@@ -836,12 +836,9 @@ __NO_RETURN static void sys_init_task(void *arg)
 	status_t ret = STATUS_ERROR;
 	
 	
-//	CANRx_task_create();
+	CANRx_task_create();
     for(;; )
-    {    
-		can_fd_bms_receive_test();
-		can_dba_receive_test();
-		can_mc_receive_test();	
+    {    	
         
 		ret = LPUART_DRV_ReceiveDataBlocking(SYS_DEBUG_LPUART_INTERFACE, rx_buffer, 1, 3000);
 		
@@ -850,7 +847,7 @@ __NO_RETURN static void sys_init_task(void *arg)
 			switch(rx_buffer[0])
 			{
 				case 0x01:
-						vcu_2_bms_can_test_msg(0x946U);
+						vcu_2_bms_can_test_msg(0x919U);
 						memset(rx_buffer, 0, sizeof(rx_buffer));
 						break;
 				case 0x02:
@@ -871,36 +868,36 @@ __NO_RETURN static void sys_init_task(void *arg)
 
 }
 
-//__NO_RETURN static void CANRx_task(void *arg) 
-//{
-//    sys_msg_queue_obj_t mq;
-//    
-//    UNUSED_PARAM(arg);
-//   
-//	
-//    for(;; )
-//    {    
-//		can_fd_bms_receive_test();
-//		can_dba_receive_test();
-//		can_mc_receive_test();	
-//        
-//    }
+__NO_RETURN static void CANRx_task(void *arg) 
+{
+    sys_msg_queue_obj_t mq;
+    
+    UNUSED_PARAM(arg);
+   
+	
+    for(;; )
+    {    
+		can_fd_bms_receive_test();
+		can_dba_receive_test();
+		can_mc_receive_test();	
+        
+    }
 
-//}
+}
 
-//void CANRx_task_create(void)
-//{
-//    uint32_t param = NULL;
+void CANRx_task_create(void)
+{
+    uint32_t param = NULL;
 
-//    sys_msg_queue = osif_msg_queue_create(INIT_TASK_MSG_QUEUE_MAX_OBJS, sizeof(sys_msg_queue_obj_t));
-//    DEV_ASSERT(sys_msg_queue != NULL);
-//    
-//    thread_init = osif_thread_create(CANRx_task, &param, &CANRx_attr);
-//    DEV_ASSERT(thread_init != NULL);
-//    
-//    init_sm_key_state_timer = osif_timer_create(init_sm_key_state_timer_handler, osTimerOnce, NULL, NULL);
-//    DEV_ASSERT(init_sm_key_state_timer != NULL); 
-//}
+    sys_msg_queue = osif_msg_queue_create(INIT_TASK_MSG_QUEUE_MAX_OBJS, sizeof(sys_msg_queue_obj_t));
+    DEV_ASSERT(sys_msg_queue != NULL);
+    
+    thread_init = osif_thread_create(CANRx_task, &param, &CANRx_attr);
+    DEV_ASSERT(thread_init != NULL);
+    
+    init_sm_key_state_timer = osif_timer_create(init_sm_key_state_timer_handler, osTimerOnce, NULL, NULL);
+    DEV_ASSERT(init_sm_key_state_timer != NULL); 
+}
 
 void init_task_create(void)
 {

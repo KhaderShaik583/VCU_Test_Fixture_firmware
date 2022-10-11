@@ -40,6 +40,7 @@
 #define CAN_IF_VCU_2_BMS_TEST_MSG_ID 	0x123U
 #define CAN_IF_VCU_2_MC_TEST_MSG_ID 	0x456U
 #define CAN_IF_VCU_2_DBA_TEST_MSG_ID 	0x789U
+#define CAN_IF_MSG_BMS_WAKE_NTF_ID              (0x919U)
 
 /* For compatibility with earlier designs that had 3 ports for 3 packs */
 static const uint32_t slot_to_msg_id_map[MAX_CANFD_LOGICAL_INTERFACES] = {
@@ -187,13 +188,13 @@ status_t vcu_2_bms_can_test_msg(uint32_t msgid)
 {
     status_t s = STATUS_SUCCESS;
      volatile uint32_t emsg_id = 0U;
-    uint8_t msg_sig[CANFD_MSG_SIG_LEN] = {0x25U, 0x9cU, 0x1fU, 0x57U, 0x93U, 0xacU, 0x8bU, 0x92U};
-	
+//    uint8_t msg_sig[CANFD_MSG_SIG_LEN] = {0x25U, 0x9cU, 0x1fU, 0x57U, 0x93U, 0xacU, 0x8bU, 0x92U};
+	uint8_t buffer[4] = {0x34U, 0xDFU, 0x5AU, 0xEFU};
 	    msgid = outgoing_slot_to_msg_id_map[0] | ((uint32_t)msgid << CAN_MSG_MSG_ID_SHIFT);   
 	    /* Add message specific data other than signature */
     /* Increment data length by CANFD_MSG_SIG_LEN + data length */
     
-    (void)can_fd_if_bms_testmsg_send(msg_sig, CANFD_MSG_SIG_LEN, msgid, 0);
+    (void)can_fd_if_bms_testmsg_send(buffer, 4U, msgid, 0);
     
     return s;
 }
@@ -217,8 +218,10 @@ status_t vcu_2_bms_can_test_msg_reply(uint32_t msgid, const uint8_t *msg_sig)
 status_t vcu_2_mc_send_rpdo_msg(uint32_t msg_Id)
 {
 	status_t write_status = STATUS_SUCCESS;
-	uint8_t buffer[8] = {"MCCANTES"};
-    
+	uint8_t buffer[8];
+		buffer[5] = 0xFCU;
+		buffer[6] = 0xABU;
+		buffer[7] =	0xCDU;
     
 	flexcan_data_info_t tx_info =
     {
@@ -237,8 +240,10 @@ status_t vcu_2_mc_send_rpdo_msg(uint32_t msg_Id)
 status_t vcu_2_dba_send_test_msg(uint32_t msg_Id)
 {
 	status_t write_status = STATUS_SUCCESS;
-	uint8_t buffer[8] = {"DBACAN"};
-    
+	uint8_t buffer[8];
+		buffer[5] = 0x15U;
+		buffer[6] = 0xA0U;
+		buffer[7] =	0x4DU;
     
 	flexcan_data_info_t tx_info =
     {

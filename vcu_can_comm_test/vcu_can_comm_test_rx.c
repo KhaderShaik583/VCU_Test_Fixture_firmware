@@ -222,7 +222,7 @@ int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 #else
                             aes_sw_dec(bms_rx_buff[bus].data, dec_fd_rx_buffer, canfd_cipher_len);
 #endif /* USE_SW_AES_MOD */
-								if(msgid == 0x946U)
+								if((msgid == 0x908U) || (msgid == 0x906U))
 								{
 									LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 20, 200);
 								}
