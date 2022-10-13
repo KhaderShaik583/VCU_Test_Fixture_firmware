@@ -117,7 +117,9 @@ static uint8_t mc_tx_buffer[64] =  "MC CAN TEST PASS \n\r";
 static uint8_t bms_tx_buffer[64] = "BMS CAN TEST PASS \n\r";
 
 static uint8_t mc_tx_buffer1[64] = "MC CAN TEST FAIL \n\r";
-
+static uint32_t esrfx_1 = 0U;
+static uint32_t esrfx_2 = 0U;
+static uint32_t esrfx_3 = 0U;
 
 void dba1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState)
 {
@@ -161,6 +163,256 @@ void mc1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t
     }
 }
 
+void bmsfx_can_err_cb(uint8_t instance, flexcan_event_type_t eventType, flexcan_state_t *flexcanState)
+{
+    UNUSED_PARAM(flexcanState);
+    
+    if(eventType == FLEXCAN_EVENT_ERROR)
+    {
+        esrfx_1 = FLEXCAN_DRV_GetErrorStatus(instance);
+    }
+}
+
+void chrgfx_can_err_cb(uint8_t instance, flexcan_event_type_t eventType, flexcan_state_t *flexcanState)
+{
+    UNUSED_PARAM(flexcanState);
+    
+    if(eventType == FLEXCAN_EVENT_ERROR)
+    {
+        esrfx_2 = FLEXCAN_DRV_GetErrorStatus(instance);
+    }
+}
+
+void mcfx_can_err_cb(uint8_t instance, flexcan_event_type_t eventType, flexcan_state_t *flexcanState)
+{
+    UNUSED_PARAM(flexcanState);
+    
+    if(eventType == FLEXCAN_EVENT_ERROR)
+    {
+        esrfx_3 = FLEXCAN_DRV_GetErrorStatus(instance);
+    }
+}
+/**
+ * @brief Error processing for the bms CAN interface
+ * 
+ * @param esr - Error & status data register 
+ */
+void can_fd_if_bmsfx_err_process(uint32_t *esr)
+{
+    static uint32_t fault_confinement_count = 0U;
+    
+    
+    if((*esr & CAN_ESR1_BOFFINT_MASK))
+    {
+        dbg_printf("E,CAN I/F BUS OFF ERROR\n\r");
+    }
+    else if((*esr & CAN_ESR1_FLTCONF_MASK))
+    {
+		fault_confinement_count++;
+        if(fault_confinement_count < 10U)
+        {
+            dbg_printf("E,BMS CAN I/F Fault confinement state\n\r");
+        }
+        else if(fault_confinement_count == 10U)
+        {
+            dbg_printf("E,BMS CAN I/F Fault confinement state overflow\n\r");
+        }
+        else
+        {
+            __NOP();
+        }
+    }
+    else if((*esr & CAN_ESR1_RXWRN_MASK))
+    {
+        dbg_printf("E,CAN I/F Repetitive RX errors\n\r");
+    }
+    else if((*esr & CAN_ESR1_TXWRN_MASK))
+    {
+        dbg_printf("E,CAN I/F Repetitive TX errors\n\r");
+    }
+    else if((*esr & CAN_ESR1_STFERR_MASK))
+    {
+        dbg_printf("E,CAN I/F Stuff error\n\r");
+    }
+    else if((*esr & CAN_ESR1_FRMERR_MASK))
+    {
+        dbg_printf("E,CAN I/F Form error\n\r");
+    }
+    else if((*esr & CAN_ESR1_CRCERR_MASK))
+    {
+        dbg_printf("E,CAN I/F CRC error\n\r");
+    }
+    else if((*esr & CAN_ESR1_ACKERR_MASK))
+    {
+        dbg_printf("E,CAN I/F ACK error\n\r");
+    }
+    else if((*esr & CAN_ESR1_BIT0ERR_MASK))
+    {
+        dbg_printf("E,CAN I/F BIT0 error\n\r");
+    }
+    else if((*esr & CAN_ESR1_BIT1ERR_MASK))
+    {
+        dbg_printf("E,CAN I/F BIT1 error\n\r");
+    }
+    else if((*esr & CAN_ESR1_SYNCH_MASK))
+    {
+        dbg_printf("E,CAN I/F SYNCH errors\n\r");
+    }
+    else
+    {
+        __NOP();
+    }
+    
+    *esr = 0U;
+}
+
+/**
+ * @brief Error processing for the charger CAN interface
+ * 
+ * @param esr - Error & status data register 
+ */
+void can_if_chg_err_process(uint32_t *esr)
+{
+	static uint32_t fault_confinement_count = 0U;
+    
+    
+    if((*esr & CAN_ESR1_BOFFINT_MASK))
+    {
+        dbg_printf("E,CAN I/F BUS OFF ERROR\n\r");
+    }
+    else if((*esr & CAN_ESR1_FLTCONF_MASK))
+    {
+		fault_confinement_count++;
+        if(fault_confinement_count < 10U)
+        {
+            dbg_printf("E,DBA CAN I/F Fault confinement state\n\r");
+        }
+        else if(fault_confinement_count == 10U)
+        {
+            dbg_printf("E,DBA CAN I/F Fault confinement state overflow\n\r");
+        }
+        else
+        {
+            __NOP();
+        }
+    }
+    else if((*esr & CAN_ESR1_RXWRN_MASK))
+    {
+        dbg_printf("E,CAN I/F Repetitive RX errors\n\r");
+    }
+    else if((*esr & CAN_ESR1_TXWRN_MASK))
+    {
+        dbg_printf("E,CAN I/F Repetitive TX errors\n\r");
+    }
+    else if((*esr & CAN_ESR1_STFERR_MASK))
+    {
+        dbg_printf("E,CAN I/F Stuff error\n\r");
+    }
+    else if((*esr & CAN_ESR1_FRMERR_MASK))
+    {
+        dbg_printf("E,CAN I/F Form error\n\r");
+    }
+    else if((*esr & CAN_ESR1_CRCERR_MASK))
+    {
+        dbg_printf("E,CAN I/F CRC error\n\r");
+    }
+    else if((*esr & CAN_ESR1_ACKERR_MASK))
+    {
+        dbg_printf("E,CAN I/F ACK error\n\r");
+    }
+    else if((*esr & CAN_ESR1_BIT0ERR_MASK))
+    {
+        dbg_printf("E,CAN I/F BIT0 error\n\r");
+    }
+    else if((*esr & CAN_ESR1_BIT1ERR_MASK))
+    {
+        dbg_printf("E,CAN I/F BIT1 error\n\r");
+    }
+    else if((*esr & CAN_ESR1_SYNCH_MASK))
+    {
+        dbg_printf("E,CAN I/F SYNCH errors\n\r");
+    }
+    else
+    {
+        __NOP();
+    }
+    
+    *esr = 0U;
+}
+
+/**
+ * @brief Error processing for the mc CAN interface
+ * 
+ * @param esr - Error & status data register 
+ */
+void can_if_mcfx_err_process(uint32_t *esr)
+{
+    static uint32_t fault_confinement_count = 0U;
+    
+    
+    if((*esr & CAN_ESR1_BOFFINT_MASK))
+    {
+        dbg_printf("E,CAN I/F BUS OFF ERROR\n\r");
+    }
+    else if((*esr & CAN_ESR1_FLTCONF_MASK))
+    {
+        fault_confinement_count++;
+        if(fault_confinement_count < 10U)
+        {
+            dbg_printf("E,MC CAN I/F Fault confinement state\n\r");
+        }
+        else if(fault_confinement_count == 10U)
+        {
+            dbg_printf("E,MC CAN I/F Fault confinement state overflow\n\r");
+        }
+        else
+        {
+            __NOP();
+        }
+    }
+    else if((*esr & CAN_ESR1_RXWRN_MASK))
+    {
+        dbg_printf("E,CAN I/F Repetitive RX errors\n\r");
+    }
+    else if((*esr & CAN_ESR1_TXWRN_MASK))
+    {
+        dbg_printf("E,CAN I/F Repetitive TX errors\n\r");
+    }
+    else if((*esr & CAN_ESR1_STFERR_MASK))
+    {
+        dbg_printf("E,CAN I/F Stuff error\n\r");
+    }
+    else if((*esr & CAN_ESR1_FRMERR_MASK))
+    {
+        dbg_printf("E,CAN I/F Form error\n\r");
+    }
+    else if((*esr & CAN_ESR1_CRCERR_MASK))
+    {
+        dbg_printf("E,CAN I/F CRC error\n\r");
+    }
+    else if((*esr & CAN_ESR1_ACKERR_MASK))
+    {
+        dbg_printf("E,CAN I/F ACK error\n\r");
+    }
+    else if((*esr & CAN_ESR1_BIT0ERR_MASK))
+    {
+        dbg_printf("E,CAN I/F BIT0 error\n\r");
+    }
+    else if((*esr & CAN_ESR1_BIT1ERR_MASK))
+    {
+        dbg_printf("E,CAN I/F BIT1 error\n\r");
+    }
+    else if((*esr & CAN_ESR1_SYNCH_MASK))
+    {
+        dbg_printf("E,CAN I/F SYNCH errors\n\r");
+    }
+    else
+    {
+        __NOP();
+    }
+    
+    *esr = 0U;
+}
 
 int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 {
@@ -289,7 +541,7 @@ void can_if_dba_receive_nb(void)
 			
 				if(dba_recv_buff.msgId == 0x124U)
 				{
-					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 64);
+					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 20);
 				}
                 dba_rx_state = CAN_SM_STATE_START_RX;
             }
@@ -329,7 +581,7 @@ void can_if_mc_receive_nb(void)
 				//vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
 				if(mc_recv_buff.msgId == 0x108U)
 				{
-					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 64);
+					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 19);
 				}
                 mc_rx_state = CAN_SM_STATE_START_RX;
             }
@@ -347,16 +599,19 @@ void can_if_mc_receive_nb(void)
 }
 void can_dba_receive_test()
 { 
-    (void)can_if_dba_receive_nb();   
+    (void)can_if_dba_receive_nb(); 
+	can_if_chg_err_process(&esrfx_2);
 }
 
 void can_mc_receive_test()
 { 
-    (void)can_if_mc_receive_nb();   
+    (void)can_if_mc_receive_nb();
+	can_if_mcfx_err_process(&esrfx_3);
 }
 
 void can_fd_bms_receive_test()
 { 
-    (void)can_fd_bms_receive_test_nb(0);   
+    (void)can_fd_bms_receive_test_nb(0); 
+	can_fd_if_bmsfx_err_process(&esrfx_1);
 }
 

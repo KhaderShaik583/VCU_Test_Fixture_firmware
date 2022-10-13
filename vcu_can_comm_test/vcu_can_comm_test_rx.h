@@ -38,4 +38,11 @@ status_t can_charger_receive();
 void dba1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState);
 void mc1_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState);
 void bms_can_callback(uint8_t instance, flexcan_event_type_t eventType, uint32_t idx, flexcan_state_t *flexcanState);
+
+void bmsfx_can_err_cb(uint8_t instance, flexcan_event_type_t eventType, flexcan_state_t *flexcanState);
+void chrgfx_can_err_cb(uint8_t instance, flexcan_event_type_t eventType, flexcan_state_t *flexcanState);
+void mcfx_can_err_cb(uint8_t instance, flexcan_event_type_t eventType, flexcan_state_t *flexcanState);
+
+void can_fd_if_bmsfx_err_process(uint32_t *esr);
+void can_if_chg_err_process(uint32_t *esr);
 #endif /* CAN_MESSENGER_RX_H */

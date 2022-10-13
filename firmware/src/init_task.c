@@ -60,6 +60,7 @@
 #include "wdt_task.h" 
 #endif
 #include "sleep.h"
+#include "wdt_task.h"
 
 #define INIT_TASK_MSG_QUEUE_MAX_OBJS    (16) 
 
@@ -78,7 +79,7 @@
 #define CANRx_TASK_STACK_SIZE     STACK_SIZE(128U)
 
 static uint8_t tx_buffer[MAX_UART_PAYLOAD] = "Connected \n\r";
-uint8_t rx_buffer[1] = {0x00};
+static uint8_t response[MAX_UART_PAYLOAD]  = "ACK \n\r";
 
 typedef enum
 {
@@ -832,7 +833,7 @@ __NO_RETURN static void sys_init_task(void *arg)
 	
 	uint8_t rx_buffer[1] = {0x00};
 	
-	LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, MAX_UART_PAYLOAD, 200);
+	LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, 12, 200);
 	status_t ret = STATUS_ERROR;
 	
 	
@@ -846,17 +847,21 @@ __NO_RETURN static void sys_init_task(void *arg)
 		{
 			switch(rx_buffer[0])
 			{
-				case 0x01:
-						vcu_2_bms_can_test_msg(0x919U);
+				case 0x01U:
+						vcu_2_bms_can_test_msg(0x920U);
 						memset(rx_buffer, 0, sizeof(rx_buffer));
+						LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, response, 6, 200);
 						break;
-				case 0x02:
+				case 0x02U:
 						vcu_2_mc_send_rpdo_msg(0x108U);
 						memset(rx_buffer, 0, sizeof(rx_buffer));
 						break;
-				case 0x03:
+				case 0x03U:
 						vcu_2_dba_send_test_msg(0x124U);
 						memset(rx_buffer, 0, sizeof(rx_buffer));
+						break;
+				case 0x04U:
+						LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, tx_buffer, 12, 200);
 						break;
 				default:
 					__NOP();
@@ -874,6 +879,10 @@ __NO_RETURN static void CANRx_task(void *arg)
     
     UNUSED_PARAM(arg);
    
+	    /* Install callback for CAN bus error events */
+    FLEXCAN_DRV_InstallErrorCallback(CAN_IF_BMS, bmsfx_can_err_cb, NULL);
+	FLEXCAN_DRV_InstallErrorCallback(CAN_IF_ABS, chrgfx_can_err_cb, NULL);
+	FLEXCAN_DRV_InstallErrorCallback(CAN_IF_MOTOR, mcfx_can_err_cb, NULL);
 	
     for(;; )
     {    
