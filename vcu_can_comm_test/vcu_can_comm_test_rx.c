@@ -204,7 +204,7 @@ void can_fd_if_bmsfx_err_process(uint32_t *esr)
     
     if((*esr & CAN_ESR1_BOFFINT_MASK))
     {
-        dbg_printf("E,CAN I/F BUS OFF ERROR\n\r");
+        dbg_printf("E,BMS CAN I/F BUS OFF ERROR\n\r");
     }
     else if((*esr & CAN_ESR1_FLTCONF_MASK))
     {
@@ -224,39 +224,39 @@ void can_fd_if_bmsfx_err_process(uint32_t *esr)
     }
     else if((*esr & CAN_ESR1_RXWRN_MASK))
     {
-        dbg_printf("E,CAN I/F Repetitive RX errors\n\r");
+        dbg_printf("E,BMS CAN I/F Repetitive RX errors\n\r");
     }
     else if((*esr & CAN_ESR1_TXWRN_MASK))
     {
-        dbg_printf("E,CAN I/F Repetitive TX errors\n\r");
+        dbg_printf("E,BMS CAN I/F Repetitive TX errors\n\r");
     }
     else if((*esr & CAN_ESR1_STFERR_MASK))
     {
-        dbg_printf("E,CAN I/F Stuff error\n\r");
+        dbg_printf("E,BMS CAN I/F Stuff error\n\r");
     }
     else if((*esr & CAN_ESR1_FRMERR_MASK))
     {
-        dbg_printf("E,CAN I/F Form error\n\r");
+        dbg_printf("E,BMS CAN I/F Form error\n\r");
     }
     else if((*esr & CAN_ESR1_CRCERR_MASK))
     {
-        dbg_printf("E,CAN I/F CRC error\n\r");
+        dbg_printf("E,BMS CAN I/F CRC error\n\r");
     }
     else if((*esr & CAN_ESR1_ACKERR_MASK))
     {
-        dbg_printf("E,CAN I/F ACK error\n\r");
+        dbg_printf("E,BMS CAN I/F ACK error\n\r");
     }
     else if((*esr & CAN_ESR1_BIT0ERR_MASK))
     {
-        dbg_printf("E,CAN I/F BIT0 error\n\r");
+        dbg_printf("E,BMS CAN I/F BIT0 error\n\r");
     }
     else if((*esr & CAN_ESR1_BIT1ERR_MASK))
     {
-        dbg_printf("E,CAN I/F BIT1 error\n\r");
+        dbg_printf("E,BMS CAN I/F BIT1 error\n\r");
     }
     else if((*esr & CAN_ESR1_SYNCH_MASK))
     {
-        dbg_printf("E,CAN I/F SYNCH errors\n\r");
+        dbg_printf("E,BMS CAN I/F SYNCH errors\n\r");
     }
     else
     {
@@ -278,7 +278,7 @@ void can_if_chg_err_process(uint32_t *esr)
     
     if((*esr & CAN_ESR1_BOFFINT_MASK))
     {
-        dbg_printf("E,CAN I/F BUS OFF ERROR\n\r");
+        dbg_printf("E,DBA CAN I/F BUS OFF ERROR\n\r");
     }
     else if((*esr & CAN_ESR1_FLTCONF_MASK))
     {
@@ -298,39 +298,39 @@ void can_if_chg_err_process(uint32_t *esr)
     }
     else if((*esr & CAN_ESR1_RXWRN_MASK))
     {
-        dbg_printf("E,CAN I/F Repetitive RX errors\n\r");
+        dbg_printf("E,DBA CAN I/F Repetitive RX errors\n\r");
     }
     else if((*esr & CAN_ESR1_TXWRN_MASK))
     {
-        dbg_printf("E,CAN I/F Repetitive TX errors\n\r");
+        dbg_printf("E,DBA CAN I/F Repetitive TX errors\n\r");
     }
     else if((*esr & CAN_ESR1_STFERR_MASK))
     {
-        dbg_printf("E,CAN I/F Stuff error\n\r");
+        dbg_printf("E,DBA CAN I/F Stuff error\n\r");
     }
     else if((*esr & CAN_ESR1_FRMERR_MASK))
     {
-        dbg_printf("E,CAN I/F Form error\n\r");
+        dbg_printf("E,DBA CAN I/F Form error\n\r");
     }
     else if((*esr & CAN_ESR1_CRCERR_MASK))
     {
-        dbg_printf("E,CAN I/F CRC error\n\r");
+        dbg_printf("E,DBA CAN I/F CRC error\n\r");
     }
     else if((*esr & CAN_ESR1_ACKERR_MASK))
     {
-        dbg_printf("E,CAN I/F ACK error\n\r");
+        dbg_printf("E,DBA CAN I/F ACK error\n\r");
     }
     else if((*esr & CAN_ESR1_BIT0ERR_MASK))
     {
-        dbg_printf("E,CAN I/F BIT0 error\n\r");
+        dbg_printf("E,DBA CAN I/F BIT0 error\n\r");
     }
     else if((*esr & CAN_ESR1_BIT1ERR_MASK))
     {
-        dbg_printf("E,CAN I/F BIT1 error\n\r");
+        dbg_printf("E,DBA CAN I/F BIT1 error\n\r");
     }
     else if((*esr & CAN_ESR1_SYNCH_MASK))
     {
-        dbg_printf("E,CAN I/F SYNCH errors\n\r");
+        dbg_printf("E,DBA CAN I/F SYNCH errors\n\r");
     }
     else
     {
@@ -352,7 +352,7 @@ void can_if_mcfx_err_process(uint32_t *esr)
     
     if((*esr & CAN_ESR1_BOFFINT_MASK))
     {
-        dbg_printf("E,CAN I/F BUS OFF ERROR\n\r");
+        dbg_printf("E,MC CAN I/F BUS OFF ERROR\n\r");
     }
     else if((*esr & CAN_ESR1_FLTCONF_MASK))
     {
@@ -372,39 +372,39 @@ void can_if_mcfx_err_process(uint32_t *esr)
     }
     else if((*esr & CAN_ESR1_RXWRN_MASK))
     {
-        dbg_printf("E,CAN I/F Repetitive RX errors\n\r");
+        dbg_printf("E,MC CAN I/F Repetitive RX errors\n\r");
     }
     else if((*esr & CAN_ESR1_TXWRN_MASK))
     {
-        dbg_printf("E,CAN I/F Repetitive TX errors\n\r");
+        dbg_printf("E,MC CAN I/F Repetitive TX errors\n\r");
     }
     else if((*esr & CAN_ESR1_STFERR_MASK))
     {
-        dbg_printf("E,CAN I/F Stuff error\n\r");
+        dbg_printf("E,MC CAN I/F Stuff error\n\r");
     }
     else if((*esr & CAN_ESR1_FRMERR_MASK))
     {
-        dbg_printf("E,CAN I/F Form error\n\r");
+        dbg_printf("E,MC CAN I/F Form error\n\r");
     }
     else if((*esr & CAN_ESR1_CRCERR_MASK))
     {
-        dbg_printf("E,CAN I/F CRC error\n\r");
+        dbg_printf("E,MC CAN I/F CRC error\n\r");
     }
     else if((*esr & CAN_ESR1_ACKERR_MASK))
     {
-        dbg_printf("E,CAN I/F ACK error\n\r");
+        dbg_printf("E,MC CAN I/F ACK error\n\r");
     }
     else if((*esr & CAN_ESR1_BIT0ERR_MASK))
     {
-        dbg_printf("E,CAN I/F BIT0 error\n\r");
+        dbg_printf("E,MC CAN I/F BIT0 error\n\r");
     }
     else if((*esr & CAN_ESR1_BIT1ERR_MASK))
     {
-        dbg_printf("E,CAN I/F BIT1 error\n\r");
+        dbg_printf("E,MC CAN I/F BIT1 error\n\r");
     }
     else if((*esr & CAN_ESR1_SYNCH_MASK))
     {
-        dbg_printf("E,CAN I/F SYNCH errors\n\r");
+        dbg_printf("E,MC CAN I/F SYNCH errors\n\r");
     }
     else
     {
@@ -478,6 +478,11 @@ int32_t can_fd_bms_receive_test_nb(uint32_t bus)
 								{
 									LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, bms_tx_buffer, 20, 200);
 								}
+								else if(msgid == 0x927)
+								{
+									bms_ntf_boot_done(0x919U);
+								}
+									
 //								vcu_2_bms_can_test_msg_reply(bms_rx_buff[bus].msgId, dec_fd_rx_buffer);
 
                             /* Process Data */
@@ -541,7 +546,7 @@ void can_if_dba_receive_nb(void)
 			
 				if(dba_recv_buff.msgId == 0x124U)
 				{
-					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 20);
+					LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, dba_tx_buffer, 20, 200);
 				}
                 dba_rx_state = CAN_SM_STATE_START_RX;
             }
@@ -581,7 +586,7 @@ void can_if_mc_receive_nb(void)
 				//vcu_2_mc_send_rpdo_msg(mc_recv_buff.msgId);
 				if(mc_recv_buff.msgId == 0x108U)
 				{
-					LPUART_DRV_SendDataPolling(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 19);
+					LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, mc_tx_buffer, 19, 200);
 				}
                 mc_rx_state = CAN_SM_STATE_START_RX;
             }

@@ -848,7 +848,7 @@ __NO_RETURN static void sys_init_task(void *arg)
 			switch(rx_buffer[0])
 			{
 				case 0x01U:
-						vcu_2_bms_can_test_msg(0x920U);
+						vcu_2_bms_status_msg(0x906U);
 						memset(rx_buffer, 0, sizeof(rx_buffer));
 						LPUART_DRV_SendDataBlocking(SYS_DEBUG_LPUART_INTERFACE, response, 6, 200);
 						break;

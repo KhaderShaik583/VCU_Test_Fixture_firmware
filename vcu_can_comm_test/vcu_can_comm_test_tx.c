@@ -199,6 +199,36 @@ status_t vcu_2_bms_can_test_msg(uint32_t msgid)
     return s;
 }
 
+status_t vcu_2_bms_status_msg(uint32_t msgid)
+{
+    status_t s = STATUS_SUCCESS;
+     volatile uint32_t emsg_id = 0U;
+
+	uint8_t buffer[8] = {0x01U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U, 0x00U};
+	    msgid = outgoing_slot_to_msg_id_map[0] | ((uint32_t)msgid << CAN_MSG_MSG_ID_SHIFT);   
+	    /* Add message specific data other than signature */
+    /* Increment data length by CANFD_MSG_SIG_LEN + data length */
+    
+    (void)can_fd_if_bms_testmsg_send(buffer, 8U, msgid, 0);
+    
+    return s;
+}
+
+status_t bms_ntf_boot_done(uint32_t msgid)
+{
+    uint8_t buffer[4] = {0x34U, 0xDFU, 0x5AU, 0xEFU};    
+    status_t s = STATUS_SUCCESS;
+    volatile uint32_t emsg_id = 0U;
+	msgid = outgoing_slot_to_msg_id_map[0] | ((uint32_t)msgid << CAN_MSG_MSG_ID_SHIFT);   
+	    /* Add message specific data other than signature */
+    /* Increment data length by CANFD_MSG_SIG_LEN + data length */
+    
+    (void)can_fd_if_bms_testmsg_send(buffer, 4U, msgid, 0);
+    
+    return s;
+
+}
+
 status_t vcu_2_bms_can_test_msg_reply(uint32_t msgid, const uint8_t *msg_sig)
 {
     status_t s = STATUS_SUCCESS;
